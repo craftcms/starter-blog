@@ -1,0 +1,31 @@
+{#
+  Renders the Body Content field's Image block with responsive image sizes
+  and positioning.
+#}
+
+{# Importing another template gives you access to its macro functions #}
+{% import "_private/macros/images" as images %}
+
+{#
+  Assets are related elements so we perform an element query on the block's
+  Image field. `.one()` returns either an Asset model or null. Make sure
+  to wrap the code in a conditional to prevent errors if it's null.
+#}
+{% set asset = block.image.one() %}
+
+{% if asset %}
+  <figure class="position-{{ block.position }} pt-1">
+    {# `images` is the imported macro file with the macro function named `img` #}
+    {{ images.img(asset, [350, 700, 1400]) }}
+
+    {#
+      Assets are elements, so they can have fields attached to them. In this
+      project, we've included an optional Caption field.
+    #}
+    {% if asset.caption %}
+      <figcaption class="text-sm text-gray-600 p2 text-center">
+        {{ asset.caption }}
+      </figcaption>
+    {% endif %}
+  </figure>
+{% endif %}

@@ -1,0 +1,25 @@
+{#
+  This macro renders an `<img>` tag with `srcset` and `alt` attributes.
+
+  For best results, make sure that the original image is wider than the largest
+  value in the `widths` array. If not, the image will be upsized and not look great.
+
+  Arguments:
+    asset: AssetModel - (Required) The result from an asset query like `entry.imageField.one()`
+    widths: number[]  - (Required) Array of numbers for image transform pixel widths
+    ratio: number     - (Optional) An aspect ratio (width/height) like `1.33` or a mathematical expression like `4/3`
+  }
+
+#}
+{% macro img(asset, widths, ratio) %}
+{% spaceless %}
+
+  {% set widths = widths | sort | reverse %}
+  {% set srcs = widths | map(width => asset.url({width: width, height: ratio ? width / ratio}) ~ " #{width}w" ) %}
+  {% set src = srcs[0] | split(' ') | first %}
+  {% set alt = asset.imageAlt is defined ? asset.imageAlt %}
+
+  <img src="{{ src }}" sizes="100vw" srcset="{{ srcs | join(', ') }}" alt="{{ alt }}">
+
+{% endspaceless %}
+{% endmacro %}

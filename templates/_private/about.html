@@ -1,0 +1,7 @@
+{% extends "_private/layout" %}
+
+{% block content %}
+  <h1 class="text-4xl text-black font-display my-4">{{ entry.title }}</h1>
+
+  {% include "_private/matrix" with {blocks: entry.bodyContent.all()} %}
+{% endblock %}

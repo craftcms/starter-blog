@@ -1,0 +1,35 @@
+{
+  "name": "craftcms/starter-blog-twig",
+  "description": "A Craft CMS blog site starter with Tailwind CSS",
+  "require": {
+    "clubstudioltd/craft-asset-rev": "^6.0",
+    "craftcms/cms": "^3.2.3",
+    "craftcms/redactor": "2.3.3.2",
+    "nystudio107/craft-typogrify": "^1.1",
+    "vlucas/phpdotenv": "^2.4.0",
+    "wrav/oembed": "^1.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "modules\\": "modules/"
+    }
+  },
+  "config": {
+    "sort-packages": true,
+    "optimize-autoloader": true,
+    "platform": {
+      "php": "7.0"
+    }
+  },
+  "scripts": {
+    "post-root-package-install": [
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ],
+    "post-update-cmd": [
+      "@php craft clear-caches/all"
+    ],
+    "post-install-cmd": [
+      "@php craft clear-caches/all"
+    ]
+  }
+}

@@ -1,0 +1,92 @@
+{#
+  This is a basic layout template for other templates to extend.
+#}
+<!DOCTYPE html>
+{#
+  `craft.app.language` will be the language code for the language you chose when
+  you installed Craft. It will be something like "en-US".
+ #}
+<html lang="{{ craft.app.language }}">
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8"/>
+    {#
+      `siteName` is a global variable for whatever is set in the Control Panel
+      under Settings → Sites for the default site. If you create multiple sites,
+      it will be the name of the site you're viewing at the moment.
+    #}
+    <title>{{ siteName }}</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport">
+    <meta content="origin-when-cross-origin" name="referrer">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link href="//fonts.googleapis.com/css?family=Work+Sans:600|Quattrocento+Sans:400,400i,700" rel="stylesheet" type="text/css">
+
+    {#
+      The Asset Rev plugin provides this `rev()` Twig function for cache-busting
+      css and js files. It will return nothing when the webpack dev server is
+      running because styles are then injected via js.
+    #}
+    {% set stylesheet = rev('main.css') %}
+    {% if stylesheet %}
+      <link rel="stylesheet" href="{{ rev('main.css') }}">
+    {% endif %}
+
+  </head>
+  <body class="ltr">
+    <nav class="container mx-auto py-4 px-4" role="navigation" aria-label="Main">
+      {#
+        We grab the first URL segment as a way to identify whether or not a
+        main navigation link should be active. That works for this example, but
+        for large sites, you might find yourself relying on more complex logic.
+      #}
+      {% set firstSegment = craft.app.request.getSegment(1) %}
+      <ul class="flex">
+        <li class="mr-6">
+          {#
+            The single question mark syntax is a shortcut for ternary expressions.
+            It simply means that if the condition is true, render the quoted text.
+            If not, then do nothing.
+          #}
+          <a class="text-blue-600 {{ firstSegment == '' ? 'border-b border-blue-400' }}" href="{{ siteUrl }}">Home</a>
+        </li>
+        <li class="mr-6">
+          <a class="text-blue-600 {{ firstSegment == 'about' ? 'border-b border-blue-400' }}" href="{{ url('about') }}">About</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container mx-auto px-4">
+      {#
+        Layout templates defind blocks that other templates may override. If a
+        child template (one that extends this template) does not implement the
+        `content` block, then you'll see the default message.
+      #}
+      {% block content %}
+        This content is replaced by the content block in the template
+        that extends this layout file.
+      {% endblock %}
+    </div>
+
+    <footer class="page-footer">
+      {#
+        `now` gives us the current DateTime. All DateTime values need to be
+        formatted with the `date` filter which accepts a date format. Here, we
+        render only the 4-digit year.
+      #}
+      &copy; {{ now | date('Y') }}, Built with <a class="text-blue-600" href="https://craftcms.com">Craft CMS</a>
+    </footer>
+
+    {#
+      As in the <head> section above, the Asset Rev plugin provides the `rev()`
+      function to cache-bust the js file. Unlike the CSS <link> tag in the <head>,
+      this works just fine with the webpack dev server. See the `/config/assetrev.php`
+      file to see how it is configured.
+    #}
+    <script src="{{ rev('main.js') }}"></script>
+  </body>
+</html>

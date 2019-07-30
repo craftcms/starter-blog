@@ -1,0 +1,27 @@
+/*
+  These styles are intended to be demonstrative more than prescriptive.
+
+  Most styles have been implemented in templates with Tailwind CSS utility
+  classes. Styles here demonstrate:
+
+  1. How the Body Content field Matrix blocks have styles in separate files
+  2. How to use the Tailwind CSS `@apply` directive to create styles from
+     utility class names
+ */
+html {
+  font-size: 125%;
+  line-height: 1.45em;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'variables';
+@import 'embed';
+@import 'layout';
+@import 'richText';
+@import 'image';
+@import 'quote';
+@import 'bootstrap-carousel';
+@import 'typography';

@@ -1,0 +1,6 @@
+{#
+  Renders the Body Content field's Quote field. That block has a dropdown field
+  named Style that lets you choose the type of quote: Blockquote or Pullquote.
+  We use the value of that field to dynamically include the correct template.
+#}
+{% include "_private/matrix/blocks/quote/" ~ block.style %}

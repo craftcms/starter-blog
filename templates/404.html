@@ -1,0 +1,17 @@
+{#
+  This template will display whenever a 404 Not Found error is thrown. You won't
+  see this template when Dev Mode is on, however. To see it while Dev Mode is on,
+  go to `yoursite.test/404`
+
+  See: https://docs.craftcms.com/v3/routing.html
+#}
+{% extends "_private/layout" %}
+
+{% block content %}
+  <h1 class="text-4xl text-black font-display my-4">Not Found</h1>
+
+  <p>
+    The page you’re looking for can’t be found.
+    <a href="{{ siteUrl }}" class="text-blue-600">Go to the home page?</a>
+  </p>
+{% endblock %}

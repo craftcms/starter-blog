@@ -1,0 +1,56 @@
+{#
+  This template expects a `blocks` variable. For example, if an entry has a
+  matrix field, "Body Content" with the handle "bodyContent" then you can
+  iterate over the Matrix blocks dynamically, like so:
+
+  ```
+  {% include "_private/matrix" with {blocks: entry.bodyContent.all()}  %}
+  ```
+
+  This template is named `index.html`. Any template named `index.html` or
+  `index.twig` can be ommitted from the include path. The above code is the
+  same as:
+
+  ```
+  {% include "_private/matrix/index" with {blocks: entry.bodyContent.all()}  %}
+  ```
+
+  Matrix blocks are Elements. To get the blocks from a Matrix field requires an
+  element query:
+
+  ```
+  entry.bodyContent.all()
+  ```
+
+  The `with` part of the include lets you provide a key/value object where keys
+  name variables for the scope of the included template. For example:
+
+  ```
+  ... with {blocks: entry.bodyContent.all() } ...
+  ```
+
+  That means that this included template can expect a variable named `blocks`
+  which holds the result of the element query that fetches the Matrix blocks.
+
+  This template iterates over the blocks and attempts to include a template named
+  by each block's handle. For example, if an entry included a Body Content field
+  with the following blocks selected:
+
+  Body Content
+  - Rich Text (richText)
+  - Image (image)
+  - Embed (embed)
+
+  Then the loop in this template would include templates in this order:
+
+  1. "_private/matrix/blocks/richText"
+  2. "_private/matrix/blocks/image"
+  4. "_private/matrix/blocks/embed"
+
+  If you add a new Matrix block, then you can create a file in the
+  `_private/matrix/blocks` folder named by the block handle to render content
+  for that block.
+#}
+{% for block in blocks %}
+  {% include "_private/matrix/blocks/" ~ block.type %}
+{% endfor %}

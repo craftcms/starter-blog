@@ -1,0 +1,11 @@
+{#
+  Renders the Body Content field's Embed block. The Embed field is provided by
+  the oEmbed plugin.
+
+  See https://plugins.craftcms.com/oembed
+#}
+<div class="embed embed-{{ block.embed.media.type }} mt-12 mb-12">
+  {% if block.embed.valid %}
+    {{ block.embed.render() }}
+  {% endif %}
+</div>
