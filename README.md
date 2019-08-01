@@ -33,28 +33,18 @@ You’re always welcome in the [Craft Discord chat](https://craftcms.com/communi
 
 ### Get the Code
 
-Get the code from the Github repository either by downloading a zip file, or cloning it:
+#### Composer Option
+
+If you’re familiar with [Composer](https://getcomposer.org/) then the best way to get started is like so:
+
+```bash
+composer create-project craftcms/starter-blog-twig
+```
 
 #### Download Option
 
 1. Find the “Clone or Download” button at https://github.com/craftcms/starter-blog-twig, click it, then click “Download ZIP”
 2. Extract the zip file into the folder from where you’ll serve the site
-
-#### Git Clone Option
-
-If you’re comfortable with Git then clone this repository.
-
-```bash
-git clone git@github.com:craftcms/starter-blog-twig.git
-```
-
-If you’re jumpstarting a project with your own Git repository, then delete the current Git repository and start your own.
-
-```bash
-cd starter-blog-twig
-rm -rf .git
-git init
-```
 
 ### Set Up Your Webserver
 
