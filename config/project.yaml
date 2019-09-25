@@ -1,4 +1,4 @@
-dateModified: 1564009877
+dateModified: 1569444785
 email:
   fromEmail: sam@craftcms.com
   fromName: 'Craft Blog'
@@ -509,19 +509,19 @@ siteGroups:
     name: 'Craft Blog'
 sites:
   f3400d6f-0f33-4cef-9521-f8f6620399ec:
-    baseUrl: $DEFAULT_SITE_URL
-    handle: default
-    hasUrls: true
-    language: en-US
-    name: 'Craft Blog'
-    primary: true
     siteGroup: 90dee5cc-23f1-40ac-ae14-3fa71bebc4dc
+    name: 'Craft Blog'
+    handle: default
+    language: en-US
+    hasUrls: true
+    baseUrl: $DEFAULT_SITE_URL
     sortOrder: 1
+    primary: true
 system:
   edition: solo
   name: 'Craft Blog'
   live: true
-  schemaVersion: 3.2.16
+  schemaVersion: 3.3.3
   timeZone: America/Los_Angeles
 users:
   requireEmailVerification: true

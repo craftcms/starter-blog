@@ -29,14 +29,8 @@ return [
                 return '';
             }
         ],
-        'assetUrlPrefix' => getenv('DEFAULT_SITE_URL') . '/assets/dist/',
+        'assetUrlPrefix' => getenv('DEFAULT_SITE_URL'),// . '/assets/dist/',
         'manifestPath' => 'web/assets/dist/manifest.json',
         'pipeline' => 'manifest|noManifest',
-    ],
-
-    'dev' => [
-        'assetUrlPrefix' => getenv('USE_WEBPACK_DEV_SERVER') ?
-            getenv('WEBPACK_SERVER_URL') :
-            getenv('DEFAULT_SITE_URL'),
     ]
 ];
