@@ -19,6 +19,29 @@ This blog starter project is for developers who are new to Craft CMS and want to
 
 When you install this starter, you’ll see that it’s running Craft Solo which is free to use for any purpose. The installed plugins are also free. You can upgrade to Craft Pro or add paid plugins any time. See our [pricing page](https://craftcms.com/pricing) for details and feature comparisons.
 
+## Navigation
+
+* [Learning Resources](#learning-resources)
+* [Installation](#installation)
+  * [Clone this repo](#clone-this-repo)
+  * [Set up your local environment](#set-up-your-local-environment)
+  * [Create `.env`](#create-env)
+  * [Install Composer packages](#install-composer-packages)
+  * [Install Craft](#install-craft)
+* [Learn Craft](#learn-craft)
+  * [Create some content](#create-some-content)
+  * [Look at the settings](#look-at-the-settings)
+  * [Look at the template files](#look-at-the-template-files)
+  * [Try something new](#try-something-new)
+* [CSS and JS Development with Tailwind CSS, Webpack, and HMR](#css-and-js-development-with-tailwind-css-webpack-and-hmr)
+  * [Removal](#removal)
+  * [Setup](#setup)
+  * [Tailwind Development Flow](#tailwind-development-flow)
+* [Apendix](#apendix)
+  * [Apache or Nginx?](#apache-or-nginx)
+  * [MySQL or Postgres?](#my-sql-or-postgres)
+  * [URL Rewrites](#url-rewrites)
+
 ## Learning Resources
 
 Before you get started, we want you to know about a few helpful learning resources.
@@ -31,38 +54,92 @@ You’re always welcome in the [Craft Discord chat](https://craftcms.com/communi
 
 ## Installation
 
-### Get the Code
+Install [Composer](https://getcomposer.org/download/) if it is not installed already.
 
-#### Composer Option
+### Clone this repo
 
-If you’re familiar with [Composer](https://getcomposer.org/) then the best way to get started is like so:
+Open up a terminal window in a directory where you’d like to install Craft and run the following.
 
 ```bash
-composer create-project craftcms/starter-blog-twig
+git clone git@github.com:craftcms/starter-blog-twig.git
 ```
 
-#### Download Option
+Move into the newly created project folder.
 
-1. Find the “Clone or Download” button at https://github.com/craftcms/starter-blog-twig, click it, then click “Download ZIP”
-2. Extract the zip file into the folder from where you’ll serve the site
+```bash
+cd starter-blog-twig
+```
 
-### Set Up Your Webserver
+You’re starting your own project so you don’t need the Git project.
 
-Setting up a local development environment is outside the scope of this project. [CraftQuest](https://craftquest.io), our official training partner, offers an extensive [Localhosting Countdown](https://craftquest.io/courses/localhosting-craft-cms) series all for creating a free account.
+```bash
+rm -rf .git
+```
 
-Check Craft’s [server requirements](https://docs.craftcms.com/v3/requirements.html) before getting started. PHP’s default configuration doesn’t allocate enough resources to Craft. Read about `php.ini` settings in our guide, [How to Make Changes to php.ini](https://craftcms.com/guides/php-ini). It’s probably simplest to choose Apache over Nginx if you’re not familiar with URL rewrites. MySQL is the most popular database for Craft, but if you’re comfortable with Postgres, then it offers an advantage or two over MySQL.
+### Set up your local environment
 
-Point your web server to the `/web` directory of the project. That’s where the main `index.php` file is. Create a new database so it’s ready for the installation process.
+This part is up to you. Some folks use [MAMP](https://www.mamp.info/) or [WAMP](http://www.wampserver.com/en/). Others use [Laravel Valet](https://laravel.com/docs/valet).
+
+Point your server to the `/web` directory where the `index.php` file lives.
+
+See the [Appendix](#appendix) section for information on Apache vs. Nginx and MySQL vs. Postgres. Basically, it’s simpler to use Apache if you're getting started. MySQL is perfectly fine but might result in unexpected search results without some configuration.
+
+⚠️ Check Craft’s [server requirements](https://docs.craftcms.com/v3/requirements.html) before getting started. The default PHP configuration doesn’t allocate enough resources to Craft. Read about `php.ini` settings in our guide, [How to Make Changes to php.ini](https://craftcms.com/guides/php-ini).
+
+
+### Create `.env`
+
+Craft depends on environment variables set in a root `.env` file so you’ll need to copy the `.env.example` over.
+
+```bash
+cp .env.example .env
+```
+
+⚠️ It is important to do that _before_ installation. This starter project requires a couple of special environment variables found in `.env.example` that will not exist if you run the installer first.
+
+### Install Composer packages
+
+```bash
+composer install
+```
+
+👀 You might see some error output about cache clearing. Not to worry! Craft isn’t installed yet, so that’s perfectly fine.
 
 ### Install Craft
 
-Now that you have the files and your webserver is set up, refer to our [installation docs starting at step 2](https://docs.craftcms.com/v3/installation.html#step-2-set-the-file-permissions).
+Start by running this:
+
+```bash
+./craft setup
+```
+
+That command will generate a random value for `SECURITY_KEY` in the `.env` file. It will also ask you for database credentials, update the `.env` file accordingly, and test the database connection.
+
+You’ll be asked if you’d like to install Craft right away. If you choose not to, you can come back later and run:
+
+```bash
+./craft install
+```
+
+You’ll be asked for things like a username, email, password, and more. These values will be written to the `.env` file and the installer will run.
+
+⚠️ Watch for this line:
+
+```bash
+Site URL: [$DEFAULT_SITE_URL]
+```
+
+Be sure to enter the site URL as set up with your local server. If you miss it, you can edit it later by hand in the `.env` file which should have a variable named `DEFAULT_SITE_URL`. This is important because the AssetRev plugin configuration relies on it.
+
+You can edit values in `.env` by hand if you don’t want to run those commands again.
+
+After the installer runs you should be able to see log into the Control Panel at `http://local-site-name.test/admin`.
 
 ## Learn Craft
 
 ### Create some content
 
-This starter project ships without any content so you get to start from scratch.  The Control Panel should feel pretty intuitive. Start by adding some content and watch how the site comes together. [Unsplash](https://unsplash.com/) is a great place to grab some free images if you need some to play with.
+This starter project ships without any content so you get to start from scratch.  The Control Panel should feel pretty intuitive. Start by adding some content and watch how the site comes together. [Unsplash](https://unsplash.com/) is a great place to grab free images if you need some to play with.
 
 When you add an image with an image field, you’ll see a thumbnail of it. Double-click that thumbnail to reveal editing options.
 
@@ -82,6 +159,8 @@ You’ll find three Sections: Two Singles and one Channel. Singles are for stand
 
 This starter includes one local asset volume for all of your uploads. You’ll find a related `/web/uploads` folder. Take a loot at the Uploads volume settings to see how it’s configured. You’ll find that it has a Field Layout tab with a couple of fields applied to it. It is possible for uploaded Assets to have custom fields for metadata.
 
+You can add images directly to the `/web/uploads/images` folder rather than via the Control Panel. They won’t show up in the Control Panel until they’re indexed. Go to Utilities → Asset Indexes, and click the “Update asset indexes” button.
+
 ### Look at the template files
 
 Be sure to read up on Craft’s [front-end development docs](https://docs.craftcms.com/v3/dev/) for Twig templating features. Twig is not unique to Craft. It’s a well-loved PHP templating language. You’ll want to read up on [Twig’s documentation](https://twig.symfony.com/doc/2.x/) too.
@@ -90,7 +169,7 @@ Take a look at the files in the `/templates` folder. There are comments througho
 
 The files are named with the `.html` extension but `.twig` also works. Some developers prefer `.twig` so their IDE (like the free [Visual Studio Code](https://code.visualstudio.com/)) automatically knows to use Twig syntax highlighting.
 
-You might wonder why a folder name starts with an underscore. If so, read up on [routing](https://docs.craftcms.com/v3/routing.html#dynamic-routes). Craft will automatically route template paths as URL paths. For example if you create a file `/templates/foo/bar.html` then you will see that template render at `http://mysite.test/foo/bar`. If you'd like to keep template folders or  files private, prepend the name with an underscore so Craft will ignore it. In this starter project, there is a single folder, `_private` to hold all templates that should not be publically accessible.
+You might wonder why a folder name starts with an underscore. If so, read up on [routing](https://docs.craftcms.com/v3/routing.html#dynamic-routes). Craft will automatically route template paths as URL paths. For example if you create a file `/templates/foo/bar.html` then you will see that template render at `http://mysite.test/foo/bar`. If you’d like to keep template folders or  files private, prepend the name with an underscore so Craft will ignore it. In this starter project, there is a single folder, `_private` to hold all templates that should not be publicly accessible.
 
 ### Try something new
 
@@ -98,7 +177,7 @@ Try adding a feature of your own. For example, you might like to add categories 
 
 #### Create an empty template
 
-Make a new, empty file here:  `/templates/_private/category.html`. It doesn't need any code yet.
+Make a new, empty file here:  `/templates/_private/category.html`. It doesn’t need any code yet.
 
 #### Create a new category group
 
@@ -170,8 +249,6 @@ To create a navigation menu for the Topics category you created, you could do so
 {% set allCategories = craft.categories.group('topics').all() %}
 ```
 
-
-
 To get the first (or only) category from a blog entry, assuming your category field handle is `topic`, you’d do this:
 
 ```twig
@@ -211,7 +288,7 @@ If you’d like to feature three other blog posts within the same category at th
 
 We’ll leave the rest to you!
 
-## Tailwind CSS with Webpack and HMR
+## CSS and JS Development with Tailwind CSS, Webpack, and HMR
 
 [Webpack](https://webpack.js.org/) and [Tailwind CSS](https://tailwindcss.com/) are popular front-end technologies. We chose Tailwind because it allows you to quickly style things by adding utility classes to HTML elements.
 
@@ -238,7 +315,7 @@ You can also safely uninstall and remove the Asset Rev plugin from the Control P
 
 ### Setup
 
-If you don't have Node.js and `npm` installed, you’ll find an installer on the
+If you don’t have Node.js and `npm` installed, you’ll find an installer on the
 [NPM website](https://www.npmjs.com/get-npm). Do that first.
 
 Open up a terminal window in the root of this project and run:
@@ -271,14 +348,10 @@ The above command will minify all of the CSS and JavaScript. It will also remove
 
 #### Hot Module Reloading (HMR)
 
-For this to work you must make sure you are in Dev Mode. Check the `/.env` file to make sure these variables are set like so
+For this to work you must make sure you are in Dev Mode. Check the `/.env` file to make sure you see this:
 
 ```bash
 ENVIRONMENT="dev"
-
-...
-
-USE_WEBPACK_DEV_SERVER=1
 ```
 
 Then run this script:
@@ -287,21 +360,19 @@ Then run this script:
 npm run hot
 ```
 
-Now you’ll see changes in the browser immediately (without a page refresh) as you edit `.scss` files in the `/src` folder. You’ll need to reload the page yourself if you edit Twig templates.
+Refresh the browser. Now you’ll see changes in the browser immediately (without a page refresh) as you edit `.scss` files in the `/src` folder. Hot module reloading does not apply to changes made in Twig templates.
 
-When you’re done, cancel the npm process and set this variable back:
+When you’re done, cancel the npm process with CTRL+C.
 
-```bash
-USE_WEBPACK_DEV_SERVER=1
-```
-
-Then run a build command:
+You can build minified CSS and JS for production by running:
 
 ```bash
 npm run build
+```
 
-# OR
+If you’d rather compile without minification, run:
 
+```bash
 npm run production
 ```
 
@@ -323,7 +394,6 @@ Spoiler: Add this to your `config/general.php` file under the `'*'` array key:
     'subRight' => true,
 ],
 ```
-
 
 ### URL Rewrites
 
