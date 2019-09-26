@@ -440,7 +440,7 @@ Go to GraphQL → Schemas. You’ll see one public schema for which you can add 
 
 ### Try our Gatsby starter
 
-If you’re new to GraphQL, our Gatsby blog starter is a good place to start.
+You’ll find a Craft + Gatsby blog starter in the `/headless-front-end/gatsby` directory. Check out that [README](/headless-front-end/gatsby/README.md) to get started with it.
 
 **Coming soon!**
 
