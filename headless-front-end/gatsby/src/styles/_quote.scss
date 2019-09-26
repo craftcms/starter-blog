@@ -1,0 +1,14 @@
+blockquote {
+  &.rich-text {
+    p {
+      margin: 0;
+      & + p {
+        margin-top: 1em;
+      }
+    }
+  }
+
+  footer {
+    margin-top: 1em;
+  }
+}
