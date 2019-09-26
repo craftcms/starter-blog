@@ -37,6 +37,13 @@ When you install this starter, you’ll see that it’s running Craft Solo which
   * [Removal](#removal)
   * [Setup](#setup)
   * [Tailwind Development Flow](#tailwind-development-flow)
+* [Go headless with GraphQL](#go-headless-with-graph-ql)
+  * [Switch to Pro trial](#switch-to-pro-trial)
+  * [Switch to Pro trial](#switch-to-pro-trial)
+  * [Headless Mode](#headless-mode)
+  * [Set up a GraphQL api endpoint](#set-up-a-graph-ql-api-endpoint)
+  * [Create GraphQL schemas and private tokens](#create-graph-ql-schemas-and-private-tokens)
+  * [Try our Gatsby starter](#try-our-gatsby-starter)
 * [Apendix](#apendix)
   * [Apache or Nginx?](#apache-or-nginx)
   * [MySQL or Postgres?](#my-sql-or-postgres)
@@ -375,6 +382,67 @@ If you’d rather compile without minification, run:
 ```bash
 npm run production
 ```
+
+## Go headless with GraphQL
+
+Craft Pro includes a native GraphQL implementation which makes Craft perfect for front-end frameworks like [Gatsby](https://www.gatsbyjs.org/) and [Gridsome](https://gridsome.org/).
+
+See Craft’s [GraphQL documentation](https://docs.craftcms.com/v3/graphql.html#getting-started) to learn more about it.
+
+### Switch to Pro trial
+
+Craft is installed with the free Solo edition. In your local environment, you can switch to Pro in trial mode with no time limits. That allows you to try Pro features as well as commercial plugins for as long as you like. Read more about that in our guide, [Try Craft Pro & Plugins Before Buying](https://craftcms.com/guides/try-craft-pro-plugins-before-buying).
+
+To enable GraphQL support, find the “Solo” badge at the bottom of the left side navigation column and click it. On the next screen, under the Pro edition block, click the “Try for free” button. After trial mode is enabled, refresh the browser. You should now see a GraphQL menu item.
+
+### Headless Mode
+
+If you want to use Craft purely as a headless CMS and clean things up then set the [`headlessMode` configuration](https://docs.craftcms.com/v3/config/config-settings.html#headlessmode) in `/config/general.php`.
+
+```php
+return [
+    // Global settings
+    '*' => [
+        // ... other settings
+        'headlessMode' => true,
+    ],
+    // ... other environment settings
+];
+```
+
+You can also remove these files and folders:
+
+* All files in the `templates` folder
+* All front-end development files and folders
+  * `/node_modules` (if you previously ran `npm install`)
+  * `/src`
+  * `package-lock.json`
+  * `package.json`
+  * `postcss.config.js`
+  * `tailwind.config.js`
+  * `webpack.config.js`
+
+### Set up a GraphQL api endpoint
+
+Edit the `/config/routes.php` file to look like this:
+
+```php
+return [
+    'api' => 'graphql/api`
+];
+```
+
+The `'api'` key can be any route you prefer as long as it maps to `graphql/api`.
+
+### Create GraphQL schemas and private tokens
+
+Go to GraphQL → Schemas. You’ll see one public schema for which you can add access to various elements. You can also create private schemas with tokens, each with their own permissions.
+
+### Try our Gatsby starter
+
+If you’re new to GraphQL, our Gatsby blog starter is a good place to start.
+
+**Coming soon!**
 
 ## Apendix
 
