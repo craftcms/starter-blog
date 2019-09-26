@@ -68,7 +68,7 @@ Install [Composer](https://getcomposer.org/download/) if it is not installed alr
 Open up a terminal window in a directory where you’d like to install Craft and run the following.
 
 ```bash
-git clone git@github.com:craftcms/starter-blog-twig.git
+git clone git@github.com:craftcms/starter-blog.git
 ```
 
 Move into the newly created project folder.
