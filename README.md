@@ -442,8 +442,6 @@ Go to GraphQL → Schemas. You’ll see one public schema for which you can add 
 
 You’ll find a Craft + Gatsby blog starter in the `/headless-front-end/gatsby` directory. Check out that [README](/headless-front-end/gatsby/README.md) to get started with it.
 
-**Coming soon!**
-
 ## Apendix
 
 ### Apache or Nginx?
