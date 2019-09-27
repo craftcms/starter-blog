@@ -74,7 +74,7 @@ git clone git@github.com:craftcms/starter-blog.git
 Move into the newly created project folder.
 
 ```bash
-cd starter-blog-twig
+cd starter-blog
 ```
 
 You’re starting your own project so you don’t need the Git project.
