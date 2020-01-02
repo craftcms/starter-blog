@@ -535,7 +535,7 @@ volumes:
     handle: uploads
     type: craft\volumes\Local
     hasUrls: true
-    url: /uploads
+    url: '@web/uploads'
     settings:
       path: '@webroot/uploads'
     sortOrder: 1

@@ -33,6 +33,7 @@ return [
         ),
 
         'aliases' => [
+            '@web' => getenv('DEFAULT_SITE_URL'),
             // Lets `./craft clear-caches all` clear CP resources cache
             '@webroot' => dirname(__DIR__) . '/web',
         ]
