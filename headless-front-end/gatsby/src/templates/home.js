@@ -16,7 +16,7 @@ export const query = graphql`
         }
       }
 
-      home: entries(section: "home") {
+      home: entry(section: "home") {
         ... on Craft_home_home_Entry {
           siteIntroduction
         }
@@ -44,7 +44,7 @@ const IndexPage = ({ data, pageContext }) => {
       {pageContext.currentPage === 1 && (
         <div
           dangerouslySetInnerHTML={{
-            __html: craft.home[0].siteIntroduction,
+            __html: craft.home.siteIntroduction,
           }}
         ></div>
       )}
