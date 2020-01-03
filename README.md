@@ -428,7 +428,7 @@ Edit the `/config/routes.php` file to look like this:
 
 ```php
 return [
-    'api' => 'graphql/api`
+    'api' => 'graphql/api'
 ];
 ```
 
