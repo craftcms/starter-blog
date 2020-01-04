@@ -8,7 +8,7 @@ import Matrix from "../components/matrix"
 import { getPrettyDate, getStandardDate } from "../utils/dates"
 
 export const query = graphql`
-  query BlogPostQuery($id: [Int]) {
+  query BlogPostQuery($id: [Craft_QueryParameter]) {
     craft {
       entries(id: $id) {
         title
