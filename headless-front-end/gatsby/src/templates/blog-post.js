@@ -8,9 +8,9 @@ import Matrix from "../components/matrix"
 import { getPrettyDate, getStandardDate } from "../utils/dates"
 
 export const query = graphql`
-  query BlogPostQuery($id: [Int]) {
+  query BlogPostQuery($id: [Craft_QueryArgument]) {
     craft {
-      entries(id: $id) {
+      entry(id: $id) {
         title
         postDate
 
@@ -30,7 +30,7 @@ export const query = graphql`
 `
 
 const BlogPostPage = ({ data }) => {
-  const entry = data.craft.entries[0]
+  const entry = data.craft.entry
   return (
     <Layout>
       <SEO title={entry.title} />
