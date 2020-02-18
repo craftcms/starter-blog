@@ -164,7 +164,7 @@ You’ll find three Sections: Two Singles and one Channel. Singles are for stand
 
 #### Assets
 
-This starter includes one local asset volume for all of your uploads. You’ll find a related `/web/uploads` folder. Take a loot at the Uploads volume settings to see how it’s configured. You’ll find that it has a Field Layout tab with a couple of fields applied to it. It is possible for uploaded Assets to have custom fields for metadata.
+This starter includes one local asset volume for all of your uploads. You’ll find a related `/web/uploads` folder. Take a look at the Uploads volume settings to see how it’s configured. You’ll find that it has a Field Layout tab with a couple of fields applied to it. It is possible for uploaded Assets to have custom fields for metadata.
 
 You can add images directly to the `/web/uploads/images` folder rather than via the Control Panel. They won’t show up in the Control Panel until they’re indexed. Go to Utilities → Asset Indexes, and click the “Update asset indexes” button.
 
