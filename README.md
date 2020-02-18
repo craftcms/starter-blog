@@ -44,7 +44,7 @@ When you install this starter, you’ll see that it’s running Craft Solo which
   * [Set up a GraphQL api endpoint](#set-up-a-graph-ql-api-endpoint)
   * [Create GraphQL schemas and private tokens](#create-graph-ql-schemas-and-private-tokens)
   * [Try our Gatsby starter](#try-our-gatsby-starter)
-* [Apendix](#apendix)
+* [Appendix](#appendix)
   * [Apache or Nginx?](#apache-or-nginx)
   * [MySQL or Postgres?](#my-sql-or-postgres)
   * [URL Rewrites](#url-rewrites)
@@ -442,7 +442,7 @@ Go to GraphQL → Schemas. You’ll see one public schema for which you can add 
 
 You’ll find a Craft + Gatsby blog starter in the `/headless-front-end/gatsby` directory. Check out that [README](/headless-front-end/gatsby/README.md) to get started with it.
 
-## Apendix
+## Appendix
 
 ### Apache or Nginx?
 
