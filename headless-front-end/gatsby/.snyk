@@ -1,0 +1,72 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.19.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-567746:
+    - gatsby > lodash:
+        patched: '2020-08-12T02:57:11.693Z'
+    - gatsby-plugin-offline > lodash:
+        patched: '2020-08-12T02:57:11.693Z'
+    - gatsby-plugin-sharp > lodash:
+        patched: '2020-08-12T02:57:11.693Z'
+    - gatsby > css-loader > lodash:
+        patched: '2020-08-12T02:57:11.693Z'
+    - gatsby > devcert > lodash:
+        patched: '2020-08-12T02:57:11.693Z'
+    - gatsby > eslint > lodash:
+        patched: '2020-08-12T02:57:11.693Z'
+    - gatsby > eslint-plugin-flowtype > lodash:
+        patched: '2020-08-12T02:57:11.693Z'
+    - gatsby > eslint-plugin-graphql > lodash:
+        patched: '2020-08-12T02:57:11.693Z'
+    - gatsby > gatsby-telemetry > lodash:
+        patched: '2020-08-12T02:57:11.693Z'
+    - gatsby > gatsby-cli > lodash:
+        patched: '2020-08-12T02:57:11.693Z'
+    - gatsby > gatsby-plugin-page-creator > lodash:
+        patched: '2020-08-12T02:57:11.693Z'
+    - gatsby-plugin-sharp > async > lodash:
+        patched: '2020-08-12T02:57:11.693Z'
+    - gatsby > webpack-merge > lodash:
+        patched: '2020-08-12T02:57:11.693Z'
+    - gatsby-plugin-offline > cheerio > lodash:
+        patched: '2020-08-12T02:57:11.693Z'
+    - gatsby > @typescript-eslint/parser > @typescript-eslint/typescript-estree > lodash:
+        patched: '2020-08-12T02:57:11.693Z'
+    - gatsby > eslint > table > lodash:
+        patched: '2020-08-12T02:57:11.693Z'
+    - gatsby > eslint-plugin-graphql > graphql-config > lodash:
+        patched: '2020-08-12T02:57:11.693Z'
+    - gatsby > gatsby-cli > gatsby-telemetry > lodash:
+        patched: '2020-08-12T02:57:11.693Z'
+    - gatsby > gatsby-cli > gatsby-recipes > lodash:
+        patched: '2020-08-12T02:57:11.693Z'
+    - gatsby > gatsby-plugin-page-creator > gatsby-page-utils > lodash:
+        patched: '2020-08-12T02:57:11.693Z'
+    - gatsby > optimize-css-assets-webpack-plugin > last-call-webpack-plugin > lodash:
+        patched: '2020-08-12T02:57:11.693Z'
+    - gatsby > react-dev-utils > inquirer > lodash:
+        patched: '2020-08-12T02:57:11.693Z'
+    - gatsby > webpack-dev-server > http-proxy-middleware > lodash:
+        patched: '2020-08-12T02:57:11.693Z'
+    - gatsby > @typescript-eslint/eslint-plugin > @typescript-eslint/experimental-utils > @typescript-eslint/typescript-estree > lodash:
+        patched: '2020-08-12T02:57:11.693Z'
+    - gatsby > @typescript-eslint/parser > @typescript-eslint/experimental-utils > @typescript-eslint/typescript-estree > lodash:
+        patched: '2020-08-12T02:57:11.693Z'
+    - gatsby > eslint-plugin-graphql > graphql-config > graphql-import > lodash:
+        patched: '2020-08-12T02:57:11.693Z'
+    - gatsby > gatsby-cli > gatsby-recipes > concurrently > lodash:
+        patched: '2020-08-12T02:57:11.693Z'
+    - gatsby > gatsby-cli > gatsby-recipes > contentful-management > lodash:
+        patched: '2020-08-12T02:57:11.693Z'
+    - gatsby > gatsby-cli > gatsby-recipes > formik > lodash:
+        patched: '2020-08-12T02:57:11.693Z'
+    - gatsby > gatsby-cli > gatsby-recipes > gatsby-telemetry > lodash:
+        patched: '2020-08-12T02:57:11.693Z'
+    - gatsby > gatsby-cli > gatsby-recipes > yup > lodash:
+        patched: '2020-08-12T02:57:11.693Z'
+    - gatsby > webpack-dev-server > portfinder > async > lodash:
+        patched: '2020-08-12T02:57:11.693Z'
+    - gatsby > gatsby-cli > gatsby-recipes > contentful-management > contentful-sdk-core > lodash:
+        patched: '2020-08-12T02:57:11.693Z'
