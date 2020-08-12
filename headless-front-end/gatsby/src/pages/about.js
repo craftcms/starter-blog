@@ -8,7 +8,7 @@ import Matrix from "../components/matrix"
 export const query = graphql`
   query AboutPageQuery {
     craft {
-      about: entries(id: 1) {
+      about: entry(slug: "about") {
         title
 
         ... on Craft_about_about_Entry {
@@ -26,7 +26,7 @@ export const query = graphql`
 `
 
 const About = ({ data }) => {
-  const entry = data.craft.about[0]
+  const entry = data.craft.about
 
   return (
     <Layout>
