@@ -1,0 +1,21 @@
+fieldLayouts:
+  f6203211-ad03-49ec-8423-3d215898f508:
+    tabs:
+      -
+        fields:
+          cdd377e5-a451-46b0-ae80-bc4cee907d3e:
+            required: false
+            sortOrder: 1
+          db95de40-4dec-44cc-9d17-bba2223c91cf:
+            required: false
+            sortOrder: 2
+        name: Content
+        sortOrder: 1
+handle: uploads
+hasUrls: true
+name: Uploads
+settings:
+  path: '@webroot/uploads'
+sortOrder: 1
+type: craft\volumes\Local
+url: '@web/uploads'

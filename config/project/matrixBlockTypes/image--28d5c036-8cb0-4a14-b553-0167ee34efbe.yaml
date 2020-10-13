@@ -1,0 +1,74 @@
+field: e567b6ab-3855-452b-a337-4c119dac4d62
+fieldLayouts:
+  d0baa120-b528-4317-a11e-0a36f80501c3:
+    tabs:
+      -
+        fields:
+          5d2372e2-c220-4af4-80c9-49bb8c85a92e:
+            required: false
+            sortOrder: 2
+          6b203fd7-eca1-4313-8795-efbb5f6a8e63:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  5d2372e2-c220-4af4-80c9-49bb8c85a92e:
+    contentColumnType: string
+    fieldGroup: null
+    handle: position
+    instructions: ''
+    name: Position
+    searchable: true
+    settings:
+      optgroups: true
+      options:
+        -
+          default: '1'
+          label: Wide
+          value: wide
+        -
+          default: ''
+          label: Center
+          value: center
+        -
+          default: ''
+          label: Left
+          value: left
+        -
+          default: ''
+          label: Right
+          value: right
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  6b203fd7-eca1-4313-8795-efbb5f6a8e63:
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: 'Double-click the image thumbnail to apply a caption to an image.'
+    name: Image
+    searchable: true
+    settings:
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:101a70a1-d200-4629-91e5-3425a0937c0e'
+      defaultUploadLocationSubpath: images
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: 'Add an image'
+      singleUploadLocationSource: 'volume:101a70a1-d200-4629-91e5-3425a0937c0e'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: ''
+      validateRelatedElements: ''
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: image
+name: Image
+sortOrder: 3

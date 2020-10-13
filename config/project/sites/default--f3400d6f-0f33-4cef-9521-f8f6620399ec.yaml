@@ -1,0 +1,8 @@
+baseUrl: $DEFAULT_SITE_URL
+handle: default
+hasUrls: true
+language: en-US
+name: 'Craft Blog'
+primary: true
+siteGroup: 90dee5cc-23f1-40ac-ae14-3fa71bebc4dc
+sortOrder: 1

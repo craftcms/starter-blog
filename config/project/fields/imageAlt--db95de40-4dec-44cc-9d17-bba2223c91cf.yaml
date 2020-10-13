@@ -1,0 +1,16 @@
+contentColumnType: text
+fieldGroup: 911477c7-3c92-407b-a9a9-e69ccb74eabb
+handle: imageAlt
+instructions: 'Optional text for the `<img>` tag `alt` attribute.'
+name: 'Image Alt'
+searchable: true
+settings:
+  charLimit: ''
+  code: ''
+  columnType: text
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

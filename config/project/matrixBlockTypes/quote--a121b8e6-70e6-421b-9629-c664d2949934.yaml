@@ -1,0 +1,80 @@
+field: e567b6ab-3855-452b-a337-4c119dac4d62
+fieldLayouts:
+  e25f5116-982d-45a0-ac12-9d3a3f1d07e7:
+    tabs:
+      -
+        fields:
+          09c265f3-2ab1-405d-9111-108e6b54f0fb:
+            required: false
+            sortOrder: 2
+          5fd465cf-5b00-4b4f-8ee0-ce0eac4fd2eb:
+            required: false
+            sortOrder: 3
+          a6ca7d80-fa7f-433b-b6ba-fd9f19791f82:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  09c265f3-2ab1-405d-9111-108e6b54f0fb:
+    contentColumnType: text
+    fieldGroup: null
+    handle: quote
+    instructions: ''
+    name: Quote
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Simple.json
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  5fd465cf-5b00-4b4f-8ee0-ce0eac4fd2eb:
+    contentColumnType: text
+    fieldGroup: null
+    handle: attribution
+    instructions: ''
+    name: Attribution
+    searchable: true
+    settings:
+      charLimit: ''
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  a6ca7d80-fa7f-433b-b6ba-fd9f19791f82:
+    contentColumnType: string
+    fieldGroup: null
+    handle: style
+    instructions: ''
+    name: Style
+    searchable: true
+    settings:
+      optgroups: true
+      options:
+        -
+          default: '1'
+          label: Blockquote
+          value: blockquote
+        -
+          default: ''
+          label: Pullquote
+          value: pullquote
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+handle: quote
+name: Quote
+sortOrder: 2

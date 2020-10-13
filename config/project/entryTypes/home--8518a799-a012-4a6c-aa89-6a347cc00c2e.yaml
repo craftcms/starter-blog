@@ -1,0 +1,21 @@
+fieldLayouts:
+  434b8bff-3f8f-4c04-b4e1-43001b019d73:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: ''
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 031e8547-9981-4367-ad27-178240517ea1
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Content
+        sortOrder: 1
+handle: home
+hasTitleField: false
+name: Home
+section: 4593234a-cdd0-4c54-9931-4eb606b9e7f5
+sortOrder: 1
+titleFormat: '{section.name|raw}'

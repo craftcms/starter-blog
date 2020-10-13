@@ -1,0 +1,20 @@
+contentColumnType: text
+fieldGroup: 911477c7-3c92-407b-a9a9-e69ccb74eabb
+handle: siteIntroduction
+instructions: ''
+name: 'Site Introduction'
+searchable: true
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  cleanupHtml: true
+  columnType: text
+  purifierConfig: ''
+  purifyHtml: '1'
+  redactorConfig: ''
+  removeEmptyTags: '1'
+  removeInlineStyles: '1'
+  removeNbsp: '1'
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

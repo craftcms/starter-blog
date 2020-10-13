@@ -1,0 +1,25 @@
+fieldLayouts:
+  abfbb4c4-848b-4bbb-a8ab-fa5edb8941b6:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Title
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 5e76b2e3-1eae-4bbc-93f4-122fe4526b02
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: e567b6ab-3855-452b-a337-4c119dac4d62
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Content
+        sortOrder: 1
+handle: blog
+hasTitleField: true
+name: Blog
+section: db2dff45-19b4-479c-8cba-ab88e7e7d2fd
+sortOrder: 1
+titleFormat: ''

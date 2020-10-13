@@ -74,7 +74,11 @@ export const query = graphql`
   }
 
   fragment EmbedFragment on Craft_bodyContent_embed_BlockType {
-    embed
+    embed {
+      code
+      providerName
+      providerUrl
+    }
     typeHandle
   }
 `
