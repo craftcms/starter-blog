@@ -13,9 +13,10 @@ exports.createPages = ({ graphql, actions }) => {
   return graphql(
     `
       query BlogPostsQuery {
-        craft {
-          blogPosts: entries(section: "blog") {
+        blogPosts: allCraftBlogBlogEntry {
+          nodes {
             id
+            remoteId
             slug
           }
         }
@@ -27,7 +28,7 @@ exports.createPages = ({ graphql, actions }) => {
       throw result.errors
     }
 
-    const posts = result.data.craft.blogPosts
+    const posts = result.data.blogPosts.nodes
 
     // Create blog post pages.
     posts.forEach(post => {
@@ -36,7 +37,6 @@ exports.createPages = ({ graphql, actions }) => {
         path: `/blog/${post.slug}`,
         component: blogPostTemplate,
         context: {
-          id: Number(post.id),
           slug: post.slug,
         },
       })

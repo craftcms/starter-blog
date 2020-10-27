@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c70dc7a2933cd729f8046dd74d59e68a",
+    "content-hash": "6563ae069079d9f0ef836eeb4c1a4b6e",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -581,6 +581,58 @@
                 "yii2"
             ],
             "time": "2020-10-20T22:27:53+00:00"
+        },
+        {
+            "name": "craftcms/craft-gatsby",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/craftcms/craft-gatsby.git",
+                "reference": "5175185a76d766aef059aafecdafee264f5cc01e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/craftcms/craft-gatsby/zipball/5175185a76d766aef059aafecdafee264f5cc01e",
+                "reference": "5175185a76d766aef059aafecdafee264f5cc01e",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.5.11"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Gatsby",
+                "handle": "gatsby",
+                "developerUrl": "https://craftcms.com/"
+            },
+            "autoload": {
+                "psr-4": {
+                    "craft\\gatsby\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pixel & Tonic, Inc. <support@pixelandtonic.com>",
+                    "homepage": "https://craftcms.com/"
+                }
+            ],
+            "description": "Plugin for enabling support for the Gatsby Craft CMS source plugin.",
+            "keywords": [
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms",
+                "gatsby"
+            ],
+            "support": {
+                "docs": "https://github.com/craftcms/craft-gatsby",
+                "issues": "https://github.com/craftcms/craft-gatsby/issues",
+                "source": "https://github.com/craftcms/craft-gatsby/tree/master"
+            },
+            "time": "2020-10-23T13:50:08+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
@@ -5604,7 +5656,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "craftcms/craft-gatsby": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

@@ -1,10 +1,14 @@
-dateModified: 1603808036
+dateModified: 1603814335
 email:
   fromEmail: sam@craftcms.com
   fromName: 'Craft Blog'
   transportType: craft\mail\transportadapters\Sendmail
 plugins:
   assetrev:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  gatsby:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0

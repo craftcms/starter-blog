@@ -31,23 +31,7 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: "gatsby-source-graphql",
-      options: {
-        // This type will contain remote schema Query type
-        typeName: "Craft",
-        // This is field under which it's accessible
-        fieldName: "craft",
-        // Url to query from
-        url: process.env.CRAFT_API_URL,
-        // HTTP headers
-        headers: {
-          // You should have created a .env file containing your GraphQL API URL and token
-          // If you don't have a .env file, refer to the installation docs
-          Authorization: `Bearer ${process.env.CRAFT_API_TOKEN}`,
-        },
-      },
-    },
+    `gatsby-source-craftcms`,
     // SASS Processing
     {
       resolve: `gatsby-plugin-sass`,

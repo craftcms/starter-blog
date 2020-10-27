@@ -8,29 +8,24 @@ import Matrix from "../components/matrix"
 import { getPrettyDate, getStandardDate } from "../utils/dates"
 
 export const query = graphql`
-  query BlogPostQuery($id: [Craft_QueryArgument]) {
-    craft {
-      entry(id: $id) {
-        title
-        postDate
-
-        ... on Craft_blog_blog_Entry {
-          id
-          bodyContent {
-            ...RichTextFragment
-            ...QuoteFragment
-            ...ImageFragment
-            ...ImageCarouselFragment
-            ...EmbedFragment
-          }
-        }
+  query BlogPostQuery($slug: String!) {
+    entry: craftBlogBlogEntry(slug: { eq: $slug }) {
+      id
+      remoteId
+      title
+      postDate
+      bodyContent {
+        ...RichTextFragment
+        ...QuoteFragment
+        ...ImageFragment
+        ...ImageCarouselFragment
+        ...EmbedFragment
       }
     }
   }
 `
 
-const BlogPostPage = ({ data }) => {
-  const entry = data.craft.entry
+const BlogPostPage = ({ data: { entry } }) => {
   return (
     <Layout>
       <SEO title={entry.title} />
