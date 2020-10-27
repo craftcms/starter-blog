@@ -39,7 +39,6 @@ When you install this starter, you’ll see that it’s running Craft Solo which
   * [Tailwind Development Flow](#tailwind-development-flow)
 * [Go headless with GraphQL](#go-headless-with-graph-ql)
   * [Switch to Pro trial](#switch-to-pro-trial)
-  * [Switch to Pro trial](#switch-to-pro-trial)
   * [Headless Mode](#headless-mode)
   * [Set up a GraphQL api endpoint](#set-up-a-graph-ql-api-endpoint)
   * [Create GraphQL schemas and private tokens](#create-graph-ql-schemas-and-private-tokens)
