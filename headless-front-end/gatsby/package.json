@@ -12,7 +12,7 @@
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-sass": "^2.3.12",
     "gatsby-plugin-sharp": "^2.6.28",
-    "gatsby-source-craftcms": "git+https://github.com/craftcms/gatsby-source-craftcms.git",
+    "gatsby-source-craft": "^1.0.0-beta.1",
     "gatsby-source-filesystem": "^2.3.25",
     "gatsby-transformer-sharp": "^2.5.14",
     "nuka-carousel": "^4.7.0",
