@@ -15,7 +15,6 @@ exports.createPages = ({ graphql, actions }) => {
       query BlogPostsQuery {
         blogPosts: allCraftBlogBlogEntry {
           nodes {
-            id
             remoteId
             slug
           }
