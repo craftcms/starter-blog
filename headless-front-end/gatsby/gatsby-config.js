@@ -31,7 +31,7 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-source-craftcms`,
+    `gatsby-source-craft`,
     // SASS Processing
     {
       resolve: `gatsby-plugin-sass`,

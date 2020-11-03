@@ -1,4 +1,4 @@
-dateModified: 1603814335
+dateModified: 1604434684
 email:
   fromEmail: sam@craftcms.com
   fromName: 'Craft Blog'
@@ -8,10 +8,12 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
-  gatsby:
+  gatsby-helper:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+    settings:
+      previewServerUrl: $GATSBY_DEV_SERVER
   oembed:
     edition: standard
     enabled: true

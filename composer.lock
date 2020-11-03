@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "529e869873c3db9208482af731dd8e13",
+    "content-hash": "7080a48891dae777454c75b012e9f56d",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -625,22 +625,21 @@
         },
         {
             "name": "craftcms/gatsby-helper",
-            "version": "dev-master",
+            "version": "1.0.0-beta.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/gatsby-helper.git",
-                "reference": "fbdae5cd85e75f22b49faffe9cdbddbff87de299"
+                "reference": "172bfedbbf906efbc217d2adfa55661822da2962"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/gatsby-helper/zipball/fbdae5cd85e75f22b49faffe9cdbddbff87de299",
-                "reference": "fbdae5cd85e75f22b49faffe9cdbddbff87de299",
+                "url": "https://api.github.com/repos/craftcms/gatsby-helper/zipball/172bfedbbf906efbc217d2adfa55661822da2962",
+                "reference": "172bfedbbf906efbc217d2adfa55661822da2962",
                 "shasum": ""
             },
             "require": {
                 "craftcms/cms": "^3.5.11"
             },
-            "default-branch": true,
             "type": "craft-plugin",
             "extra": {
                 "name": "Gatsby Helper",
@@ -652,6 +651,7 @@
                     "craft\\gatsbyhelper\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -663,8 +663,8 @@
             ],
             "description": "Plugin for enabling support for the Gatsby Craft CMS source plugin.",
             "keywords": [
+                "Craft",
                 "cms",
-                "craft",
                 "craft-plugin",
                 "craftcms",
                 "gatsby"
@@ -672,9 +672,9 @@
             "support": {
                 "docs": "https://github.com/craftcms/gatsby-helper",
                 "issues": "https://github.com/craftcms/gatsby-helper/issues",
-                "source": "https://github.com/craftcms/gatsby-helper/tree/master"
+                "source": "https://github.com/craftcms/gatsby-helper/tree/1.0.0-beta.1"
             },
-            "time": "2020-11-03T20:15:00+00:00"
+            "time": "2020-11-03T21:13:08+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
@@ -6065,7 +6065,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "craftcms/gatsby-helper": 20
+        "craftcms/gatsby-helper": 10
     },
     "prefer-stable": false,
     "prefer-lowest": false,
