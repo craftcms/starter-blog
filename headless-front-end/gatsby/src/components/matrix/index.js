@@ -5,12 +5,14 @@ import { graphql } from 'gatsby'
 import Image from "./types/image"
 import ImageCarousel from "./types/imageCarousel"
 import Quote from "./types/quote"
+//import Embed from "./types/embed"
 
 const components = {
   richText: RichText,
   image: Image,
   imageCarousel: ImageCarousel,
   quote: Quote,
+  //embed: Embed
 }
 
 const Block = props => {

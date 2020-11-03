@@ -5,22 +5,17 @@ import { getPrettyDate, getStandardDate } from "../utils/dates"
 
 export const query = graphql`
   query WhateverQuery($limit: Int, $skip: Int) {
-    craft {
-      blogPosts: entries(section: "blog", limit: $limit, offset: $skip) {
+    blogPosts: allCraftBlogBlogEntry(limit: $limit, skip: $skip) {
+      nodes {
         title
         slug
         postDate
-
-        ... on Craft_blog_blog_Entry {
-          summary
-        }
+        summary
       }
+    }
 
-      home: entry(section: "home") {
-        ... on Craft_home_home_Entry {
-          siteIntroduction
-        }
-      }
+    home: craftHomeHomeEntry {
+      siteIntroduction
     }
 
     site {
@@ -31,25 +26,22 @@ export const query = graphql`
   }
 `
 
-const IndexPage = ({ data, pageContext }) => {
-  const { craft } = data
-  const posts = data.craft.blogPosts
-
+const IndexPage = ({ data: { blogPosts, home, site }, pageContext }) => {
   return (
     <Layout>
       <h1 className="text-4xl text-black font-display my-4">
-        <Link to="/">{data.site.siteMetadata.title}</Link>
+        <Link to="/">{site.siteMetadata.title}</Link>
       </h1>
 
       {pageContext.currentPage === 1 && (
         <div
           dangerouslySetInnerHTML={{
-            __html: craft.home.siteIntroduction,
+            __html: home.siteIntroduction,
           }}
         ></div>
       )}
 
-      {posts.map((blogEntry, i) => (
+      {blogPosts.nodes.map((blogEntry, i) => (
         <article className="mt-8" key={i}>
           <h2 className="text-2xl font-display">
             <Link className="text-blue-600" to={`/blog/${blogEntry.slug}`}>

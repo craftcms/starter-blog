@@ -22,13 +22,13 @@ Make sure you’re in this `/headless-front-end/gatsby` directory in your termin
 npm install
 ```
 
-###  Configure Craft as your data source
+### Configure Craft as your data source
 
-Craft should be running under the Pro edition to enable GraphQL support. Before proceeding, make sure you have completed the steps in the headless section of the root-level [README](../../README.md). 
+Craft should be running under the Pro edition to enable GraphQL support. Before proceeding, make sure you have completed the steps in the headless section of the root-level [README](../../README.md).
 
 1. Log into Craft’s control panel and go to GraphQL → Schemas.
-1. Create a new schema.
-1. Name it, set permissions, and copy the auto-generated token before you save it
+2. Create a new schema.
+3. Name it, set permissions, and copy the auto-generated token before you save it
 
 ### Create `.env`
 
@@ -46,6 +46,12 @@ CRAFT_API_URL=http://your-local-site.test/api
 ```
 
 The `/api` endpoint route is something you set up in Craft’s `/config/routes.php` file. You might have chosen a different route. If so, then use the route you defined.
+
+If you’re using Craft’s [live preview feature with Gatsby](https://github.com/craftcms/gatsby-source-craft#live-preview), you’ll also need to add one more line to your `.env` file after everything’s configured:
+
+```bash
+ENABLE_GATSBY_REFRESH_ENDPOINT=true
+```
 
 ### Start developing!
 
