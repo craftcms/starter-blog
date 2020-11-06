@@ -1,6 +1,6 @@
 # Headless Craft CMS Blog + Gatsby Starter
 
-This Gatsby starter is intended for use with Craft’s blog starter project as the back-end. If you haven’t set it up yet, start with the root-level [README](../../README.md) to get Craft up and running. Be sure to follow the instructions in the headless section.
+This Gatsby starter is intended for use with Craft’s blog starter project as the back end. If you haven’t set it up yet, start with the root-level [README](../../README.md) to get Craft up and running. Be sure to follow the instructions in the headless section.
 
 ## Install the dependencies
 
@@ -28,7 +28,7 @@ Craft should be running under the Pro edition to enable GraphQL support. Before 
 
 1. Log into Craft’s control panel and go to GraphQL → Schemas.
 2. Create a new schema.
-3. Name it, set permissions, and copy the auto-generated token before you save it
+3. Name the schema, set permissions, enable **Allow discovery of sourcing data for Gatsby**, and copy the auto-generated token before you save it.
 
 ### Create `.env`
 
@@ -41,17 +41,19 @@ cp .env.example .env
 Update the `.env` file:
 
 ```bash
-CRAFT_API_TOKEN=[the token you got from Craft’s Control Panel]
-CRAFT_API_URL=http://your-local-site.test/api
+CRAFTGQL_TOKEN=[the token you got from Craft’s control panel]
+CRAFTGQL_URL=http://your-local-site.test/api
 ```
 
-The `/api` endpoint route is something you set up in Craft’s `/config/routes.php` file. You might have chosen a different route. If so, then use the route you defined.
+The `/api` endpoint route is something [you set up](https://craftcms.com/docs/3.x/graphql.html#create-your-api-endpoint) in Craft’s `/config/routes.php` file. You might have chosen a different route. If so, then use the route you defined.
 
-If you’re using Craft’s [live preview feature with Gatsby](https://github.com/craftcms/gatsby-source-craft#live-preview), you’ll also need to add one more line to your `.env` file after everything’s configured:
+If you’re using Craft’s [live preview feature with Gatsby](https://github.com/craftcms/gatsby-source-craft#live-preview), you’ll also need to add one more line to your `.env` file:
 
 ```bash
 ENABLE_GATSBY_REFRESH_ENDPOINT=true
 ```
+
+For more in-depth setup instructions, see https://github.com/craftcms/gatsby-source-craft.
 
 ### Start developing!
 
