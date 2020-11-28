@@ -13,7 +13,7 @@
     "gatsby-plugin-sass": "^2.4.2",
     "gatsby-plugin-sharp": "^2.7.1",
     "gatsby-source-craft": "^1.0.0-beta.1.1",
-    "gatsby-source-filesystem": "^2.4.1",
+    "gatsby-source-filesystem": "^2.4.2",
     "gatsby-transformer-sharp": "^2.5.17",
     "nuka-carousel": "^4.7.1",
     "prop-types": "^15.7.2",
