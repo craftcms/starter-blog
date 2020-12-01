@@ -5,7 +5,7 @@
   "require": {
     "clubstudioltd/craft-asset-rev": "^6.0",
     "craftcms/cms": "^3.4.3",
-    "craftcms/gatsby-helper": "^1.0.0-beta.1",
+    "craftcms/gatsby-helper": "^1.0.0-beta.2",
     "craftcms/redactor": "^2.5.0",
     "nystudio107/craft-typogrify": "^1.1",
     "vlucas/phpdotenv": "^2.4.0",
