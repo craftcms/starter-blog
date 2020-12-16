@@ -15,7 +15,7 @@
     "gatsby-source-craft": "^1.0.0-beta.2",
     "gatsby-source-filesystem": "^2.6.1",
     "gatsby-transformer-sharp": "^2.7.0",
-    "nuka-carousel": "^4.7.1",
+    "nuka-carousel": "^4.7.3",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
