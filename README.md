@@ -116,7 +116,7 @@ composer install
 Start by running this:
 
 ```bash
-./craft setup
+php craft setup
 ```
 
 That command will generate a random value for `SECURITY_KEY` in the `.env` file. It will also ask you for database credentials, update the `.env` file accordingly, and test the database connection.
@@ -124,7 +124,7 @@ That command will generate a random value for `SECURITY_KEY` in the `.env` file.
 You’ll be asked if you’d like to install Craft right away. If you choose not to, you can come back later and run:
 
 ```bash
-./craft install
+php craft install
 ```
 
 You’ll be asked for things like a username, email, password, and more. These values will be written to the `.env` file and the installer will run.
@@ -145,7 +145,7 @@ After the installer runs you should be able to see log into the Control Panel at
 
 ### Create some content
 
-This starter project ships without any content so you get to start from scratch.  The Control Panel should feel pretty intuitive. Start by adding some content and watch how the site comes together. [Unsplash](https://unsplash.com/) is a great place to grab free images if you need some to play with.
+This starter project ships without any content so you get to start from scratch. The Control Panel should feel pretty intuitive. Start by adding some content and watch how the site comes together. [Unsplash](https://unsplash.com/) is a great place to grab free images if you need some to play with.
 
 When you add an image with an image field, you’ll see a thumbnail of it. Double-click that thumbnail to reveal editing options.
 
