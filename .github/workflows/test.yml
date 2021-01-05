@@ -50,7 +50,7 @@ jobs:
         ports:
           - 8080:80
         volumes:
-          - .:/app
+          - nginx_volume:/app
 
     steps:
       - uses: actions/checkout@v2
