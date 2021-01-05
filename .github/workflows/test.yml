@@ -48,7 +48,7 @@ jobs:
       nginx:
         image: craftcms/nginx:7.4
         ports:
-          - 8080:80
+          - 80:80
         volumes:
           - nginx_volume:/app
 
