@@ -70,11 +70,14 @@ jobs:
         run: php craft install/craft --username=admin --password=password --email=test@craftcms.com --site-name=Craft Blog --site-url=$DEFAULT_SITE_URL
 
       - name: Add Craft demo content
-        run: php craft migrate
+        run: php craft migrate/up --track=content --interactive=0
 
       - name: Prepare Gatsby environment
         run: cp .github/workflows/.env-gatsby headless-front-end/gatsby/.env
 
+      - name: Install Gatsby CLI
+        run: npm install -g gatsby-cli
+        
       - name: Install Gatsby dependencies
         run: node --version && cd headless-front-end/gatsby && npm install
 
