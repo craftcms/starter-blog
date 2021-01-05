@@ -1,0 +1,81 @@
+name: Test Build
+
+on:
+  push:
+    branches:
+      - '*'
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  test:
+    name: PHP ${{ matrix.php-versions }} + ${{ matrix.db }} on ${{ matrix.operating-system }}
+    runs-on: ${{ matrix.operating-system }}
+
+    strategy:
+      matrix:
+        operating-system: [ubuntu-latest]
+        php-versions: ["7.4"]
+        db: ["mysql", "pgsql"]
+    env:
+      DEFAULT_COMPOSER_FLAGS: "--no-interaction --no-ansi --no-progress --no-suggest"
+    services:
+      mysql:
+        image: mysql:5.7
+        env:
+          MYSQL_ALLOW_EMPTY_PASSWORD: false
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: test
+        ports:
+          - 3306:3306
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+      redis:
+        image: redis
+        ports:
+          - 6379:6379
+        options: --health-cmd="redis-cli ping" --health-interval=10s --health-timeout=5s --health-retries=3
+      postgres:
+        image: postgres:12
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: test
+        ports:
+          - 5432:5432
+        options: --health-cmd="pg_isready" --health-interval=10s --health-timeout=5s --health-retries=3
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup PHP Action
+        uses: shivammathur/setup-php@2.5.0
+        with:
+          php-version: ${{ matrix.php-versions }}
+          extensions: mbstring, intl, gd, imagick, zip, dom, pdo_mysql, pdo_pgsql, fileinfo
+          ini-values: post_max_size=256M
+          tools: php-cs-fixer, phpunit
+
+      - name: Validate composer.json and composer.lock
+        run: composer validate
+
+      - name: Install Composer dependencies
+        run: composer install --prefer-dist --no-progress --no-suggest
+
+      - name: Prepare Craft environment
+        run: cp .github/workflows/.env.${{ matrix.db }} .env
+
+      - name: Install Craft
+        run: php craft install/craft --username=admin --password=password --email=test@craftcms.com --site-name=Craft Blog --site-url=$DEFAULT_SITE_URL
+
+      - name: Add Craft demo content
+        run: php craft migrate
+
+      - name: Install Gatsby dependencies
+        run: npm install
+
+      - name: Prepare Gatsby environment
+        run: cp .github/workflows/.env-gatsby headless-front-end/gatsby/.env
+
+      - name: Build Gatsby site
+        run: gatsby build
