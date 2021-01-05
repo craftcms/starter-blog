@@ -18,7 +18,7 @@ jobs:
       matrix:
         operating-system: [ubuntu-latest]
         php-versions: ["7.4"]
-        db: ["mysql", "pgsql"]
+        db: ["mysql"]
     env:
       DEFAULT_COMPOSER_FLAGS: "--no-interaction --no-ansi --no-progress --no-suggest"
     services:
@@ -48,7 +48,7 @@ jobs:
       nginx:
         image: craftcms/nginx:7.4
         ports:
-          - 80:80
+          - 80:8080
         volumes:
           - nginx_volume:/app
 
