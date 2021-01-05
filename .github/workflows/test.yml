@@ -75,11 +75,12 @@ jobs:
       - name: Prepare Gatsby environment
         run: cp .github/workflows/.env-gatsby headless-front-end/gatsby/.env
 
-      - name: Install Gatsby CLI
-        run: npm install -g gatsby-cli
-        
       - name: Install Gatsby dependencies
         run: node --version && cd headless-front-end/gatsby && npm install
 
       - name: Build Gatsby site
-        run: gatsby build
+        uses: jzweifel/gatsby-cli-github-action@master
+        env:
+          GATSBY_PROJECT_PATH: "./headless-front-end/gatsby"
+        with:
+          gatsby-arg: build
