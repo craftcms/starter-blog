@@ -8,6 +8,9 @@
  * @see \craft\config\GeneralConfig
  */
 
+// for testing
+define('CRAFT_EPHEMERAL', getenv('CRAFT_EPHEMERAL'));
+
 return [
     // Global settings
     '*' => [
@@ -37,13 +40,6 @@ return [
             // Lets `./craft clear-caches all` clear CP resources cache
             '@webroot' => dirname(__DIR__) . '/web',
         ]
-    ],
-
-    // Test environment settings
-    'test' => [
-        // Set this to `false` to prevent administrative changes from being made on production
-        'allowAdminChanges' => false,
-        'devMode' => false,
     ],
 
     // Dev environment settings
