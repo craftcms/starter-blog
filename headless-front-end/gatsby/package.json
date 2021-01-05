@@ -20,7 +20,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^5.2.1",
-    "snyk": "^1.436.0"
+    "snyk": "^1.437.0"
   },
   "devDependencies": {
     "@babel/polyfill": "^7.10.4",
