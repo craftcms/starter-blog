@@ -47,10 +47,9 @@ jobs:
         options: --health-cmd="pg_isready" --health-interval=10s --health-timeout=5s --health-retries=3
       nginx:
         image: craftcms/nginx:7.4
+        options: -v ${{ github.workspace }}:/app --name nginx
         ports:
           - 8080:8080
-        volumes:
-          - ${{ GITHUB_WORKSPACE }}:/app
 
     steps:
       - uses: actions/checkout@v2
@@ -73,7 +72,7 @@ jobs:
         run: cp .github/workflows/.env.${{ matrix.db }} .env
 
       - name: Install Craft
-        run: php craft install/craft --username=admin --password=password --email=test@craftcms.com --site-name=Craft Blog --site-url=$DEFAULT_SITE_URL
+        run: php craft install/craft --username=admin --password=password --email=test@craftcms.com --site-name=Craft Blog --site-url=$DEFAULT_SITE_URL --interactive=0
 
       - name: Add Craft demo content
         run: php craft migrate/up --track=content --interactive=0
