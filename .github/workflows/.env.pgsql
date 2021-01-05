@@ -4,3 +4,4 @@ DB_USER="postgres"
 DB_PASSWORD="postgres"
 DB_SCHEMA="public"
 DB_TABLE_PREFIX=""
+CRAFT_EPHEMERAL=1
