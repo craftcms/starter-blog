@@ -77,6 +77,9 @@ jobs:
       - name: Add Craft demo content
         run: php craft migrate/up --track=content --interactive=0
 
+      - name: Ping GraphQL endpoint
+        run: curl http://localhost:8080/api
+
       - name: Prepare Gatsby environment
         run: cp .github/workflows/.env-gatsby headless-front-end/gatsby/.env
 
