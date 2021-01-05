@@ -66,7 +66,7 @@ jobs:
         run: composer validate
 
       - name: Install Composer dependencies
-        run: composer install --prefer-dist --no-progress --no-suggest
+        run: composer install --prefer-dist --no-progress
 
       - name: Prepare Craft environment
         run: cp .github/workflows/.env.${{ matrix.db }} .env
