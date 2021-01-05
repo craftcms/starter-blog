@@ -39,6 +39,13 @@ return [
         ]
     ],
 
+    // Test environment settings
+    'test' => [
+        // Set this to `false` to prevent administrative changes from being made on production
+        'allowAdminChanges' => false,
+        'devMode' => false,
+    ],
+
     // Dev environment settings
     'dev' => [
         // Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
