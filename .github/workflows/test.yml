@@ -80,7 +80,7 @@ jobs:
 
       - name: Ping GraphQL endpoint
         run: |-
-          curl -s -X POST -H "Content-Type: application/json" --data '{ "query": "{ ping }" }' http://127.0.0.1/api
+          curl -s -X POST -H "Content-Type: application/json" --data '{ "query": "{ ping }" }' http://localhost/api
 
       - name: Prepare Gatsby environment
         run: cp .github/workflows/.env-gatsby headless-front-end/gatsby/.env
