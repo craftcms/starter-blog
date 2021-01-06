@@ -9,7 +9,7 @@
  */
 
 // for testing
-define('CRAFT_EPHEMERAL', getenv('CRAFT_EPHEMERAL'));
+define('CRAFT_EPHEMERAL', true);
 
 return [
     // Global settings
