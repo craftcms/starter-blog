@@ -76,7 +76,7 @@ jobs:
         run: php craft migrate/up --track=content --interactive=0
 
       - name: Set Craft writable folder permissions
-        run: chmod 775 config && chmod 775 storage
+        run: chmod 777 config && chmod 777 storage
 
       - name: Ping GraphQL endpoint
         run: |-
