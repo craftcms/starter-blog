@@ -12,8 +12,7 @@ on:
 jobs:
   test:
     name: Gatsby + Craft with PHP ${{ matrix.php-versions }} + ${{ matrix.db }}
-    runs-on: ${{ matrix.operating-system }}
-
+    container: ubuntu-latest
     strategy:
       matrix:
         operating-system: [ubuntu-latest]
