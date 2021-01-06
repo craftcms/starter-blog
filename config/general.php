@@ -8,9 +8,6 @@
  * @see \craft\config\GeneralConfig
  */
 
-// for testing
-define('CRAFT_EPHEMERAL', true);
-
 return [
     // Global settings
     '*' => [
