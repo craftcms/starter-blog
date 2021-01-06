@@ -28,12 +28,12 @@ jobs:
           MYSQL_DATABASE: test
         ports:
           - 3306:3306
-        options: --name mysql --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
       redis:
         image: redis
         ports:
           - 6379:6379
-        options: --name redis --health-cmd="redis-cli ping" --health-interval=10s --health-timeout=5s --health-retries=3
+        options: --health-cmd="redis-cli ping" --health-interval=10s --health-timeout=5s --health-retries=3
       postgres:
         image: postgres:12
         env:
@@ -42,10 +42,10 @@ jobs:
           POSTGRES_DB: test
         ports:
           - 5432:5432
-        options: --name postgres --health-cmd="pg_isready" --health-interval=10s --health-timeout=5s --health-retries=3
+        options: --health-cmd="pg_isready" --health-interval=10s --health-timeout=5s --health-retries=3
       nginx:
         image: craftcms/nginx:7.4
-        options: --name nginx --volume ${{ github.workspace }}:/app --user www-data:www-data
+        options: --volume ${{ github.workspace }}:/app --user www-data:www-data
         ports:
           - 8080:8080
 
