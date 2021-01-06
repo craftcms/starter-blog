@@ -3,9 +3,6 @@
  * Craft web bootstrap file
  */
 
-// for testing
-define('CRAFT_EPHEMERAL', 1);
-
 // Set path constants
 define('CRAFT_BASE_PATH', dirname(__DIR__));
 define('CRAFT_VENDOR_PATH', CRAFT_BASE_PATH.'/vendor');

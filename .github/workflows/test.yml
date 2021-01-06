@@ -45,7 +45,7 @@ jobs:
         options: --health-cmd="pg_isready" --health-interval=10s --health-timeout=5s --health-retries=3
       nginx:
         image: craftcms/nginx:7.4
-        options: -v ${{ github.workspace }}:/app --name nginx
+        options: -v ${{ github.workspace }}:/app --name nginx --user www-data:www-data
         ports:
           - 8080:8080
 
