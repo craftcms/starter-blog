@@ -12,12 +12,10 @@ on:
 jobs:
   test:
     name: Gatsby + Craft with PHP ${{ matrix.php-versions }} + ${{ matrix.db }}
-    runs-on: ubuntu-latest
-    container:
-      image: craftcms/cli:7.4
-      options: --volume ${{ github.workspace }}:/app --user www-data:www-data
+    runs-on: ${{ matrix.operating-system }}
     strategy:
       matrix:
+        operating-system: [ubuntu-latest]
         php-versions: ["7.4"]
         db: ["mysql"]
     services:
@@ -48,6 +46,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Setup PHP Action
+        uses: shivammathur/setup-php@2.5.0
+        with:
+          php-version: ${{ matrix.php-versions }}
+          extensions: mbstring, intl, gd, imagick, zip, dom, pdo_mysql, pdo_pgsql, fileinfo
+          ini-values: post_max_size=256M
+          tools: php-cs-fixer, phpunit
+
       - name: Prepare Craft environment
         run: cp .github/workflows/.env.${{ matrix.db }} .env
 
@@ -56,6 +62,9 @@ jobs:
 
       - name: Install Composer dependencies
         run: composer install --prefer-dist --no-progress
+      
+      - name: Add Docker database host aliases to build environment
+        run: sudo echo "127.0.0.1 postgres mysql" | sudo tee -a /etc/hosts
 
       - name: Ping MySQL container
         run: ping -c 1 mysql
