@@ -97,7 +97,8 @@ jobs:
       
       - name: Upload Craft logs
         uses: actions/upload-artifact@v2
+        if: failure()
         with:
           name: craft-logs
-          path: storage/logs
+          path: storage/logs/*.log
 
