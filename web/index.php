@@ -4,7 +4,7 @@
  */
 
  // for testing
-define('CRAFT_EPHEMERAL', getenv('CRAFT_EPHEMERAL'));
+define('CRAFT_EPHEMERAL', true);
 
 // Set path constants
 define('CRAFT_BASE_PATH', dirname(__DIR__));
