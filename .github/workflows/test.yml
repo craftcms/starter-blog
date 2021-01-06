@@ -4,10 +4,9 @@ on:
   push:
     branches:
       - '*'
-      - 'feature/content-migration'
   pull_request:
     branches:
-      - master
+      - '*'
 
 jobs:
   test:
