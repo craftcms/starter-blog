@@ -69,6 +69,9 @@ jobs:
       - name: Install Composer dependencies
         run: composer install --prefer-dist --no-progress
 
+      - name: Ping MySQL container
+        run: ping -c 1 mysql
+
       - name: Install Craft
         run: php craft install/craft --username=admin --password=password --email=test@craftcms.com --site-name=Craft Blog --site-url=$DEFAULT_SITE_URL --interactive=0
 
