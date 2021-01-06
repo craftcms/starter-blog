@@ -27,7 +27,7 @@ jobs:
           MYSQL_DATABASE: test
         ports:
           - 3306:3306
-        options: --hostname="mysql" --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
       postgres:
         image: postgres:12
         env:
@@ -36,7 +36,7 @@ jobs:
           POSTGRES_DB: test
         ports:
           - 5432:5432
-        options: --hostname="postgres" --health-cmd="pg_isready" --health-interval=10s --health-timeout=5s --health-retries=3
+        options: --health-cmd="pg_isready" --health-interval=10s --health-timeout=5s --health-retries=3
       nginx:
         image: craftcms/nginx:7.4
         options: --volume ${{ github.workspace }}:/app --user www-data:www-data
@@ -64,7 +64,7 @@ jobs:
         run: composer install --prefer-dist --no-progress
       
       - name: Add Docker database host aliases to build environment
-        run: sudo echo "127.0.0.1 postgres mysql" | sudo tee -a /etc/hosts
+        run: sudo echo "127.0.0.1 nginx postgres mysql" | sudo tee -a /etc/hosts
 
       - name: Ping MySQL container
         run: ping -c 1 mysql
@@ -80,7 +80,7 @@ jobs:
 
       - name: Ping GraphQL endpoint
         run: |-
-          curl -s -X POST -H "Content-Type: application/json" --data '{ "query": "{ ping }" }' http://localhost/api
+          curl -s -X POST -H "Content-Type: application/json" --data '{ "query": "{ ping }" }' http://nginx/api
 
       - name: Prepare Gatsby environment
         run: cp .github/workflows/.env-gatsby headless-front-end/gatsby/.env
