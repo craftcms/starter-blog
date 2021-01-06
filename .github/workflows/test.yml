@@ -13,7 +13,9 @@ jobs:
   test:
     name: Gatsby + Craft with PHP ${{ matrix.php-versions }} + ${{ matrix.db }}
     runs-on: ubuntu-latest
-    container: craftcms/cli:7.4
+    container:
+      image: craftcms/cli:7.4
+      options: --volume ${{ github.workspace }}:/app --user www-data:www-data
     strategy:
       matrix:
         php-versions: ["7.4"]
@@ -28,11 +30,6 @@ jobs:
         ports:
           - 3306:3306
         options: --hostname="mysql" --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
-      redis:
-        image: redis
-        ports:
-          - 6379:6379
-        options: --hostname="redis" --health-cmd="redis-cli ping" --health-interval=10s --health-timeout=5s --health-retries=3
       postgres:
         image: postgres:12
         env:
@@ -50,14 +47,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
-      - name: Setup PHP Action
-        uses: shivammathur/setup-php@2.5.0
-        with:
-          php-version: ${{ matrix.php-versions }}
-          extensions: mbstring, intl, gd, imagick, zip, dom, pdo_mysql, pdo_pgsql, fileinfo
-          ini-values: post_max_size=256M
-          tools: php-cs-fixer, phpunit
 
       - name: Prepare Craft environment
         run: cp .github/workflows/.env.${{ matrix.db }} .env
