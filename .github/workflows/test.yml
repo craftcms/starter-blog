@@ -19,8 +19,6 @@ jobs:
         operating-system: [ubuntu-latest]
         php-versions: ["7.4"]
         db: ["mysql"]
-    env:
-      DEFAULT_COMPOSER_FLAGS: "--no-interaction --no-ansi --no-progress --no-suggest"
     services:
       mysql:
         image: mysql:5.7
