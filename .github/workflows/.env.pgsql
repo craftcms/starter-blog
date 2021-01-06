@@ -3,3 +3,4 @@ DB_DSN=pgsql:host=postgres;port=5432;dbname=test
 DB_USER=postgres
 DB_PASSWORD=postgres
 DB_SCHEMA=public
+SECURITY_KEY=12345

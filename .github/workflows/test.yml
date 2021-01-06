@@ -94,7 +94,7 @@ jobs:
           GATSBY_PROJECT_PATH: "./headless-front-end/gatsby"
         with:
           gatsby-arg: build
-      
+
       - name: Upload Craft logs
         uses: actions/upload-artifact@v2
         if: failure()
