@@ -86,14 +86,10 @@ jobs:
         run: cp .github/workflows/.env-gatsby headless-front-end/gatsby/.env
 
       - name: Install Gatsby dependencies
-        run: node --version && cd headless-front-end/gatsby && npm install
+        run: node --version && cd headless-front-end/gatsby && npm install && npm install --global gatsby-cli
 
       - name: Build Gatsby site
-        uses: jzweifel/gatsby-cli-github-action@master
-        env:
-          GATSBY_PROJECT_PATH: "./headless-front-end/gatsby"
-        with:
-          gatsby-arg: build
+        run: gatsby build
 
       - name: Upload Craft logs
         uses: actions/upload-artifact@v2
