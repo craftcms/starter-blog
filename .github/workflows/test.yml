@@ -18,7 +18,7 @@ jobs:
       matrix:
         operating-system: [ubuntu-latest]
         php-versions: ["7.4"]
-        db: ["pgsql"]
+        db: ["mysql"]
     services:
       mysql:
         image: mysql:5.7
@@ -48,6 +48,8 @@ jobs:
         options: --volume ${{ github.workspace }}:/app --user www-data:www-data
         ports:
           - 8080:8080
+          - 3306:3306
+          - 5432:5432
 
     steps:
       - uses: actions/checkout@v2
