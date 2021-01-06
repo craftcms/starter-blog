@@ -2,6 +2,7 @@
   "name": "craftcms/starter-blog-twig",
   "description": "A Craft CMS blog site starter with Tailwind CSS",
   "type": "project",
+  "license": "0BSD",
   "require": {
     "clubstudioltd/craft-asset-rev": "^6.0",
     "craftcms/cms": "^3.4.3",
