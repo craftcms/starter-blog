@@ -83,7 +83,7 @@ jobs:
         run: cp .github/workflows/.env-gatsby headless-front-end/gatsby/.env
 
       - name: Install Gatsby dependencies
-        run: node --version && cd headless-front-end/gatsby && npm install && npm install gatsby-cli
+        run: cd headless-front-end/gatsby && npm install && npm install gatsby-cli
 
       - name: Build Gatsby site
         run: cd headless-front-end/gatsby && npm run build
