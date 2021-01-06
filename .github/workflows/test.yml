@@ -13,10 +13,9 @@ jobs:
   test:
     name: Gatsby + Craft with PHP ${{ matrix.php-versions }} + ${{ matrix.db }}
     runs-on: ubuntu-latest
-    container: ubuntu-latest
+    container: craftcms/cli:7.4
     strategy:
       matrix:
-        operating-system: [ubuntu-latest]
         php-versions: ["7.4"]
         db: ["mysql"]
     services:
