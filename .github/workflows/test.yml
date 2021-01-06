@@ -41,7 +41,7 @@ jobs:
         image: craftcms/nginx:7.4
         options: --volume ${{ github.workspace }}:/app --user www-data:www-data
         ports:
-          - 8080:8080
+          - 80:8080
 
     steps:
       - uses: actions/checkout@v2
@@ -80,7 +80,7 @@ jobs:
 
       - name: Ping GraphQL endpoint
         run: |-
-          curl -s -X POST -H "Content-Type: application/json" --data '{ "query": "{ ping }" }' http://127.0.0.1:8080/api
+          curl -s -X POST -H "Content-Type: application/json" --data '{ "query": "{ ping }" }' http://127.0.0.1/api
 
       - name: Prepare Gatsby environment
         run: cp .github/workflows/.env-gatsby headless-front-end/gatsby/.env
