@@ -66,9 +66,6 @@ jobs:
       - name: Add Docker database host aliases to build environment
         run: sudo echo "127.0.0.1 nginx postgres mysql" | sudo tee -a /etc/hosts
 
-      - name: Ping MySQL container
-        run: ping -c 1 mysql
-
       - name: Install Craft
         run: php craft install/craft --username=admin --password=password --email=test@craftcms.com --site-name=Craft Blog --site-url=$DEFAULT_SITE_URL --interactive=0
 
