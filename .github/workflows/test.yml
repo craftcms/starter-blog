@@ -45,7 +45,7 @@ jobs:
         options: --health-cmd="pg_isready" --health-interval=10s --health-timeout=5s --health-retries=3
       nginx:
         image: craftcms/nginx:7.4
-        options: -v ${{ github.workspace }}:/app --name nginx --user www-data:www-data
+        options: --volume ${{ github.workspace }}:/app --name nginx --user www-data:www-data
         ports:
           - 8080:8080
 
@@ -74,6 +74,9 @@ jobs:
 
       - name: Add Craft demo content
         run: php craft migrate/up --track=content --interactive=0
+
+      - name: Cheat Craft permissions
+        run: chmod 777 config
 
       - name: Ping GraphQL endpoint
         run: |-
