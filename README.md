@@ -40,7 +40,7 @@ When you install this starter, you’ll see that it’s running Craft Solo which
 * [Go headless with GraphQL](#go-headless-with-graph-ql)
   * [Switch to Pro trial](#switch-to-pro-trial)
   * [Headless Mode](#headless-mode)
-  * [Set up a GraphQL api endpoint](#set-up-a-graph-ql-api-endpoint)
+  * [Set up a GraphQL API endpoint](#set-up-a-graph-ql-api-endpoint)
   * [Create GraphQL schemas and private tokens](#create-graph-ql-schemas-and-private-tokens)
   * [Try our Gatsby starter](#try-our-gatsby-starter)
 * [Appendix](#appendix)
@@ -421,7 +421,7 @@ You can also remove these files and folders:
   * `tailwind.config.js`
   * `webpack.config.js`
 
-### Set up a GraphQL api endpoint
+### Set up a GraphQL API endpoint
 
 Edit the `/config/routes.php` file to look like this:
 
