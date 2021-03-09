@@ -26,6 +26,7 @@
     "node-sass": "^4.14.1",
     "optimize-css-assets-webpack-plugin": "^5.0.4",
     "postcss-loader": "^3.0.0",
+    "sane": "^4.1.0",
     "sass-loader": "^7.3.1",
     "siema": "^1.5.1",
     "style-loader": "^0.23.1",

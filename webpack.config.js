@@ -5,6 +5,7 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
 const devMode = process.env.NODE_ENV !== 'production';
 const path = require('path');
+const sane = require('sane');
 
 config = {
   optimization: {
@@ -19,6 +20,15 @@ config = {
     port: 8080,
     hot: true,
     disableHostCheck: true,
+    before: (app, server) => {
+      const watcher = sane(path.join(__dirname, './templates/'), {
+        glob: ['**/*'],
+      });
+      watcher.on('change', function (filePath, root, stat) {
+        console.log('  File modified:', filePath);
+        server.sockWrite(server.sockets, "content-changed");
+      });
+    }  
   },
   output: {
     path: path.resolve(__dirname, 'web/assets/dist'),
