@@ -4,14 +4,13 @@ import { Link } from "gatsby"
 const nav = [{ title: "Home", path: "/" }, { title: "About", path: "/about" }]
 
 const NavItem = ({ item }) => {
-  // const firstSegment = window.location.pathname.split("/")[1]
-  // const isActive = `/${firstSegment}` === item.path
-  // const activeClasses = isActive ? "border-b border-blue-400" : ""
-  const activeClasses = ""
-
   return (
     <li className="mr-6">
-      <Link className={`text-blue-600 ${activeClasses}`} to={item.path}>
+      <Link
+        to={item.path}
+        className={`text-blue-600`}
+        activeClassName={`border-b border-blue-400`}
+      >
         {item.title}
       </Link>
     </li>
