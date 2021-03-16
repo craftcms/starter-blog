@@ -1,7 +1,7 @@
 blockquote {
   &.rich-text {
     p {
-      margin: 0;
+      @apply m-0;
       & + p {
         margin-top: 1em;
       }

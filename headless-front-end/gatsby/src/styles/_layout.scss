@@ -3,7 +3,7 @@
 }
 
 .page-footer {
-  @apply .page-footer .text-sm .py-10 .m-auto .text-center;
+  @apply text-sm py-10 m-auto text-center;
   max-width: $content-width;
   min-height: 100px;
 }

@@ -32,12 +32,11 @@ module.exports = {
       },
     },
     `gatsby-source-craft`,
-    // SASS Processing
     {
       resolve: `gatsby-plugin-sass`,
       options: {
         // Configure SASS to process Tailwind
-        postCssPlugins: [require("tailwindcss")("./tailwind.config.js")],
+        postCssPlugins: [require("tailwindcss")],
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

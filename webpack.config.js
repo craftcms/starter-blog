@@ -1,17 +1,18 @@
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const ManifestPlugin = require('webpack-manifest-plugin');
+const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
 const devMode = process.env.NODE_ENV !== 'production';
 const path = require('path');
 const sane = require('sane');
+const webpack = require('webpack');
 
 config = {
   optimization: {
     minimizer: devMode ? [] : [
       new TerserJSPlugin(),
-      new OptimizeCSSAssetsPlugin()
+      new CssMinimizerPlugin(),
     ],
   },
   devServer: {
@@ -32,8 +33,8 @@ config = {
   },
   output: {
     path: path.resolve(__dirname, 'web/assets/dist'),
-    filename: devMode ? "[name].js" : "[name].[hash].js",
-    chunkFilename: "[name].[hash].js",
+    filename: devMode ? "[name].js" : "[name].[fullhash].js",
+    chunkFilename: "[name].[chunkhash].js",
     publicPath: '/assets/dist/'
   },
   module: {
@@ -64,10 +65,14 @@ config = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new ManifestPlugin(),
+    new WebpackManifestPlugin(),
     new MiniCssExtractPlugin({
-      filename: devMode ? '[name].css' : '[name].[hash].css',
-      chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
+      filename: devMode ? '[name].css' : '[name].[fullhash].css',
+      chunkFilename: devMode ? '[id].css' : '[id].[fullhash].css',
+    }),
+    new webpack.ProvidePlugin({
+     $: "jquery",
+     jQuery: "jquery"
     })
   ]
 }

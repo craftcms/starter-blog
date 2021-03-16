@@ -1,22 +1,15 @@
 .embed {
   &.embed-video {
-    position: relative;
-    height: 0;
-    overflow: hidden;
+    @apply relative hidden h-0;
     padding-bottom: 56.25%;
 
     > iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
+      @apply absolute top-0 left-0 w-full h-full border-0;
     }
   }
   &:not(.embed-video) {
     > :first-child {
-      margin: auto;
+      @apply m-auto;
     }
   }
 }
