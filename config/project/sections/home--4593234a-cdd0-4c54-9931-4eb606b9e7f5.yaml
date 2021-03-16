@@ -7,7 +7,7 @@ previewTargets:
     urlFormat: '{url}'
 propagationMethod: all
 siteSettings:
-  f3400d6f-0f33-4cef-9521-f8f6620399ec:
+  f3400d6f-0f33-4cef-9521-f8f6620399ec: # Craft Blog
     enabledByDefault: true
     hasUrls: true
     template: _private/home
