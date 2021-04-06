@@ -23,39 +23,6 @@ use Craft;
 class Module extends \yii\base\Module
 {
     /**
-     * @var string[] List of commands that should be ignored.
-     */
-    public $ignoreCommands = [];
-
-    /**
-     * @var string[] List of actions that should be ignored.
-     */
-    public $ignoreActions = [
-        'tests/test'
-    ];
-
-    /**
-     * @var string[] List of options that should be ignored. (Defaults to common ones
-     *               that don’t need to be constantly repeated.)
-     */
-    public $ignoreOptions = [];
-
-    /**
-     * @var string The path to the generated Markdown file.
-     */
-    public $outputFile;
-
-    /**
-     * @inheritdoc
-     */
-    public $defaultRoute = 'help-doc/index';
-
-    /**
-     * @var string The Twig template to use for output.
-     */
-    public $template = 'command-docs.twig';
-
-    /**
      * Initializes the module.
      */
     public function init()
@@ -71,5 +38,7 @@ class Module extends \yii\base\Module
         }
 
         parent::init();
+
+        // Custom initialization code goes here...
     }
 }
