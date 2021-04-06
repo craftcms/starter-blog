@@ -87,7 +87,7 @@ jobs:
         working-directory: headless-front-end/gatsby
 
       - name: Build Gatsby site
-        run: ./node_modules/.bin/gatsby build
+        run: npm run build
         working-directory: headless-front-end/gatsby
 
       - name: Upload Craft logs
