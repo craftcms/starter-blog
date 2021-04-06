@@ -82,6 +82,9 @@ jobs:
       - name: Prepare Gatsby environment
         run: cp .github/workflows/.env-gatsby headless-front-end/gatsby/.env
 
+      - name: Remove root PostCSS config so Gatsby doesn’t try to use it
+        run: rm postcss.config.js
+
       - name: Install Gatsby dependencies
         run: npm install && npm install gatsby-cli
         working-directory: headless-front-end/gatsby
