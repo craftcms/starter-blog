@@ -2,7 +2,7 @@ import React from "react"
 
 import { graphql } from 'gatsby'
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Matrix from "../components/matrix"
 
 export const query = graphql`
@@ -25,7 +25,7 @@ const About = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="About" />
+      <Seo title="About" />
 
       <h1 className="text-4xl text-black font-display my-4">{entry.title}</h1>
 

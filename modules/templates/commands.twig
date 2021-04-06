@@ -1,0 +1,64 @@
+{#
+@var command \modules\models\ConsoleCommand
+@var action  \modules\models\ConsoleAction
+@var arg     \modules\models\ConsoleActionParam
+@var option  \modules\models\ConsoleActionOption
+#}
+
+<!-- BEGIN COMMANDS -->
+
+{% for command in commands|filter(v => not v.deprecated) %}
+
+## `{{ command.name }}`
+
+{{ command.description|raw }}{{ "\n" }}
+
+{%- for action in command.actions|filter(v => not v.deprecated) %}
+
+### `{{ action.name }}`{% if action.isDefault %} <badge vertical="center">default</badge>{% endif %}
+
+{% if action.description %}{{ "\n" }}
+    {{- action.description|raw }}
+{% elseif action.summary %}{{ "\n" }}
+    {{- action.summary|raw }}
+{% endif %}
+
+{%- if action.args|length %}
+
+<h4 id="{{ action.name|kebab }}-parameters">Parameters</h4>
+
+{% for arg in action.args %}
+- **{{ arg.name }}** – {{ arg.comment|raw }} ({% if arg.required %}required {% endif %}{{ arg.type }})
+{% endfor %}
+
+{% endif %}
+{%- if action.options|length %}
+
+<h4 id="{{ action.name|kebab }}-options">Options</h4>
+
+{% for option in action.options|filter(v => not v.deprecated) %}
+- **--{{ option.name }}**{% for alias in option.aliases %}, **-{{ alias }}**{% endfor %} – {{ option.comment|raw }}{% if option.required %} (required){% endif %}
+
+{% endfor %}
+
+{% endif %}
+{% endfor %}
+{% endfor %}
+
+<!-- END COMMANDS -->
+
+{#
+
+TODO
+
+- [ ] display parameter defaults
+- [ ] display parameter types
+- [ ] display option defaults
+- [ ] display option required
+- [x] ignore deprecated actions
+- [x] ignore deprecated options
+- [x] see if longer markdown comments will still work (spot check, fix by hand—see testscontroller)
+- [x] clear-caches/* descriptions?
+- [x] tests/setup missing param
+
+#}

@@ -1,5 +1,7 @@
 import React from "react"
-import Carousel from "nuka-carousel"
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import 'swiper/swiper.scss';
 
 const ImageCarousel = ({ block }) => {
   const heights = {
@@ -10,9 +12,9 @@ const ImageCarousel = ({ block }) => {
   const height = heights[block.aspectRatio]
 
   return (
-    <Carousel>
+    <Swiper>
       {block.images.map((image, i) => (
-        <figure
+        <SwiperSlide
           key={i}
           className="relative item"
           style={{
@@ -30,9 +32,9 @@ const ImageCarousel = ({ block }) => {
               {image.caption}
             </figcaption>
           )}
-        </figure>
+        </SwiperSlide>
       ))}
-    </Carousel>
+    </Swiper>
   )
 }
 

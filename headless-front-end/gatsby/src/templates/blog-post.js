@@ -2,7 +2,7 @@ import React from "react"
 
 import { graphql } from 'gatsby'
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Matrix from "../components/matrix"
 
 import { getPrettyDate, getStandardDate } from "../utils/dates"
@@ -28,7 +28,7 @@ export const query = graphql`
 const BlogPostPage = ({ data: { entry } }) => {
   return (
     <Layout>
-      <SEO title={entry.title} />
+      <Seo title={entry.title} />
       <h1 className="text-4xl text-black font-display my-4">{entry.title}</h1>
 
       <time
