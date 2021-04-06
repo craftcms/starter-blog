@@ -77,7 +77,7 @@ config = {
   ]
 }
 
- module.exports = (env, argv) => {
+module.exports = (env, argv) => {
   if (argv.hot) {
     config.module.rules.push({
       test: /\.scss$/,
@@ -100,5 +100,5 @@ config = {
     });
   }
 
-   return config;
- };
+  return config;
+};
