@@ -1,16 +1,16 @@
-field: e567b6ab-3855-452b-a337-4c119dac4d62
+field: e567b6ab-3855-452b-a337-4c119dac4d62 # Body Content
 fieldLayouts:
   59ffc94b-a1a3-4ecb-98e4-67dbd4317f23:
     tabs:
       -
         fields:
-          df3a27ff-e318-422f-8ff5-d626eda8ce54:
+          df3a27ff-e318-422f-8ff5-d626eda8ce54: # Rich Text
             required: false
             sortOrder: 1
         name: Content
         sortOrder: 1
 fields:
-  df3a27ff-e318-422f-8ff5-d626eda8ce54:
+  df3a27ff-e318-422f-8ff5-d626eda8ce54: # Rich Text
     contentColumnType: text
     fieldGroup: null
     handle: richText

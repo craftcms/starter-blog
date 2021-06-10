@@ -27,7 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 5e76b2e3-1eae-4bbc-93f4-122fe4526b02
+            fieldUid: 5e76b2e3-1eae-4bbc-93f4-122fe4526b02 # Summary
             instructions: null
             label: null
             required: false
@@ -36,7 +36,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: e567b6ab-3855-452b-a337-4c119dac4d62
+            fieldUid: e567b6ab-3855-452b-a337-4c119dac4d62 # Body Content
             instructions: null
             label: null
             required: false
@@ -58,7 +58,7 @@ fieldLayouts:
 handle: blog
 hasTitleField: true
 name: Blog
-section: db2dff45-19b4-479c-8cba-ab88e7e7d2fd
+section: db2dff45-19b4-479c-8cba-ab88e7e7d2fd # Blog
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

@@ -1,19 +1,19 @@
-field: e567b6ab-3855-452b-a337-4c119dac4d62
+field: e567b6ab-3855-452b-a337-4c119dac4d62 # Body Content
 fieldLayouts:
   d0baa120-b528-4317-a11e-0a36f80501c3:
     tabs:
       -
         fields:
-          5d2372e2-c220-4af4-80c9-49bb8c85a92e:
+          5d2372e2-c220-4af4-80c9-49bb8c85a92e: # Position
             required: false
             sortOrder: 2
-          6b203fd7-eca1-4313-8795-efbb5f6a8e63:
+          6b203fd7-eca1-4313-8795-efbb5f6a8e63: # Image
             required: false
             sortOrder: 1
         name: Content
         sortOrder: 1
 fields:
-  5d2372e2-c220-4af4-80c9-49bb8c85a92e:
+  5d2372e2-c220-4af4-80c9-49bb8c85a92e: # Position
     contentColumnType: string
     fieldGroup: null
     handle: position
@@ -42,7 +42,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Dropdown
-  6b203fd7-eca1-4313-8795-efbb5f6a8e63:
+  6b203fd7-eca1-4313-8795-efbb5f6a8e63: # Image
     contentColumnType: string
     fieldGroup: null
     handle: image
@@ -52,13 +52,13 @@ fields:
     settings:
       allowedKinds:
         - image
-      defaultUploadLocationSource: 'volume:101a70a1-d200-4629-91e5-3425a0937c0e'
+      defaultUploadLocationSource: 'volume:101a70a1-d200-4629-91e5-3425a0937c0e' # Uploads
       defaultUploadLocationSubpath: images
       limit: '1'
       localizeRelations: false
       restrictFiles: '1'
       selectionLabel: 'Add an image'
-      singleUploadLocationSource: 'volume:101a70a1-d200-4629-91e5-3425a0937c0e'
+      singleUploadLocationSource: 'volume:101a70a1-d200-4629-91e5-3425a0937c0e' # Uploads
       singleUploadLocationSubpath: ''
       source: null
       sources: '*'

@@ -3,10 +3,10 @@ fieldLayouts:
     tabs:
       -
         fields:
-          cdd377e5-a451-46b0-ae80-bc4cee907d3e:
+          cdd377e5-a451-46b0-ae80-bc4cee907d3e: # Caption
             required: false
             sortOrder: 1
-          db95de40-4dec-44cc-9d17-bba2223c91cf:
+          db95de40-4dec-44cc-9d17-bba2223c91cf: # Image Alt
             required: false
             sortOrder: 2
         name: Content

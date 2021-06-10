@@ -1,4 +1,4 @@
-dateModified: 1615910473
+dateModified: 1623289162
 email:
   fromEmail: sam@craftcms.com
   fromName: 'Craft Blog'
@@ -11,7 +11,7 @@ plugins:
   gatsby-helper:
     edition: standard
     enabled: true
-    schemaVersion: 1.0.1
+    schemaVersion: 2.0.0
     settings:
       previewServerUrl: ''
       webhookTarget: $GATSBY_PREVIEW_TARGET
@@ -33,7 +33,7 @@ system:
   edition: pro
   live: true
   name: 'Craft Blog'
-  schemaVersion: 3.6.6
+  schemaVersion: 3.6.8
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false

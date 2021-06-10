@@ -8,7 +8,7 @@ fieldLayouts:
             label: ''
             type: craft\fieldlayoutelements\EntryTitleField
           -
-            fieldUid: e567b6ab-3855-452b-a337-4c119dac4d62
+            fieldUid: e567b6ab-3855-452b-a337-4c119dac4d62 # Body Content
             required: false
             type: craft\fieldlayoutelements\CustomField
         name: Content
@@ -16,6 +16,6 @@ fieldLayouts:
 handle: about
 hasTitleField: false
 name: About
-section: 5a80053a-6435-4fd2-8a47-53e409d994ad
+section: 5a80053a-6435-4fd2-8a47-53e409d994ad # About
 sortOrder: 1
 titleFormat: '{section.name|raw}'
