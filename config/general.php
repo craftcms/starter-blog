@@ -27,10 +27,10 @@ return [
         // (see https://docs.craftcms.com/v3/project-config.html)
         'useProjectConfigFile' => true,
 
-        'defaultSearchTermOptions' => array(
+        'defaultSearchTermOptions' => [
             'subLeft' => true,
             'subRight' => true,
-        ),
+        ],
 
         'aliases' => [
             '@web' => getenv('DEFAULT_SITE_URL'),
