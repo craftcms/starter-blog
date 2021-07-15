@@ -1,6 +1,6 @@
 dateModified: 1626354120
 email:
-  fromEmail: sam@craftcms.com
+  fromEmail: support@craftcms.com
   fromName: 'Craft Blog'
   transportType: craft\mail\transportadapters\Sendmail
 meta:
