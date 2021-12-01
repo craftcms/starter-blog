@@ -32,7 +32,7 @@
     "style-loader": "^2.0.0",
     "tailwindcss": "^2.0.3",
     "terser-webpack-plugin": "^5.1.1",
-    "webpack": "^5.26.1",
+    "webpack": "^5.63.0",
     "webpack-cli": "^4.5.0",
     "webpack-dev-server": "^3.11.2",
     "webpack-manifest-plugin": "^3.1.0"
