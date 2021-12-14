@@ -14,8 +14,6 @@
     "hot": "NODE_ENV=development webpack serve --mode development"
   },
   "devDependencies": {
-    "@babel/core": "^7.16.0",
-    "@babel/preset-env": "^7.16.0",
     "@fullhuman/postcss-purgecss": "^4.0.2",
     "autoprefixer": "^10.2.5",
     "babel-loader": "^8.2.2",
@@ -28,7 +26,6 @@
     "sane": "^4.1.0",
     "sass": "^1.43.4",
     "sass-loader": "^11.0.1",
-    "siema": "^1.5.1",
     "style-loader": "^2.0.0",
     "tailwindcss": "^2.0.3",
     "terser-webpack-plugin": "^5.1.1",
