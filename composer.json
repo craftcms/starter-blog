@@ -4,13 +4,8 @@
   "type": "project",
   "license": "0BSD",
   "require": {
-    "clubstudioltd/craft-asset-rev": "^6.0",
-    "craftcms/cms": "^3.7",
-    "craftcms/gatsby-helper": "^1.0",
-    "craftcms/redactor": "^2.5.0",
-    "nystudio107/craft-typogrify": "^1.1",
-    "vlucas/phpdotenv": "^2.4.0",
-    "wrav/oembed": "^1.1"
+    "craftcms/cms": "4.0.x-dev as 4.0",
+    "vlucas/phpdotenv": "^2.4.0"
   },
   "autoload": {
     "psr-4": {
@@ -21,7 +16,7 @@
     "sort-packages": true,
     "optimize-autoloader": true,
     "platform": {
-      "php": "7.2.5"
+      "php": "8.0"
     }
   },
   "scripts": {

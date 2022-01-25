@@ -11,11 +11,9 @@ fieldLayouts:
             sortOrder: 2
         name: Content
         sortOrder: 1
+fs: uploads
 handle: uploads
 hasUrls: true
 name: Uploads
-settings:
-  path: '@webroot/uploads'
 sortOrder: 1
-type: craft\volumes\Local
 url: '@web/uploads'
