@@ -21,13 +21,13 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
-    "snyk": "^1.750.0",
+    "snyk": "^1.763.0",
     "swiper": "^6.8.0"
   },
   "devDependencies": {
     "@babel/polyfill": "^7.10.4",
     "core-js": "^3.14.0",
-    "node-sass": "^6.0.0",
+    "node-sass": "^7.0.1",
     "prettier": "^2.3.1",
     "tailwindcss": "^2.1.4"
   },
