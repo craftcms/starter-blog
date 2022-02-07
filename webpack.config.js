@@ -81,8 +81,8 @@ config = {
   ]
 }
 
-module.exports = (env, argv) => {
-  if (argv.env.WEBPACK_SERVE) {
+module.exports = (env) => {
+  if (env.WEBPACK_SERVE) {
     config.module.rules.push({
       test: /\.scss$/,
       use: [
