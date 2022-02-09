@@ -664,16 +664,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.7.31",
+            "version": "3.7.32",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "81856f0d33c233ff58d07ef9bac5dcb5db5f058c"
+                "reference": "78b6a0d9d5a36f9c2ea54e7a3ad620946a17ab46"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/81856f0d33c233ff58d07ef9bac5dcb5db5f058c",
-                "reference": "81856f0d33c233ff58d07ef9bac5dcb5db5f058c",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/78b6a0d9d5a36f9c2ea54e7a3ad620946a17ab46",
+                "reference": "78b6a0d9d5a36f9c2ea54e7a3ad620946a17ab46",
                 "shasum": ""
             },
             "require": {
@@ -769,7 +769,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2022-02-08T20:13:00+00:00"
+            "time": "2022-02-09T17:21:16+00:00"
         },
         {
             "name": "craftcms/gatsby-helper",
@@ -6447,5 +6447,5 @@
     "platform-overrides": {
         "php": "7.2.5"
     },
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.1.0"
 }
