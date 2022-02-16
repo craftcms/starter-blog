@@ -16,20 +16,24 @@ config = {
     ],
   },
   devServer: {
-    contentBase: path.join(__dirname, 'web/assets/dist'),
-    writeToDisk: true,
+    allowedHosts: "all",
+    static: {
+      directory: path.join(__dirname, 'web/assets/dist'),
+    },
+    devMiddleware: {
+      writeToDisk: true,
+    },
     port: 8080,
     hot: true,
-    disableHostCheck: true,
-    before: (app, server) => {
+    onBeforeSetupMiddleware: (server) => {
       const watcher = sane(path.join(__dirname, './templates/'), {
         glob: ['**/*'],
       });
       watcher.on('change', function (filePath, root, stat) {
         console.log('  File modified:', filePath);
-        server.sockWrite(server.sockets, "content-changed");
+        server.sendMessage(server.webSocketServer.clients, "content-changed");
       });
-    }  
+    }
   },
   output: {
     path: path.resolve(__dirname, 'web/assets/dist'),
@@ -77,8 +81,8 @@ config = {
   ]
 }
 
-module.exports = (env, argv) => {
-  if (argv.hot) {
+module.exports = (env) => {
+  if (env.WEBPACK_SERVE) {
     config.module.rules.push({
       test: /\.scss$/,
       use: [
