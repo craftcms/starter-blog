@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3599d788fd41bd7eca32772c78358f6a",
+    "content-hash": "03db5f5085a6f13ebe47255aee8f485b",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -687,12 +687,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "fe1d6f08c2e213847769bf24ffea750498835a39"
+                "reference": "cadb3ca8d8df11a691aed4ea1f9e40e7b8f0912d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/fe1d6f08c2e213847769bf24ffea750498835a39",
-                "reference": "fe1d6f08c2e213847769bf24ffea750498835a39",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/cadb3ca8d8df11a691aed4ea1f9e40e7b8f0912d",
+                "reference": "cadb3ca8d8df11a691aed4ea1f9e40e7b8f0912d",
                 "shasum": ""
             },
             "require": {
@@ -794,7 +794,60 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2022-03-02T14:26:50+00:00"
+            "time": "2022-03-03T01:28:56+00:00"
+        },
+        {
+            "name": "craftcms/gatsby-helper",
+            "version": "dev-craft-4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/craftcms/gatsby-helper.git",
+                "reference": "5b9ce2f73ea9d68c8529f231b177552fe2497fcf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/craftcms/gatsby-helper/zipball/5b9ce2f73ea9d68c8529f231b177552fe2497fcf",
+                "reference": "5b9ce2f73ea9d68c8529f231b177552fe2497fcf",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^4.0.0-alpha1"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Gatsby Helper",
+                "handle": "gatsby-helper",
+                "developerUrl": "https://craftcms.com/"
+            },
+            "autoload": {
+                "psr-4": {
+                    "craft\\gatsbyhelper\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pixel & Tonic",
+                    "homepage": "https://pixelandtonic.com/"
+                }
+            ],
+            "description": "Plugin for enabling support for the Gatsby Craft CMS source plugin.",
+            "keywords": [
+                "Craft",
+                "cms",
+                "craft-plugin",
+                "craftcms",
+                "gatsby"
+            ],
+            "support": {
+                "docs": "https://github.com/craftcms/gatsby-helper",
+                "issues": "https://github.com/craftcms/gatsby-helper/issues",
+                "source": "https://github.com/craftcms/gatsby-helper/tree/craft-4"
+            },
+            "time": "2022-03-03T01:35:57+00:00"
         },
         {
             "name": "craftcms/html-field",
@@ -4182,37 +4235,34 @@
         },
         {
             "name": "symfony/mailer",
-            "version": "5.4.x-dev",
+            "version": "6.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/mailer.git",
-                "reference": "f6e927ec95c957131e6b2c78790e1a6d4c576447"
+                "reference": "0f4772db6521a1beb44529aa2c0c1e56f671be8f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/mailer/zipball/f6e927ec95c957131e6b2c78790e1a6d4c576447",
-                "reference": "f6e927ec95c957131e6b2c78790e1a6d4c576447",
+                "url": "https://api.github.com/repos/symfony/mailer/zipball/0f4772db6521a1beb44529aa2c0c1e56f671be8f",
+                "reference": "0f4772db6521a1beb44529aa2c0c1e56f671be8f",
                 "shasum": ""
             },
             "require": {
                 "egulias/email-validator": "^2.1.10|^3",
-                "php": ">=7.2.5",
+                "php": ">=8.0.2",
                 "psr/event-dispatcher": "^1",
                 "psr/log": "^1|^2|^3",
-                "symfony/deprecation-contracts": "^2.1|^3",
-                "symfony/event-dispatcher": "^4.4|^5.0|^6.0",
-                "symfony/mime": "^5.2.6|^6.0",
-                "symfony/polyfill-php80": "^1.16",
+                "symfony/event-dispatcher": "^5.4|^6.0",
+                "symfony/mime": "^5.4|^6.0",
                 "symfony/service-contracts": "^1.1|^2|^3"
             },
             "conflict": {
-                "symfony/http-kernel": "<4.4"
+                "symfony/http-kernel": "<5.4"
             },
             "require-dev": {
                 "symfony/http-client-contracts": "^1.1|^2|^3",
-                "symfony/messenger": "^4.4|^5.0|^6.0"
+                "symfony/messenger": "^5.4|^6.0"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -4239,7 +4289,7 @@
             "description": "Helps sending emails",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/mailer/tree/v5.4.5"
+                "source": "https://github.com/symfony/mailer/tree/6.0"
             },
             "funding": [
                 {
@@ -4255,7 +4305,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-02-25T10:48:33+00:00"
+            "time": "2022-02-25T10:48:52+00:00"
         },
         {
             "name": "symfony/mime",
@@ -6883,6 +6933,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "craftcms/gatsby-helper": 20,
         "craftcms/redactor": 20
     },
     "prefer-stable": false,
@@ -6892,5 +6943,5 @@
     "platform-overrides": {
         "php": "8.0.2"
     },
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.2.0"
 }

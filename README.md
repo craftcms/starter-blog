@@ -6,7 +6,6 @@ This blog starter project is for developers who are new to Craft CMS and want to
 
 ```
 "clubstudioltd/craft-asset-rev": "^6.0",
-"craftcms/gatsby-helper": "^1.0",
 "wrav/oembed": "^1.1"
 ```
 

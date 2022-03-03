@@ -6,6 +6,7 @@
   "minimum-stability": "dev",
   "require": {
     "craftcms/cms": "^4.0.0-alpha.1",
+    "craftcms/gatsby-helper": "craft-4-dev",
     "craftcms/redactor": "^3.0.x-dev",
     "nystudio107/craft-typogrify": "^4.0.0-beta.1",
     "vlucas/phpdotenv": "^2.4.0"
@@ -20,6 +21,10 @@
     "optimize-autoloader": true,
     "platform": {
       "php": "8.0.2"
+    },
+    "allow-plugins": {
+      "yiisoft/yii2-composer": true,
+      "craftcms/plugin-installer": true
     }
   },
   "scripts": {
