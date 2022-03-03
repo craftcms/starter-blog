@@ -1,0 +1,27 @@
+field: e567b6ab-3855-452b-a337-4c119dac4d62 # Body Content
+fieldLayouts:
+  edfa3f3b-4e3a-4aa8-959c-95de3a10409d:
+    tabs:
+      -
+        fields:
+          e8fdd2ad-6739-4bab-a689-8a422e18a8f4: # Embed
+            required: true
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  e8fdd2ad-6739-4bab-a689-8a422e18a8f4: # Embed
+    contentColumnType: text
+    fieldGroup: null
+    handle: embed
+    instructions: ''
+    name: Embed
+    searchable: false
+    settings:
+      url: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: wrav\oembed\fields\OembedField
+handle: embed
+name: Embed
+sortOrder: 5
