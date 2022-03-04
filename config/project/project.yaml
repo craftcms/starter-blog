@@ -1,4 +1,4 @@
-dateModified: 1646269008
+dateModified: 1646419030
 email:
   fromEmail: support@craftcms.com
   fromName: 'Craft Blog'
@@ -35,7 +35,6 @@ meta:
     e8fdd2ad-6739-4bab-a689-8a422e18a8f4: Embed # Embed
     e567b6ab-3855-452b-a337-4c119dac4d62: 'Body Content' # Body Content
     f3400d6f-0f33-4cef-9521-f8f6620399ec: 'Craft Blog' # Craft Blog
-    fb2f8912-57ad-4b4e-887d-e55f22a6d348: Embed # Embed
 plugins:
   assetrev:
     edition: standard
@@ -48,12 +47,6 @@ plugins:
     settings:
       previewServerUrl: ''
       webhookTarget: $GATSBY_PREVIEW_TARGET
-  oembed:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.1
-    settings:
-      enableCache: '1'
   redactor:
     edition: standard
     enabled: true

@@ -2,13 +2,6 @@
 
 This blog starter project is for developers who are new to Craft CMS and want to learn the basics quickly. It tries not to be too prescriptive while demonstrating a few essentials of Craft development with the Twig templating language.
 
-## Temporarily Removed for Craft 4
-
-```
-"clubstudioltd/craft-asset-rev": "^6.0",
-"wrav/oembed": "^1.1"
-```
-
 ### Topics, features, and implementations:
 
 - Matrix as a page-builder field

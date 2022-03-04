@@ -3,17 +3,32 @@ fieldLayouts:
   a3b39778-708a-4de0-9501-6b1d37108919:
     tabs:
       -
-        fields:
-          2f6bf496-df01-42e0-9b77-a764f886813d: # Aspect Ratio
+        elements:
+          -
+            fieldUid: a6f02aa5-ab37-46e2-bbd4-3b56930577d5 # Images
+            instructions: null
+            label: null
             required: false
-            sortOrder: 2
-          a6f02aa5-ab37-46e2-bbd4-3b56930577d5: # Images
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fd66ef66-2143-4c5d-86b2-a8817d61b504
+            warning: null
+            width: 100
+          -
+            fieldUid: 2f6bf496-df01-42e0-9b77-a764f886813d # Aspect Ratio
+            instructions: null
+            label: null
             required: false
-            sortOrder: 1
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 15bb34d2-bc3a-4d37-a24b-9ab7a9611b2d
+            warning: null
+            width: 100
         name: Content
-        sortOrder: 1
+        uid: d259e6d6-6182-4f9c-a068-b6d625684e8b
 fields:
   2f6bf496-df01-42e0-9b77-a764f886813d: # Aspect Ratio
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: aspectRatio
@@ -21,24 +36,45 @@ fields:
     name: 'Aspect Ratio'
     searchable: true
     settings:
-      optgroups: true
       options:
         -
-          default: '1'
-          label: '16:9'
-          value: '16:9'
+          __assoc__:
+            -
+              - label
+              - '16:9'
+            -
+              - value
+              - '16:9'
+            -
+              - default
+              - '1'
         -
-          default: ''
-          label: '4:3'
-          value: '4:3'
+          __assoc__:
+            -
+              - label
+              - '4:3'
+            -
+              - value
+              - '4:3'
+            -
+              - default
+              - ''
         -
-          default: ''
-          label: '3:2'
-          value: '3:2'
+          __assoc__:
+            -
+              - label
+              - '3:2'
+            -
+              - value
+              - '3:2'
+            -
+              - default
+              - ''
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Dropdown
   a6f02aa5-ab37-46e2-bbd4-3b56930577d5: # Images
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: images
@@ -46,21 +82,41 @@ fields:
     name: Images
     searchable: true
     settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
       allowedKinds:
         - image
       defaultUploadLocationSource: 'volume:101a70a1-d200-4629-91e5-3425a0937c0e' # Uploads
       defaultUploadLocationSubpath: images
-      limit: ''
       localizeRelations: false
-      restrictFiles: '1'
+      maxRelations: null
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: ''
+      restrictedLocationSource: 'volume:101a70a1-d200-4629-91e5-3425a0937c0e' # Uploads
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
       selectionLabel: 'Add an image'
-      singleUploadLocationSource: 'volume:101a70a1-d200-4629-91e5-3425a0937c0e' # Uploads
-      singleUploadLocationSubpath: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: true
       source: null
       sources: '*'
       targetSiteId: null
-      useSingleFolder: ''
-      validateRelatedElements: ''
+      validateRelatedElements: false
       viewMode: large
     translationKeyFormat: null
     translationMethod: site

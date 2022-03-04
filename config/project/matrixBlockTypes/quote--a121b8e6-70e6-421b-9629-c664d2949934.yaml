@@ -3,20 +3,42 @@ fieldLayouts:
   e25f5116-982d-45a0-ac12-9d3a3f1d07e7:
     tabs:
       -
-        fields:
-          5fd465cf-5b00-4b4f-8ee0-ce0eac4fd2eb: # Attribution
+        elements:
+          -
+            fieldUid: a6ca7d80-fa7f-433b-b6ba-fd9f19791f82 # Style
+            instructions: null
+            label: null
             required: false
-            sortOrder: 3
-          09c265f3-2ab1-405d-9111-108e6b54f0fb: # Quote
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a69ee201-bae7-41da-b168-e8845101b16f
+            warning: null
+            width: 100
+          -
+            fieldUid: 09c265f3-2ab1-405d-9111-108e6b54f0fb # Quote
+            instructions: null
+            label: null
             required: false
-            sortOrder: 2
-          a6ca7d80-fa7f-433b-b6ba-fd9f19791f82: # Style
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a1e542aa-e800-4112-9f5f-2879d509f3a7
+            warning: null
+            width: 100
+          -
+            fieldUid: 5fd465cf-5b00-4b4f-8ee0-ce0eac4fd2eb # Attribution
+            instructions: null
+            label: null
             required: false
-            sortOrder: 1
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2e6ca961-e740-4d10-a151-c04cb84e8716
+            warning: null
+            width: 100
         name: Content
-        sortOrder: 1
+        uid: c82ef1c7-6d7a-42db-a18d-0048b2893a90
 fields:
   5fd465cf-5b00-4b4f-8ee0-ce0eac4fd2eb: # Attribution
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: attribution
@@ -24,16 +46,19 @@ fields:
     name: Attribution
     searchable: true
     settings:
-      charLimit: ''
-      code: ''
+      byteLimit: null
+      charLimit: null
+      code: false
       columnType: text
-      initialRows: '4'
-      multiline: ''
-      placeholder: ''
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
   09c265f3-2ab1-405d-9111-108e6b54f0fb: # Quote
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: quote
@@ -43,18 +68,25 @@ fields:
     settings:
       availableTransforms: '*'
       availableVolumes: '*'
-      cleanupHtml: true
       columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
       purifierConfig: ''
-      purifyHtml: '1'
+      purifyHtml: true
       redactorConfig: Simple.json
-      removeEmptyTags: '1'
-      removeInlineStyles: '1'
-      removeNbsp: '1'
+      removeEmptyTags: true
+      removeInlineStyles: true
+      removeNbsp: true
+      showHtmlButtonForNonAdmins: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: true
+      uiMode: enlarged
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
   a6ca7d80-fa7f-433b-b6ba-fd9f19791f82: # Style
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: style
@@ -62,16 +94,29 @@ fields:
     name: Style
     searchable: true
     settings:
-      optgroups: true
       options:
         -
-          default: '1'
-          label: Blockquote
-          value: blockquote
+          __assoc__:
+            -
+              - label
+              - Blockquote
+            -
+              - value
+              - blockquote
+            -
+              - default
+              - '1'
         -
-          default: ''
-          label: Pullquote
-          value: pullquote
+          __assoc__:
+            -
+              - label
+              - Pullquote
+            -
+              - value
+              - pullquote
+            -
+              - default
+              - ''
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Dropdown

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "03db5f5085a6f13ebe47255aee8f485b",
+    "content-hash": "5da67dba938869c875e8f64fea453a0e",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -70,6 +70,56 @@
                 "source": "https://github.com/cebe/markdown"
             },
             "time": "2020-02-26T01:55:18+00:00"
+        },
+        {
+            "name": "clubstudioltd/craft-asset-rev",
+            "version": "dev-feature/craft-4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mattstein/craft-asset-rev.git",
+                "reference": "fc5801ecaff37cc5959e83971a451611eb826a1c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mattstein/craft-asset-rev/zipball/fc5801ecaff37cc5959e83971a451611eb826a1c",
+                "reference": "fc5801ecaff37cc5959e83971a451611eb826a1c",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^4.0.0-alpha.1",
+                "php": "^8.0.2"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.*",
+                "phpunit/php-token-stream": "<2",
+                "phpunit/phpunit": "^9.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Asset Rev",
+                "handle": "assetrev",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://github.com/clubstudioltd/craft-asset-rev/blob/master/CHANGELOG.md",
+                "documentationUrl": "https://github.com/clubstudioltd/craft-asset-rev",
+                "downloadUrl": "https://github.com/clubstudioltd/craft-asset-rev/archive/v6.zip",
+                "developer": "Club Studio Ltd",
+                "developerUrl": "https://clubstudio.co.uk",
+                "class": "club\\assetrev\\AssetRev"
+            },
+            "autoload": {
+                "psr-4": {
+                    "club\\assetrev\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "A plugin to aid cache-busting in Craft 4",
+            "support": {
+                "source": "https://github.com/mattstein/craft-asset-rev/tree/feature/craft-4"
+            },
+            "time": "2022-03-03T20:28:01+00:00"
         },
         {
             "name": "commerceguys/addressing",
@@ -687,12 +737,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "cadb3ca8d8df11a691aed4ea1f9e40e7b8f0912d"
+                "reference": "2927f56d9421436079dbb98093b70bf704623a48"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/cadb3ca8d8df11a691aed4ea1f9e40e7b8f0912d",
-                "reference": "cadb3ca8d8df11a691aed4ea1f9e40e7b8f0912d",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/2927f56d9421436079dbb98093b70bf704623a48",
+                "reference": "2927f56d9421436079dbb98093b70bf704623a48",
                 "shasum": ""
             },
             "require": {
@@ -794,24 +844,27 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2022-03-03T01:28:56+00:00"
+            "time": "2022-03-04T17:58:07+00:00"
         },
         {
             "name": "craftcms/gatsby-helper",
-            "version": "dev-craft-4",
+            "version": "2.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/gatsby-helper.git",
-                "reference": "5b9ce2f73ea9d68c8529f231b177552fe2497fcf"
+                "reference": "950d7d564571214be8025caa14df98fd0d5411b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/gatsby-helper/zipball/5b9ce2f73ea9d68c8529f231b177552fe2497fcf",
-                "reference": "5b9ce2f73ea9d68c8529f231b177552fe2497fcf",
+                "url": "https://api.github.com/repos/craftcms/gatsby-helper/zipball/950d7d564571214be8025caa14df98fd0d5411b0",
+                "reference": "950d7d564571214be8025caa14df98fd0d5411b0",
                 "shasum": ""
             },
             "require": {
                 "craftcms/cms": "^4.0.0-alpha1"
+            },
+            "require-dev": {
+                "craftcms/phpstan": "dev-main"
             },
             "type": "craft-plugin",
             "extra": {
@@ -845,9 +898,9 @@
             "support": {
                 "docs": "https://github.com/craftcms/gatsby-helper",
                 "issues": "https://github.com/craftcms/gatsby-helper/issues",
-                "source": "https://github.com/craftcms/gatsby-helper/tree/craft-4"
+                "source": "https://github.com/craftcms/gatsby-helper/tree/2.0"
             },
-            "time": "2022-03-03T01:35:57+00:00"
+            "time": "2022-03-04T15:47:31+00:00"
         },
         {
             "name": "craftcms/html-field",
@@ -1011,12 +1064,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/redactor.git",
-                "reference": "6d61c166f7bb37cab002a6047104ba01c3be89f5"
+                "reference": "49f4e45b0d3b666b7284b7bfb785419d249d88e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/redactor/zipball/6d61c166f7bb37cab002a6047104ba01c3be89f5",
-                "reference": "6d61c166f7bb37cab002a6047104ba01c3be89f5",
+                "url": "https://api.github.com/repos/craftcms/redactor/zipball/49f4e45b0d3b666b7284b7bfb785419d249d88e1",
+                "reference": "49f4e45b0d3b666b7284b7bfb785419d249d88e1",
                 "shasum": ""
             },
             "require": {
@@ -1025,8 +1078,8 @@
                 "php": "^8.0.2"
             },
             "require-dev": {
-                "craftcms/rector": "dev-main",
-                "phpstan/phpstan": "^1.4.6"
+                "craftcms/phpstan": "dev-main",
+                "craftcms/rector": "dev-main"
             },
             "type": "craft-plugin",
             "extra": {
@@ -1064,7 +1117,7 @@
                 "rss": "https://github.com/craftcms/redactor/commits/v2.atom",
                 "source": "https://github.com/craftcms/redactor"
             },
-            "time": "2022-03-02T00:58:50+00:00"
+            "time": "2022-03-04T13:35:20+00:00"
         },
         {
             "name": "craftcms/server-check",
@@ -1902,12 +1955,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
-                "reference": "3f4db0d7d1583a09b024e66370f30ee8b633f588"
+                "reference": "ce32560ca1f37fc1a3dacfe9a9bb2db006b11b35"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/collections/zipball/3f4db0d7d1583a09b024e66370f30ee8b633f588",
-                "reference": "3f4db0d7d1583a09b024e66370f30ee8b633f588",
+                "url": "https://api.github.com/repos/illuminate/collections/zipball/ce32560ca1f37fc1a3dacfe9a9bb2db006b11b35",
+                "reference": "ce32560ca1f37fc1a3dacfe9a9bb2db006b11b35",
                 "shasum": ""
             },
             "require": {
@@ -1949,7 +2002,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2022-02-28T12:33:28+00:00"
+            "time": "2022-03-04T13:43:36+00:00"
         },
         {
             "name": "illuminate/conditionable",
@@ -2003,12 +2056,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
-                "reference": "bf4b3c254c49d28157645d01e4883b5951b1e1d0"
+                "reference": "ce68106c575410c71f92ac1c91c5d95c561033bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/contracts/zipball/bf4b3c254c49d28157645d01e4883b5951b1e1d0",
-                "reference": "bf4b3c254c49d28157645d01e4883b5951b1e1d0",
+                "url": "https://api.github.com/repos/illuminate/contracts/zipball/ce68106c575410c71f92ac1c91c5d95c561033bc",
+                "reference": "ce68106c575410c71f92ac1c91c5d95c561033bc",
                 "shasum": ""
             },
             "require": {
@@ -2043,7 +2096,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2022-02-22T14:45:39+00:00"
+            "time": "2022-03-04T18:18:32+00:00"
         },
         {
             "name": "illuminate/macroable",
@@ -4390,7 +4443,7 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.24.0",
+            "version": "v1.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
@@ -4452,7 +4505,7 @@
                 "portable"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.24.0"
+                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.25.0"
             },
             "funding": [
                 {
@@ -4472,7 +4525,7 @@
         },
         {
             "name": "symfony/polyfill-iconv",
-            "version": "v1.24.0",
+            "version": "v1.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-iconv.git",
@@ -4535,7 +4588,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-iconv/tree/v1.24.0"
+                "source": "https://github.com/symfony/polyfill-iconv/tree/v1.25.0"
             },
             "funding": [
                 {
@@ -4555,7 +4608,7 @@
         },
         {
             "name": "symfony/polyfill-intl-grapheme",
-            "version": "v1.24.0",
+            "version": "v1.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-grapheme.git",
@@ -4616,7 +4669,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-intl-grapheme/tree/v1.24.0"
+                "source": "https://github.com/symfony/polyfill-intl-grapheme/tree/v1.25.0"
             },
             "funding": [
                 {
@@ -4636,7 +4689,7 @@
         },
         {
             "name": "symfony/polyfill-intl-idn",
-            "version": "v1.24.0",
+            "version": "v1.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-idn.git",
@@ -4703,7 +4756,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-intl-idn/tree/v1.24.0"
+                "source": "https://github.com/symfony/polyfill-intl-idn/tree/v1.25.0"
             },
             "funding": [
                 {
@@ -4723,7 +4776,7 @@
         },
         {
             "name": "symfony/polyfill-intl-normalizer",
-            "version": "v1.24.0",
+            "version": "v1.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-normalizer.git",
@@ -4787,7 +4840,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-intl-normalizer/tree/v1.24.0"
+                "source": "https://github.com/symfony/polyfill-intl-normalizer/tree/v1.25.0"
             },
             "funding": [
                 {
@@ -4807,7 +4860,7 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.24.0",
+            "version": "v1.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
@@ -4870,7 +4923,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.24.0"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.25.0"
             },
             "funding": [
                 {
@@ -4890,7 +4943,7 @@
         },
         {
             "name": "symfony/polyfill-php72",
-            "version": "v1.24.0",
+            "version": "v1.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php72.git",
@@ -4946,7 +4999,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php72/tree/v1.24.0"
+                "source": "https://github.com/symfony/polyfill-php72/tree/v1.25.0"
             },
             "funding": [
                 {
@@ -4966,16 +5019,16 @@
         },
         {
             "name": "symfony/polyfill-php80",
-            "version": "v1.24.0",
+            "version": "v1.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
-                "reference": "57b712b08eddb97c762a8caa32c84e037892d2e9"
+                "reference": "4407588e0d3f1f52efb65fbe92babe41f37fe50c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/57b712b08eddb97c762a8caa32c84e037892d2e9",
-                "reference": "57b712b08eddb97c762a8caa32c84e037892d2e9",
+                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/4407588e0d3f1f52efb65fbe92babe41f37fe50c",
+                "reference": "4407588e0d3f1f52efb65fbe92babe41f37fe50c",
                 "shasum": ""
             },
             "require": {
@@ -5029,7 +5082,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php80/tree/v1.24.0"
+                "source": "https://github.com/symfony/polyfill-php80/tree/v1.25.0"
             },
             "funding": [
                 {
@@ -5045,7 +5098,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-09-13T13:58:33+00:00"
+            "time": "2022-03-04T08:16:47+00:00"
         },
         {
             "name": "symfony/process",
@@ -5698,12 +5751,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/voku/anti-xss.git",
-                "reference": "7abe3cd4052cf6a79314ac559807f7ee80fd38e0"
+                "reference": "20a89b578e354f060ce4188413929a52fdf7f03e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/voku/anti-xss/zipball/7abe3cd4052cf6a79314ac559807f7ee80fd38e0",
-                "reference": "7abe3cd4052cf6a79314ac559807f7ee80fd38e0",
+                "url": "https://api.github.com/repos/voku/anti-xss/zipball/20a89b578e354f060ce4188413929a52fdf7f03e",
+                "reference": "20a89b578e354f060ce4188413929a52fdf7f03e",
                 "shasum": ""
             },
             "require": {
@@ -5774,7 +5827,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-03-01T19:01:22+00:00"
+            "time": "2022-03-04T00:30:52+00:00"
         },
         {
             "name": "voku/arrayy",
@@ -6933,6 +6986,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "clubstudioltd/craft-asset-rev": 20,
         "craftcms/gatsby-helper": 20,
         "craftcms/redactor": 20
     },

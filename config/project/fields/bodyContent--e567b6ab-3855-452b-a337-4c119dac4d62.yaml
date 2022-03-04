@@ -1,3 +1,4 @@
+columnSuffix: null
 contentColumnType: string
 fieldGroup: 911477c7-3c92-407b-a9a9-e69ccb74eabb # Common
 handle: bodyContent
@@ -6,8 +7,9 @@ name: 'Body Content'
 searchable: true
 settings:
   contentTable: '{{%matrixcontent_bodycontent}}'
-  maxBlocks: ''
-  minBlocks: ''
+  maxBlocks: null
+  minBlocks: null
+  propagationKeyFormat: null
   propagationMethod: all
 translationKeyFormat: null
 translationMethod: site

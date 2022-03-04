@@ -3,14 +3,22 @@ fieldLayouts:
   59ffc94b-a1a3-4ecb-98e4-67dbd4317f23:
     tabs:
       -
-        fields:
-          df3a27ff-e318-422f-8ff5-d626eda8ce54: # Rich Text
+        elements:
+          -
+            fieldUid: df3a27ff-e318-422f-8ff5-d626eda8ce54 # Rich Text
+            instructions: null
+            label: null
             required: false
-            sortOrder: 1
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2d321fb9-6f23-4b85-b389-6571b6f3a8a9
+            warning: null
+            width: 100
         name: Content
-        sortOrder: 1
+        uid: a8feaa26-e7b8-4ec8-9601-d54ec3f46b29
 fields:
   df3a27ff-e318-422f-8ff5-d626eda8ce54: # Rich Text
+    columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: richText
@@ -20,14 +28,20 @@ fields:
     settings:
       availableTransforms: '*'
       availableVolumes: '*'
-      cleanupHtml: true
       columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
       purifierConfig: ''
-      purifyHtml: '1'
+      purifyHtml: true
       redactorConfig: Standard.json
-      removeEmptyTags: '1'
-      removeInlineStyles: '1'
-      removeNbsp: '1'
+      removeEmptyTags: true
+      removeInlineStyles: true
+      removeNbsp: true
+      showHtmlButtonForNonAdmins: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: true
+      uiMode: enlarged
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field

@@ -3,17 +3,32 @@ fieldLayouts:
   d0baa120-b528-4317-a11e-0a36f80501c3:
     tabs:
       -
-        fields:
-          5d2372e2-c220-4af4-80c9-49bb8c85a92e: # Position
+        elements:
+          -
+            fieldUid: 6b203fd7-eca1-4313-8795-efbb5f6a8e63 # Image
+            instructions: null
+            label: null
             required: false
-            sortOrder: 2
-          6b203fd7-eca1-4313-8795-efbb5f6a8e63: # Image
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dc50ea3d-13a7-4a7f-b4dd-9f4c9ed6b871
+            warning: null
+            width: 100
+          -
+            fieldUid: 5d2372e2-c220-4af4-80c9-49bb8c85a92e # Position
+            instructions: null
+            label: null
             required: false
-            sortOrder: 1
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bc548b92-dfc7-4167-85a3-6fd67beaea18
+            warning: null
+            width: 100
         name: Content
-        sortOrder: 1
+        uid: 1296beb9-08f7-4de1-b282-99c6d3f696be
 fields:
   5d2372e2-c220-4af4-80c9-49bb8c85a92e: # Position
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: position
@@ -21,28 +36,56 @@ fields:
     name: Position
     searchable: true
     settings:
-      optgroups: true
       options:
         -
-          default: '1'
-          label: Wide
-          value: wide
+          __assoc__:
+            -
+              - label
+              - Wide
+            -
+              - value
+              - wide
+            -
+              - default
+              - '1'
         -
-          default: ''
-          label: Center
-          value: center
+          __assoc__:
+            -
+              - label
+              - Center
+            -
+              - value
+              - center
+            -
+              - default
+              - ''
         -
-          default: ''
-          label: Left
-          value: left
+          __assoc__:
+            -
+              - label
+              - Left
+            -
+              - value
+              - left
+            -
+              - default
+              - ''
         -
-          default: ''
-          label: Right
-          value: right
+          __assoc__:
+            -
+              - label
+              - Right
+            -
+              - value
+              - right
+            -
+              - default
+              - ''
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Dropdown
   6b203fd7-eca1-4313-8795-efbb5f6a8e63: # Image
+    columnSuffix: null
     contentColumnType: string
     fieldGroup: null
     handle: image
@@ -50,21 +93,41 @@ fields:
     name: Image
     searchable: true
     settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
       allowedKinds:
         - image
       defaultUploadLocationSource: 'volume:101a70a1-d200-4629-91e5-3425a0937c0e' # Uploads
       defaultUploadLocationSubpath: images
-      limit: '1'
       localizeRelations: false
-      restrictFiles: '1'
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: ''
+      restrictedLocationSource: 'volume:101a70a1-d200-4629-91e5-3425a0937c0e' # Uploads
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
       selectionLabel: 'Add an image'
-      singleUploadLocationSource: 'volume:101a70a1-d200-4629-91e5-3425a0937c0e' # Uploads
-      singleUploadLocationSubpath: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: true
       source: null
       sources: '*'
       targetSiteId: null
-      useSingleFolder: ''
-      validateRelatedElements: ''
+      validateRelatedElements: false
       viewMode: large
     translationKeyFormat: null
     translationMethod: site
