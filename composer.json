@@ -34,12 +34,6 @@
       "craftcms/plugin-installer": true
     }
   },
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/mattstein/craft-asset-rev"
-    }
-  ],
   "scripts": {
     "post-root-package-install": [
       "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
