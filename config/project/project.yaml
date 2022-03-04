@@ -1,8 +1,16 @@
-dateModified: 1646419030
+dateModified: 1646419858
 email:
   fromEmail: support@craftcms.com
   fromName: 'Craft Blog'
   transportType: craft\mail\transportadapters\Sendmail
+fs:
+  uploads:
+    hasUrls: true
+    name: Uploads
+    settings:
+      path: '@webroot/uploads'
+    type: craft\fs\Local
+    url: '@web/uploads'
 meta:
   __names__:
     0c98f9b9-84bf-4766-af63-a3568b46c0a6: 'Rich Text' # Rich Text
@@ -63,6 +71,7 @@ system:
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
+  deactivateByDefault: false
   defaultGroup: null
   photoSubpath: ''
   photoVolumeUid: null

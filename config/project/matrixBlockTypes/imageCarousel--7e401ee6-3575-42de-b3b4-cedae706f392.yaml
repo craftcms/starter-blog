@@ -11,7 +11,6 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: fd66ef66-2143-4c5d-86b2-a8817d61b504
             warning: null
             width: 100
           -
@@ -21,11 +20,10 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 15bb34d2-bc3a-4d37-a24b-9ab7a9611b2d
             warning: null
             width: 100
         name: Content
-        uid: d259e6d6-6182-4f9c-a068-b6d625684e8b
+        sortOrder: 1
 fields:
   2f6bf496-df01-42e0-9b77-a764f886813d: # Aspect Ratio
     columnSuffix: null
@@ -36,6 +34,7 @@ fields:
     name: 'Aspect Ratio'
     searchable: true
     settings:
+      optgroups: true
       options:
         -
           __assoc__:
@@ -83,39 +82,25 @@ fields:
     searchable: true
     settings:
       allowSelfRelations: false
-      allowSubfolders: false
       allowUploads: true
       allowedKinds:
         - image
       defaultUploadLocationSource: 'volume:101a70a1-d200-4629-91e5-3425a0937c0e' # Uploads
       defaultUploadLocationSubpath: images
+      limit: ''
       localizeRelations: false
-      maxRelations: null
-      minRelations: null
       previewMode: full
-      restrictFiles: true
-      restrictLocation: false
-      restrictedDefaultUploadSubpath: ''
-      restrictedLocationSource: 'volume:101a70a1-d200-4629-91e5-3425a0937c0e' # Uploads
-      restrictedLocationSubpath: null
-      selectionCondition:
-        __assoc__:
-          -
-            - elementType
-            - craft\elements\Asset
-          -
-            - fieldContext
-            - global
-          -
-            - class
-            - craft\elements\conditions\assets\AssetCondition
+      restrictFiles: '1'
       selectionLabel: 'Add an image'
       showSiteMenu: true
       showUnpermittedFiles: false
       showUnpermittedVolumes: true
+      singleUploadLocationSource: 'volume:101a70a1-d200-4629-91e5-3425a0937c0e' # Uploads
+      singleUploadLocationSubpath: ''
       source: null
       sources: '*'
       targetSiteId: null
+      useSingleFolder: false
       validateRelatedElements: false
       viewMode: large
     translationKeyFormat: null

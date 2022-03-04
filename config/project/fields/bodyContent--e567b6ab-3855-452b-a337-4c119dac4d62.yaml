@@ -7,8 +7,8 @@ name: 'Body Content'
 searchable: true
 settings:
   contentTable: '{{%matrixcontent_bodycontent}}'
-  maxBlocks: null
-  minBlocks: null
+  maxBlocks: ''
+  minBlocks: ''
   propagationKeyFormat: null
   propagationMethod: all
 translationKeyFormat: null
