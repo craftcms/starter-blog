@@ -10,7 +10,7 @@
     "craftcms/gatsby-helper": "2.0.x-dev",
     "craftcms/redactor": "^3.0.x-dev",
     "nystudio107/craft-typogrify": "^4.0.0-beta.1",
-    "vlucas/phpdotenv": "^2.4.0"
+    "vlucas/phpdotenv": "^5.4.0"
   },
   "autoload": {
     "psr-4": {
