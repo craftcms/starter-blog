@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b18680cdab33cbed220f03e6929f3873",
+    "content-hash": "f22e2c9219b6943ca8cdb67472443f92",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -79,12 +79,6 @@
                 "url": "https://github.com/mattstein/craft-asset-rev.git",
                 "reference": "fc5801ecaff37cc5959e83971a451611eb826a1c"
             },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mattstein/craft-asset-rev/zipball/fc5801ecaff37cc5959e83971a451611eb826a1c",
-                "reference": "fc5801ecaff37cc5959e83971a451611eb826a1c",
-                "shasum": ""
-            },
             "require": {
                 "craftcms/cms": "^4.0.0-alpha.1",
                 "php": "^8.0.2"
@@ -116,9 +110,6 @@
                 "MIT"
             ],
             "description": "A plugin to aid cache-busting in Craft 4",
-            "support": {
-                "source": "https://github.com/mattstein/craft-asset-rev/tree/feature/craft-4"
-            },
             "time": "2022-03-03T20:28:01+00:00"
         },
         {
@@ -737,12 +728,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "69c342fd06f4f3f543182490afa313fb55bbdfa5"
+                "reference": "a0a9dee06660dbbacec6d3357808197a2c3f781b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/69c342fd06f4f3f543182490afa313fb55bbdfa5",
-                "reference": "69c342fd06f4f3f543182490afa313fb55bbdfa5",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/a0a9dee06660dbbacec6d3357808197a2c3f781b",
+                "reference": "a0a9dee06660dbbacec6d3357808197a2c3f781b",
                 "shasum": ""
             },
             "require": {
@@ -847,7 +838,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2022-03-09T15:23:11+00:00"
+            "time": "2022-03-09T19:02:15+00:00"
         },
         {
             "name": "craftcms/gatsby-helper",

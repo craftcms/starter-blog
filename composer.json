@@ -19,8 +19,8 @@
   },
   "repositories": [
     {
-      "type": "vcs",
-      "url": "https://github.com/mattstein/craft-asset-rev"
+      "type": "git",
+      "url": "https://github.com/mattstein/craft-asset-rev.git"
     }
   ],
   "config": {
