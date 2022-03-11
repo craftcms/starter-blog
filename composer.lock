@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f22e2c9219b6943ca8cdb67472443f92",
+    "content-hash": "e442ba9f27ca2b2a68894ee5a99a3398",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -728,12 +728,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "a0a9dee06660dbbacec6d3357808197a2c3f781b"
+                "reference": "a2a8ec96f71233da95769d4d843cb9fe0e69eae4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/a0a9dee06660dbbacec6d3357808197a2c3f781b",
-                "reference": "a0a9dee06660dbbacec6d3357808197a2c3f781b",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/a2a8ec96f71233da95769d4d843cb9fe0e69eae4",
+                "reference": "a2a8ec96f71233da95769d4d843cb9fe0e69eae4",
                 "shasum": ""
             },
             "require": {
@@ -838,7 +838,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2022-03-09T19:02:15+00:00"
+            "time": "2022-03-10T14:31:22+00:00"
         },
         {
             "name": "craftcms/gatsby-helper",
@@ -902,12 +902,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/html-field.git",
-                "reference": "60174b111d7c180d91bca59af7d86f3ccac1a1a4"
+                "reference": "5476387139d255a6dd258b7dab2ad952c49cbf20"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/html-field/zipball/60174b111d7c180d91bca59af7d86f3ccac1a1a4",
-                "reference": "60174b111d7c180d91bca59af7d86f3ccac1a1a4",
+                "url": "https://api.github.com/repos/craftcms/html-field/zipball/5476387139d255a6dd258b7dab2ad952c49cbf20",
+                "reference": "5476387139d255a6dd258b7dab2ad952c49cbf20",
                 "shasum": ""
             },
             "require": {
@@ -942,7 +942,7 @@
                 "rss": "https://github.com/craftcms/html-field/commits/main.atom",
                 "source": "https://github.com/craftcms/html-field"
             },
-            "time": "2022-03-04T20:53:05+00:00"
+            "time": "2022-03-10T14:41:08+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
@@ -2012,12 +2012,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
-                "reference": "5eac9f31907c423eb7e2dc9dc22d9a29ca8e6daa"
+                "reference": "15d9a8511c606a92b2fe1e1015873372eb682cb1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/collections/zipball/5eac9f31907c423eb7e2dc9dc22d9a29ca8e6daa",
-                "reference": "5eac9f31907c423eb7e2dc9dc22d9a29ca8e6daa",
+                "url": "https://api.github.com/repos/illuminate/collections/zipball/15d9a8511c606a92b2fe1e1015873372eb682cb1",
+                "reference": "15d9a8511c606a92b2fe1e1015873372eb682cb1",
                 "shasum": ""
             },
             "require": {
@@ -2059,7 +2059,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2022-03-09T16:36:30+00:00"
+            "time": "2022-03-10T16:13:19+00:00"
         },
         {
             "name": "illuminate/conditionable",
