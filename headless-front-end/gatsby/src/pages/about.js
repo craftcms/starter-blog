@@ -14,7 +14,6 @@ export const query = graphql`
         ...QuoteFragment
         ...ImageFragment
         ...ImageCarouselFragment
-        ...EmbedFragment
       }
     }
   }

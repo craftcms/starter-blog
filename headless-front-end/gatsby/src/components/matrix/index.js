@@ -74,13 +74,4 @@ export const query = graphql`
     aspectRatio
     typeHandle
   }
-
-  fragment EmbedFragment on Craft_bodyContent_embed_BlockType {
-    embed {
-      code
-      providerName
-      providerUrl
-    }
-    typeHandle
-  }
 `
