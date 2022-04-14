@@ -190,9 +190,16 @@ class m210104_175929_sample_content extends Migration
      */
     private function addHomeContent(): bool
     {
-        if ($homeEntry = Entry::find()->slug('home')->one()) {
-            $homeEntry->setFieldValue('siteIntroduction', '<p>This simple Craft CMS project includes this homepage, a blog section, and an about page. You can use it to see Craft in action with the included Twig templates and headless Gatsby front end.</p>');
-            Craft::$app->getElements()->saveElement($homeEntry);
+        if (! $homeEntry = Entry::find()->slug('home')->one()) {
+            echo 'Home is missing.';
+            return false;
+        }
+
+        $homeEntry->setFieldValue('siteIntroduction', '<p>This simple Craft CMS project includes this homepage, a blog section, and an about page. You can use it to see Craft in action with the included Twig templates and headless Gatsby front end.</p>');
+
+        if (! Craft::$app->getElements()->saveElement($homeEntry)) {
+            echo 'Failed to save home page: ' . $homeEntry->getErrors()[0];
+            return false;
         }
 
         return true;
@@ -208,20 +215,26 @@ class m210104_175929_sample_content extends Migration
      */
     private function addAboutContent(): bool
     {
-        if ($aboutEntry = Entry::find()->slug('about')->one()) {
-            $aboutEntry->setFieldValue(
-                'bodyContent',
-                [
-                    'new1' => [
-                        'type' => 'richText',
-                        'fields' => [
-                            'richText' => '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
-                        ]
-                    ],
-                ]
-            );
+        if (! $aboutEntry = Entry::find()->slug('about')->one()) {
+            echo 'About page is missing';
+            return false;
+        }
 
-            Craft::$app->getElements()->saveElement($aboutEntry);
+        $aboutEntry->setFieldValue(
+            'bodyContent',
+            [
+                'new1' => [
+                    'type' => 'richText',
+                    'fields' => [
+                        'richText' => '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
+                    ]
+                ],
+            ]
+        );
+
+        if (! Craft::$app->getElements()->saveElement($aboutEntry)) {
+            echo 'Failed to save about page: ' . $aboutEntry->getErrors()[0];
+            return false;
         }
 
         return true;
