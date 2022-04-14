@@ -190,7 +190,7 @@ class m210104_175929_sample_content extends Migration
      */
     private function addHomeContent(): bool
     {
-        if (! $homeEntry = Entry::find()->slug('home')->one()) {
+        if (! $homeEntry = Entry::find()->slug('home')->status(null)->one()) {
             echo 'Home is missing.';
             return false;
         }
@@ -215,7 +215,7 @@ class m210104_175929_sample_content extends Migration
      */
     private function addAboutContent(): bool
     {
-        if (! $aboutEntry = Entry::find()->slug('about')->one()) {
+        if (! $aboutEntry = Entry::find()->slug('about')->status(null)->one()) {
             echo 'About page is missing';
             return false;
         }
