@@ -5,11 +5,11 @@
   "license": "0BSD",
   "minimum-stability": "dev",
   "require": {
-    "clubstudioltd/craft-asset-rev": "dev-feature/craft-4",
-    "craftcms/cms": "^4.0.0-beta.1",
-    "craftcms/gatsby-helper": "2.0.x-dev",
-    "craftcms/redactor": "^3.0.x-dev",
-    "nystudio107/craft-typogrify": "^4.0.0-beta.1",
+    "clubstudioltd/craft-asset-rev": "^7.0.0",
+    "craftcms/cms": "^4.0.0",
+    "craftcms/gatsby-helper": "^2.0.0",
+    "craftcms/redactor": "^3.0.0",
+    "nystudio107/craft-typogrify": "^4.0.0-beta.2",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "autoload": {
@@ -17,12 +17,6 @@
       "modules\\": "modules/"
     }
   },
-  "repositories": [
-    {
-      "type": "git",
-      "url": "https://github.com/mattstein/craft-asset-rev.git"
-    }
-  ],
   "config": {
     "sort-packages": true,
     "optimize-autoloader": true,
