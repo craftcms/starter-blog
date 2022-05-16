@@ -740,12 +740,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "49f7586e6bc57eadaf9e5d74a63f2207898e33e7"
+                "reference": "f45c185f4aa0d164f40fbdb34061d0150256ef1c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/49f7586e6bc57eadaf9e5d74a63f2207898e33e7",
-                "reference": "49f7586e6bc57eadaf9e5d74a63f2207898e33e7",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/f45c185f4aa0d164f40fbdb34061d0150256ef1c",
+                "reference": "f45c185f4aa0d164f40fbdb34061d0150256ef1c",
                 "shasum": ""
             },
             "require": {
@@ -850,7 +850,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2022-05-10T16:50:27+00:00"
+            "time": "2022-05-14T23:30:43+00:00"
         },
         {
             "name": "craftcms/gatsby-helper",
@@ -1701,12 +1701,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "82ca75f0b1f130f018febdda29af13086da5dbac"
+                "reference": "b720a2d0ff4a135ee0ef542082b2b979ff1f1d14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/82ca75f0b1f130f018febdda29af13086da5dbac",
-                "reference": "82ca75f0b1f130f018febdda29af13086da5dbac",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/b720a2d0ff4a135ee0ef542082b2b979ff1f1d14",
+                "reference": "b720a2d0ff4a135ee0ef542082b2b979ff1f1d14",
                 "shasum": ""
             },
             "require": {
@@ -1818,7 +1818,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-03-20T14:21:21+00:00"
+            "time": "2022-05-16T15:07:31+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -2027,12 +2027,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
-                "reference": "32badf046bfc187afacbee37b9820c5e200285d0"
+                "reference": "7d7617afdca6f15c881856c679da4e76820e7674"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/collections/zipball/32badf046bfc187afacbee37b9820c5e200285d0",
-                "reference": "32badf046bfc187afacbee37b9820c5e200285d0",
+                "url": "https://api.github.com/repos/illuminate/collections/zipball/7d7617afdca6f15c881856c679da4e76820e7674",
+                "reference": "7d7617afdca6f15c881856c679da4e76820e7674",
                 "shasum": ""
             },
             "require": {
@@ -2074,7 +2074,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2022-05-02T14:05:19+00:00"
+            "time": "2022-05-16T15:20:45+00:00"
         },
         {
             "name": "illuminate/conditionable",
@@ -3920,12 +3920,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "f7e29ecb38b7536fa544108b8a7962697273d88c"
+                "reference": "18949198428c079e9cbe7be63fd628d74e7f2751"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/f7e29ecb38b7536fa544108b8a7962697273d88c",
-                "reference": "f7e29ecb38b7536fa544108b8a7962697273d88c",
+                "url": "https://api.github.com/repos/symfony/console/zipball/18949198428c079e9cbe7be63fd628d74e7f2751",
+                "reference": "18949198428c079e9cbe7be63fd628d74e7f2751",
                 "shasum": ""
             },
             "require": {
@@ -4012,7 +4012,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-05-10T09:18:46+00:00"
+            "time": "2022-05-14T12:51:09+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
