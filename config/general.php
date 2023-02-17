@@ -28,4 +28,10 @@ return [
 
     // Whether crawlers should be allowed to index pages and following links
     'disallowRobots' => !$isProd,
+
+    // Additional aliases
+    'aliases' => [
+        '@web' => App::env('PRIMARY_SITE_URL'),
+        '@webroot' => '@root/web',
+    ],
 ];

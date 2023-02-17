@@ -29,8 +29,8 @@ return [
                 return '';
             }
         ],
-        'assetUrlPrefix' => getenv('DEFAULT_SITE_URL'),// . '/assets/dist/',
-        'manifestPath' => 'web/assets/dist/manifest.json',
+        'assetUrlPrefix' => '@web',
+        'manifestPath' => '@webroot/assets/dist/manifest.json',
         'pipeline' => 'manifest|noManifest',
     ]
 ];
