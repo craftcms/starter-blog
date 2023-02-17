@@ -224,6 +224,12 @@ nodejs_version: "16"
 #    http_port: 9998
 #    https_port: 9999
 
+web_extra_exposed_ports:
+  - name: webpack
+    container_port: 3000
+    http_port: 2999
+    https_port: 3000
+
 #web_extra_daemons:
 #- name: "http-1"
 #  command: "/var/www/html/node_modules/.bin/http-server -p 3000"
