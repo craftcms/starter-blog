@@ -149,6 +149,8 @@ After the installer runs you should be able to see log into the Control Panel at
 
 This starter project ships without any content, so you get familiarize yourself with Craft’s intuitive [control panel](https://craftcms.com/docs/4.x/control-panel.html) while populating it. Start by adding some content and watch how the site comes together.
 
+(If you would prefer to just have some bogus content to get started, you can run `ddev craft up` to execute the included seed/content migration.)
+
 > **Note**  
 > [Unsplash](https://unsplash.com/) is a great place to grab free images if you need some to play with.
 > When you add an image with an image field, you’ll see a thumbnail of it. Double-click that thumbnail to reveal more editing options.
