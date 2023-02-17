@@ -2,6 +2,9 @@
 
 This Gatsby starter is intended for use with Craft’s blog starter project as the back end. If you haven’t set it up yet, start with the root-level [README](../../README.md) to get Craft up and running. Be sure to follow the instructions in the headless section.
 
+> **Note**  
+> This guide assumes that your main project is running in a DDEV environment, and Gatsby is running on the host machine. Previews should work fine (this endpoint is requested from the browser), but you may encounter unusual behavior when using the “build” hooks, which require that Craft is able to reach the defined endpoint. `localhost` means something different from inside a container!
+
 ## Install the dependencies
 
 We’ll assume you have [Node.js](https://nodejs.org) and [npm](https://www.npmjs.com/) (or [yarn](https://yarnpkg.com)) installed and have a basic understanding of Node development.
@@ -41,11 +44,11 @@ cp .env.example .env
 Update the `.env` file:
 
 ```bash
-CRAFTGQL_TOKEN=[the token you got from Craft’s control panel]
-CRAFTGQL_URL=http://your-local-site.test/api
+CRAFTGQL_TOKEN="[[ Insert the token you got from Craft’s control panel! ]]"
+CRAFTGQL_URL=https://starter-blog.ddev.site/api
 ```
 
-The `/api` endpoint route is something [you set up](https://craftcms.com/docs/3.x/graphql.html#create-your-api-endpoint) in Craft’s `/config/routes.php` file. You might have chosen a different route. If so, then use the route you defined.
+The `/api` [endpoint](https://craftcms.com/docs/4.x/graphql.html#create-your-api-endpoint) route is set up in Craft’s `config/routes.php` file.
 
 If you’re using Craft’s [live preview feature with Gatsby](https://github.com/craftcms/gatsby-source-craft#live-preview), you’ll also need to add one more line to your `.env` file:
 
@@ -53,7 +56,7 @@ If you’re using Craft’s [live preview feature with Gatsby](https://github.co
 ENABLE_GATSBY_REFRESH_ENDPOINT=true
 ```
 
-For more in-depth setup instructions, see https://github.com/craftcms/gatsby-source-craft.
+For more in-depth setup instructions, see our official [Gatsby Source plugin](https://github.com/craftcms/gatsby-source-craft).
 
 ### Start developing!
 
