@@ -2,7 +2,7 @@
 
 ## Intent
 
-This starter project intends to be a learning resource rather than a fully baked website. It is purposefully lean on features. We hope it illuminates front-end workflow with Twig  template best practices, well-documented templates, and a simple front-end build system based on Tailwind CSS.
+This starter project is intended to be a learning resource rather than a fully-baked website, and as such is purposefully lean on features. We hope it helps illuminate some novel front-end tooling, including Twig and Tailwind CSS.
 
 ## Issues and Pull Requests
 
@@ -10,7 +10,7 @@ Please report bugs as issues. Also, please report any documentation you found in
 
 ## Pull Requests
 
-Pull requests are welcome. Any additions should aim to ease a new developer’s learning effort rather than make this starter project a full-featured blog site.
+Pull requests are always welcome! We do ask that additions focus on streamlining new developers’ onboarding experience rather than adding features. Contributions that solely add or replace tools (without an immediate, material benefit to new users) will be respectfully declined.
 
 ## Code style
 
@@ -25,7 +25,7 @@ Keep within the spirit of the current templates.
 
 ### PHP
 
-Follow the [Craft CMS coding guidelines](https://docs.craftcms.com/v3/extend/coding-guidelines.html)
+Follow the [Craft CMS coding guidelines](https://craftcms.com/docs/4.x/extend/coding-guidelines.html).
 
 ## Webpack and Tailwind CSS
 
