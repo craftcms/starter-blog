@@ -113,8 +113,10 @@ ddev start
 Running Composer with DDEV ensures that everything is done within the appropriate PHP environment:
 
 ```bash
-ddev composer install
+ddev composer update
 ```
+
+Why `update`? `composer install` will work just fine (using the existing `composer.lock` file)—but as you’re getting set up, we might as well make sure everything is up-to-date.
 
 You might see some error output about cache clearing—not to worry! Craft isn’t installed yet, so that’s perfectly fine.
 

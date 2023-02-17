@@ -730,16 +730,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "4.3.9",
+            "version": "4.3.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "12a6e0952d7130740eb0ac2e33bedebf9ba37e5a"
+                "reference": "af40a2d6e0557f6a600a22f29f1660639cd11b81"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/12a6e0952d7130740eb0ac2e33bedebf9ba37e5a",
-                "reference": "12a6e0952d7130740eb0ac2e33bedebf9ba37e5a",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/af40a2d6e0557f6a600a22f29f1660639cd11b81",
+                "reference": "af40a2d6e0557f6a600a22f29f1660639cd11b81",
                 "shasum": ""
             },
             "require": {
@@ -837,14 +837,14 @@
                 "yii2"
             ],
             "support": {
-                "docs": "https://craftcms.com/docs/4.x/",
+                "docs": "https://docs.craftcms.com/v3/",
                 "email": "support@craftcms.com",
                 "forum": "https://craftcms.stackexchange.com/",
                 "issues": "https://github.com/craftcms/cms/issues?state=open",
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2023-02-14T18:50:04+00:00"
+            "time": "2023-02-17T22:32:58+00:00"
         },
         {
             "name": "craftcms/gatsby-helper",
