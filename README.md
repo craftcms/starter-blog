@@ -1,23 +1,21 @@
 # Craft CMS Blog Starter
 
-This blog starter project is for developers who are new to Craft CMS and want to learn the basics quickly. It tries not to be too prescriptive while demonstrating a few essentials of Craft development with the Twig templating language.
+This blog starter project is for developers who are new to Craft CMS and want to learn the basics quickly. It seeks to demonstrate a few Craft essentials, without being too prescriptive about other parts of your development toolkit. You’ll get a turn-key front-end built on the native Twig templating language.
 
 ### Topics, features, and implementations:
 
-- Matrix as a page-builder field
-- Template inheritance with layouts
-- Dynamic template inclusion
-- Twig macros
-- Paginated entry list
+- Using a [Matrix field](https://craftcms.com/docs/4.x/matrix-fields.html) as a page-builder;
+- [Templating fundamentals](https://craftcms.com/docs/4.x/dev/twig-primer.html#dry-templating), including: inheritance with layouts, dynamic includes, and macros;
+- [Pagination](https://craftcms.com/docs/4.x/element-queries.html#pagination) of entries;
 - Responsive images
 - Local asset volumes
-- Error pages
-- Plugins
+- [Error pages](https://craftcms.com/docs/4.x/routing.html#error-templates)
+- Installation and configuration of [plugins](https://plugins.craftcms.com)
 - Front-end development with Webpack and Tailwind CSS
 
 ### It’s free to use
 
-When you install this starter, you’ll see that it’s running Craft Solo which is free to use for any purpose. The installed plugins are also free. You can upgrade to Craft Pro or add paid plugins any time. See our [pricing page](https://craftcms.com/pricing) for details and feature comparisons.
+When you install this starter, you’ll see that it’s running Craft Solo, which is free to use for any purpose. The installed plugins are also free. You can upgrade to Craft Pro or add paid plugins any time. See our [pricing page](https://craftcms.com/pricing) for details and feature comparisons.
 
 ## Navigation
 
@@ -60,38 +58,36 @@ You’re always welcome in the [Craft Discord chat](https://craftcms.com/communi
 
 ## Installation
 
-Install [Composer](https://getcomposer.org/download/) if it is not installed already.
+This project is designed to work with [DDEV](https://ddev.readthedocs.io/en/stable/), our recommended local development environment.
 
 ### Clone this repo
 
-Open up a terminal window in a directory where you’d like to install Craft and run the following.
+Open up a terminal window in a directory where you’d like to install Craft and run the following:
 
 ```bash
 git clone git@github.com:craftcms/starter-blog.git
 ```
 
-Move into the newly created project folder.
+Move into the newly created project folder:
 
 ```bash
 cd starter-blog
 ```
 
-You’re starting your own project so you don’t need the Git project.
+Assuming you are starting your own project (rather than contributing to this repo), you don’t need to keep the existing git history:
 
 ```bash
 rm -rf .git
+# (Optional) Start a new repository:
+git init .
 ```
 
 ### Set up your local environment
 
-This part is up to you. Some folks use [MAMP](https://www.mamp.info/) or [WAMP](http://www.wampserver.com/en/). Others use [Laravel Valet](https://laravel.com/docs/valet).
-
-Point your server to the `/web` directory where the `index.php` file lives.
-
-See the [Appendix](#appendix) section for information on Apache vs. Nginx and MySQL vs. Postgres. Basically, it’s simpler to use Apache if you're getting started. MySQL is perfectly fine but might result in unexpected search results without some configuration.
-
-⚠️ Check Craft’s [server requirements](https://docs.craftcms.com/v3/requirements.html) before getting started. The default PHP configuration doesn’t allocate enough resources to Craft. Read about `php.ini` settings in our guide, [How to Make Changes to php.ini](https://craftcms.com/guides/php-ini).
-
+> **Note**  
+> You are welcome to use any local development tool you like—but these instructions only cover [DDEV](https://ddev.readthedocs.io/en/stable/).
+> 
+> As long as the environment is capable of using the `web/` directory as the “web root,” you’ll be able to try it out!
 
 ### Create `.env`
 
@@ -101,25 +97,38 @@ Craft depends on environment variables set in a root `.env` file so you’ll nee
 cp .env.example .env
 ```
 
-⚠️ It is important to do that _before_ installation. This starter project requires a couple of special environment variables found in `.env.example` that will not exist if you run the installer first.
+> **Warning**
+> It’s important that you do this _before_ installation. This starter project requires a couple of special environment variables found in `.env.example` that will be missing if you let the installer (or DDEV) populate the file.
+
+### Start DDEV
+
+[DDEV](https://ddev.readthedocs.io/en/stable/) is a Docker-based development environment that makes spinning up Craft projects quick and reliable. The required configuration files were cloned with the repo, so all you need to do is run:
+
+```bash
+ddev start
+```
 
 ### Install Composer packages
 
+Running Composer with DDEV ensures that everything is done within the appropriate PHP environment:
+
 ```bash
-composer install
+ddev composer update
 ```
 
-👀 You might see some error output about cache clearing. Not to worry! Craft isn’t installed yet, so that’s perfectly fine.
+Why `update`? `composer install` will work just fine (using the existing `composer.lock` file)—but as you’re getting set up, we might as well make sure everything is up-to-date.
+
+You might see some error output about cache clearing—not to worry! Craft isn’t installed yet, so that’s perfectly fine.
 
 ### Install Craft
 
-Start by running this:
+Run the setup wizard with this command:
 
 ```bash
-php craft setup
+ddev craft setup
 ```
 
-That command will generate a random value for `SECURITY_KEY` in the `.env` file. It will also ask you for database credentials, update the `.env` file accordingly, and test the database connection.
+Craft will generate a random value for `SECURITY_KEY` in your `.env` file. It will also ask you for database credentials, update the `.env` file accordingly (if necessary), and test the database connection.
 
 You’ll be asked if you’d like to install Craft right away. If you choose not to, you can come back later and run:
 
@@ -127,82 +136,84 @@ You’ll be asked if you’d like to install Craft right away. If you choose not
 php craft install
 ```
 
-You’ll be asked for things like a username, email, password, and more. These values will be written to the `.env` file and the installer will run.
+The setup wizard will also prompt you for details about your first account, including a username, email, and password. You’ll use these in just a moment!
 
-⚠️ Watch for this line:
+> **Note**  
+> If you are not using DDEV, you will need to provide a “Site URL” setting during installation.
 
-```bash
-Site URL: [$DEFAULT_SITE_URL]
-```
-
-Be sure to enter the site URL as set up with your local server. If you miss it, you can edit it later by hand in the `.env` file which should have a variable named `DEFAULT_SITE_URL`. This is important because the AssetRev plugin configuration relies on it.
-
-You can edit values in `.env` by hand if you don’t want to run those commands again.
-
-After the installer runs you should be able to see log into the Control Panel at `http://local-site-name.test/admin`.
+After the installer runs you should be able to see log into the Control Panel at `https://starter-blog.ddev.site/admin`. You can also run `ddev launch admin` to open a browser, directly.
 
 ## Learn Craft
 
 ### Create some content
 
-This starter project ships without any content so you get to start from scratch. The Control Panel should feel pretty intuitive. Start by adding some content and watch how the site comes together. [Unsplash](https://unsplash.com/) is a great place to grab free images if you need some to play with.
+This starter project ships without any content, so you get familiarize yourself with Craft’s intuitive [control panel](https://craftcms.com/docs/4.x/control-panel.html) while populating it. Start by adding some content and watch how the site comes together.
 
-When you add an image with an image field, you’ll see a thumbnail of it. Double-click that thumbnail to reveal editing options.
+(If you would prefer to just have some bogus content to get started, you can run `ddev craft up` to execute the included seed/content migration.)
+
+> **Note**  
+> [Unsplash](https://unsplash.com/) is a great place to grab free images if you need some to play with.
+> When you add an image with an image field, you’ll see a thumbnail of it. Double-click that thumbnail to reveal more editing options.
 
 ### Look at the settings
 
-In the Control Panel, go to Settings → Sections.
+In the Control Panel, go to **Settings** → **Sections**.
 
 #### Fields
 
-Take a look at the fields to see how they are configured. Take note of the Matrix field named Body Content. Developers to use the Matrix field as a page builder field quite often. Each Matrix block represents a content module that content creators may use to piece together pages creatively and safely.
+Take a look at the fields to see how they are configured. Take note of the Matrix field named _Body Content_. Developers use the Matrix field as a page builder field quite often. Each Matrix block represents a content module that content authors may use to piece together pages creatively—and safely.
 
 #### Sections
 
-You’ll find three Sections: Two Singles and one Channel. Singles are for standalone evergreen pages and Channels are for listable content like news articles. There is also a Structure section type, but that’s not implemented in this starter.
+You’ll find three Sections: Two [Singles](https://craftcms.com/docs/4.x/entries.html#singles) and one [Channel](https://craftcms.com/docs/4.x/entries.html#channels). Singles are for standalone, evergreen pages and Channels are for listable content like news articles. Craft also has a hierarchical section type, [Structure](https://craftcms.com/docs/4.x/entries.html#structures), but it is not used in this project.
 
 #### Assets
 
 This starter includes one local asset volume for all of your uploads. You’ll find a related `/web/uploads` folder. Take a look at the Uploads volume settings to see how it’s configured. You’ll find that it has a Field Layout tab with a couple of fields applied to it. It is possible for uploaded Assets to have custom fields for metadata.
 
-You can add images directly to the `/web/uploads/images` folder rather than via the Control Panel. They won’t show up in the Control Panel until they’re indexed. Go to Utilities → Asset Indexes, and click the “Update asset indexes” button.
+> **Note**  
+> If you want to start with a large image library, you can copy images directly to the `/web/uploads/images` folder, then run the asset indexing tool from the control panel (**Utilities** → **Asset Indexes**), or via the CLI: `ddev craft index-assets/one uploads`.
 
 ### Look at the template files
 
-Be sure to read up on Craft’s [front-end development docs](https://docs.craftcms.com/v3/dev/) for Twig templating features. Twig is not unique to Craft. It’s a well-loved PHP templating language. You’ll want to read up on [Twig’s documentation](https://twig.symfony.com/doc/2.x/) too.
+Be sure and read up on Craft’s [front-end development docs](https://craftcms.com/docs/4.x/dev/) for Twig templating features. Twig is not unique to Craft! It’s a well-loved, PHP-driven templating language, with great [documentation](https://twig.symfony.com/doc/3.x/) of its own.
 
-Take a look at the files in the `/templates` folder. There are comments throughout the templates to help you understand what’s going on and why.
+Take a look at the files in the `/templates` folder. There are comments throughout the templates to help you understand what’s going on—and why things are set up as they are. The `.twig` extension is not required (`.html` is also acceptable), but it provides a hint to IDEs (like the free [Visual Studio Code](https://code.visualstudio.com/)) that they should use special rules for syntax highlighting.
 
-The files are named with the `.html` extension but `.twig` also works. Some developers prefer `.twig` so their IDE (like the free [Visual Studio Code](https://code.visualstudio.com/)) automatically knows to use Twig syntax highlighting.
-
-You might wonder why a folder name starts with an underscore. If so, read up on [routing](https://docs.craftcms.com/v3/routing.html#dynamic-routes). Craft will automatically route template paths as URL paths. For example if you create a file `/templates/foo/bar.html` then you will see that template render at `http://mysite.test/foo/bar`. If you’d like to keep template folders or  files private, prepend the name with an underscore so Craft will ignore it. In this starter project, there is a single folder, `_private` to hold all templates that should not be publicly accessible.
+> **Note**  
+> Curious about the folders with underscores? When Craft doesn’t find a matching element URL or [route](https://craftcms.com/docs/4.x/routing.html), it automatically looks for a file in your `templates/` with the request’s path. For example, if you create `templates/foo/bar.twig` then Craft will render that template when the URL `https://starter-project.ddev.site/foo/bar` is requested. If you’d like to keep template folders (or individual files) private, prepend the name with an underscore (`_`). In this starter project, there is a single folder, `_private`, to hold all templates that should not be publicly accessible.
+>
+> You can still use a “private” template in a section’s settings!
 
 ### Try something new
 
-Try adding a feature of your own. For example, you might like to add categories to your blog posts and have listing pages for them.
+Try adding a feature of your own. For example, you might like to add [categories](https://craftcms.com/docs/4.x/categories.html) to your blog posts and have listing pages for them.
 
 #### Create an empty template
 
-Make a new, empty file here:  `/templates/_private/category.html`. It doesn’t need any code yet.
+Make a new, empty file here:  `templates/_private/category.twig`. It doesn’t need any code yet.
 
 #### Create a new category group
 
-1. Go to Settings → Categories and create a new category group named Topics
+1. Go to **Settings** → **Categories** and create a new category group named Topics
 2. Set Max Levels to `1`
 3. Set the URI format to `topic/{slug}`
 4. Set the Template path to the template you created in the first step.
-5. Save it
+5. Save it.
 
 #### Create a new category field
 
-1. Go to Settings → Fields and create a Categories field for your new category
-2. Go to Settings → Sections → Blog and add your new field under the Field Layout tab
+1. Go to **Settings** → **Fields** and create a **Categories** field for your new group.
+2. Go to **Settings** → **Sections** → **Blog** and add your new field under the _Field Layout_ tab.
 
-Now you can add categories to your blog entries.
+Back on a blog entry, you can now assign categories, or create new ones on-the-fly!
+
+> **Note**  
+> Double-click an attached category to edit it, in-place.
 
 #### Modify your category template
 
-Copy over code from the `/templates/_private/home.html` template.
+Copy over code from the `templates/_private/home.twig` template.
 
 Find the `<h1>` tag and modify the `<a>` tag like so:
 
@@ -210,7 +221,7 @@ Find the `<h1>` tag and modify the `<a>` tag like so:
 <a href="{{ category.url }}">Topic: {{ category.title }}</a>
 ```
 
-Find the element query that looks like this:
+Find the [element query](https://craftcms.com/docs/4.x/element-queries.html) that looks like this…
 
 ```twig
 {% set query = craft.entries()
@@ -218,15 +229,16 @@ Find the element query that looks like this:
   .limit(10) %}
 ```
 
-Change it to this:
+…and add `.relatedTo(category)` to it, like this:
 
 ```twig
 {% set query = craft.entries()
+  .section('blog')
   .relatedTo(category)
   .limit(10) %}
 ```
 
-Find and delete this:
+Finally, find and delete this:
 
 ```twig
 {% if pageInfo.currentPage == 1 %}
@@ -236,29 +248,34 @@ Find and delete this:
 
 #### Add some categories
 
-1. Go to Categories in the left navigation in the Control Panel and create a few topics
+If you haven’t already added some categories, now’s the time!
+
+1. Go to **Categories** in the left navigation in the control panel and create a few topics
 2. Go to some blog entries and add categories to them
 
 #### Test it
 
-Go to `mysite.test/topic/a-topic-slug` to see a list of blog posts related to that topic.
+Visit `https://starter-blog.ddev.site/topic/{a-topic-slug}` to see a list of blog posts related to one of your topics! You can find the slug of a topic on its edit screen, at the top of the right-hand column.
 
 #### Finish it
 
-You’ll want to expose these categories somewhere like the main navigation, or in a sidebar, or as tags under a blog post title. We’ll leave that excercise to you because we’re sure you have your own preferences.
+You’ll want to expose these categories somewhere, like the main navigation, in a sidebar, or as “tags” under a blog post title.
 
-Here are a few tips:
+Here are a few tips to get you going…
 
-To create a navigation menu for the Topics category you created, you could do something like this:
+To create a navigation menu for the _Topics_ category you created, you could do something like this:
 
 ```twig
 {% set allCategories = craft.categories.group('topics').all() %}
 ```
 
-To get the first (or only) category from a blog entry, assuming your category field handle is `topic`, you’d do this:
+> **Note**  
+> This query will work anywhere—Craft doesn’t limit where your content can be accessed or output.
+
+To get the first (or only) category from a blog entry (assuming your category field’s handle is `topic`) you’d do this:
 
 ```twig
-{% set category = entry.topic.first() %}
+{% set category = entry.topic.one() %}
 
 {% if category %}{{ category.link }}{% endif %}
 
@@ -272,22 +289,22 @@ To get the first (or only) category from a blog entry, assuming your category fi
 If you’d like to feature three other blog posts within the same category at the bottom of a blog post, you can grab them like so:
 
 ```twig
-{% set category = entry.topic.first() %}
+{% set category = entry.topic.one() %}
 
 {% if category %}
-	{% set otherBlogPosts = craft.entries()
-	  .relatedTo(category)
-	  .not(entry)
+  {% set otherBlogPosts = craft.entries()
+    .relatedTo(category)
+    .not(entry)
     .limit(3)
     .all() %}
-  
+
   {% if otherBlogPosts | length %}
-  	<h3>You might also like:<h3>
-  	<ul>
-	  	{% for otherBlogPost in otherBlogPosts%}
-	  	  <li>{{ otherBlogPost.link }}<li>
-	  	{% endfor %}
-	  </ul>
+    <h3>You might also like:<h3>
+    <ul>
+      {% for otherBlogPost in otherBlogPosts %}
+        <li>{{ otherBlogPost.link }}<li>
+      {% endfor %}
+    </ul>
   {% endif %}
 {% endif %}
 ```
@@ -296,7 +313,7 @@ We’ll leave the rest to you!
 
 ## CSS and JS Development with Tailwind CSS, Webpack, and HMR
 
-[Webpack](https://webpack.js.org/) and [Tailwind CSS](https://tailwindcss.com/) are popular front-end technologies. We chose Tailwind because it allows you to quickly style things by adding utility classes to HTML elements.
+[Webpack](https://webpack.js.org/) and [Tailwind CSS](https://tailwindcss.com/) are popular front-end technologies. We chose Tailwind because it allows you to quickly add style to your markup with “utility classes.”
 
 ### Removal
 
@@ -306,7 +323,7 @@ We hope you’ll give it a go, but if you prefer not to, then delete these folde
 * `package.json`
 * `package-lock.json`
 
-In the `/templates/layout/main.html` find this:
+In the `templates/layout/main.twig` find this:
 
 ```twig
 {% set stylesheet = rev('main.css') %}
@@ -317,37 +334,34 @@ In the `/templates/layout/main.html` find this:
 
 Replace it with a link to your own stylesheet.
 
-You can also safely uninstall and remove the Asset Rev plugin from the Control Panel and the `/config/assetrev.php` file from the project.
+You can also safely uninstall and remove the Asset Rev plugin from the Control Panel (and delete the `config/assetrev.php` file).
 
 ### Setup
 
-If you don’t have Node.js and `npm` installed, you’ll find an installer on the
-[NPM website](https://www.npmjs.com/get-npm). Do that first.
-
-Open up a terminal window in the root of this project and run:
+DDEV comes installed with Node and [NPM](https://www.npmjs.com). From your project folder, run:
 
 ```bash
-npm install
+ddev npm install
 ```
 
 ### Tailwind Development Flow
 
-All of the SCSS and JavaScript files are in the project root `/src` folder.
+All of the SCSS and JavaScript files are in the project root `src/` folder.
 
 There are three npm scripts you can run:
 
 #### Development Build
 
 ```bash
-npm run dev
+ddev npm run dev
 ```
 
-The above command  builds the largest possible css file with all of Tailwind’s classes available to you. The resulting file is a bit large for production, but it allows you to explore all of the possibilities.
+The above command  builds the largest possible css file with _all_ of Tailwind’s classes available to you. The resulting file is generally considered too large for production use, but it allows you to explore all of the possibilities during development.
 
 #### Production Build
 
 ```bash
-npm run production
+ddev npm run production
 ```
 
 The above command will minify all of the CSS and JavaScript. It will also remove any classes that aren’t actually used in the `/template` files resulting in a very small file.
@@ -363,7 +377,7 @@ ENVIRONMENT="dev"
 Then run this script:
 
 ```bash
-npm run hot
+ddev npm run hot
 ```
 
 Refresh the browser. Now you’ll see changes in the browser immediately (without a page refresh) as you edit `.scss` files in the `/src` folder. Hot module reloading does not apply to changes made in Twig templates.
@@ -373,20 +387,20 @@ When you’re done, cancel the npm process with CTRL+C.
 You can build minified CSS and JS for production by running:
 
 ```bash
-npm run build
+ddev npm run build
 ```
 
 If you’d rather compile without minification, run:
 
 ```bash
-npm run production
+ddev npm run production
 ```
 
 ## Go headless with GraphQL
 
 Craft Pro includes a native GraphQL implementation which makes Craft perfect for front-end frameworks like [Gatsby](https://www.gatsbyjs.org/) and [Gridsome](https://gridsome.org/).
 
-See Craft’s [GraphQL documentation](https://docs.craftcms.com/v3/graphql.html#getting-started) to learn more about it.
+See Craft’s [GraphQL documentation](https://craftcms.com/docs/4.x/graphql.html) to learn more about it.
 
 ### Switch to Pro trial
 
@@ -396,20 +410,17 @@ To enable GraphQL support, find the “Solo” badge at the bottom of the left s
 
 ### Headless Mode
 
-If you want to use Craft purely as a headless CMS and clean things up then set the [`headlessMode` configuration](https://docs.craftcms.com/v3/config/config-settings.html#headlessmode) in `/config/general.php`.
+If you want to use Craft purely as a headless CMS, set the [`headlessMode` configuration](https://craftcms.com/docs/4.x/config/config-settings.html#headlessmode) in `/config/general.php`:
 
 ```php
-return [
-    // Global settings
-    '*' => [
-        // ... other settings
-        'headlessMode' => true,
-    ],
-    // ... other environment settings
-];
+return GeneralConfig::create()
+  // ...
+  ->headlessMode(true)
+  // ...
+;
 ```
 
-You can also remove these files and folders:
+Assuming your front-end is in another repository, you are free to remove these files and folders:
 
 * All files in the `templates` folder
 * All front-end development files and folders
@@ -423,7 +434,7 @@ You can also remove these files and folders:
 
 ### Set up a GraphQL API endpoint
 
-Edit the `/config/routes.php` file to look like this:
+Edit `config/routes.php` to look like this:
 
 ```php
 return [

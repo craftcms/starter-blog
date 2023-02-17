@@ -3,13 +3,12 @@
   "description": "A Craft CMS blog site starter with Tailwind CSS",
   "type": "project",
   "license": "0BSD",
-  "minimum-stability": "dev",
   "require": {
     "clubstudioltd/craft-asset-rev": "^7.0.0",
     "craftcms/cms": "^4.0.0",
     "craftcms/gatsby-helper": "^2.0.0",
     "craftcms/redactor": "^3.0.0",
-    "nystudio107/craft-typogrify": "^4.0.0-beta.2",
+    "nystudio107/craft-typogrify": "^4.0.0",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "autoload": {

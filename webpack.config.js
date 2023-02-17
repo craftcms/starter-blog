@@ -23,7 +23,7 @@ config = {
     devMiddleware: {
       writeToDisk: true,
     },
-    port: 8080,
+    port: 3000,
     hot: true,
     onBeforeSetupMiddleware: (server) => {
       const watcher = sane(path.join(__dirname, './templates/'), {

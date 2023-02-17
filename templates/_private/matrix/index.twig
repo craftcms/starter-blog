@@ -4,18 +4,22 @@
   iterate over the Matrix blocks dynamically, like so:
 
   ```
-  {% include "_private/matrix" with {blocks: entry.bodyContent.all()}  %}
+  {% include "_private/matrix" with {
+    blocks: entry.bodyContent.all()
+  } %}
   ```
 
-  This template is named `index.html`. Any template named `index.html` or
-  `index.twig` can be ommitted from the include path. The above code is the
+  This template is named `index.twig`. Any template named `index.html` or
+  `index.twig` can be omitted from the include path. The above code is the
   same as:
 
   ```
-  {% include "_private/matrix/index" with {blocks: entry.bodyContent.all()}  %}
+  {% include "_private/matrix/index" with {
+    blocks: entry.bodyContent.all()
+  }  %}
   ```
 
-  Matrix blocks are Elements. To get the blocks from a Matrix field requires an
+  Matrix blocks are elements. To get the blocks from a Matrix field requires an
   element query:
 
   ```
@@ -26,7 +30,7 @@
   name variables for the scope of the included template. For example:
 
   ```
-  ... with {blocks: entry.bodyContent.all() } ...
+  ... with { blocks: entry.bodyContent.all() } ...
   ```
 
   That means that this included template can expect a variable named `blocks`

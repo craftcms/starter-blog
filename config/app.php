@@ -19,7 +19,7 @@
 
 return [
     'modules' => [
-        'my-module' => \modules\Module::class,
+        'blog' => \modules\Blog::class,
     ],
-//    'bootstrap' => ['my-module'],
+   'bootstrap' => ['blog'],
 ];
