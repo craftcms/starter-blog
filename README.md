@@ -133,7 +133,7 @@ Craft will generate a random value for `SECURITY_KEY` in your `.env` file. It wi
 You’ll be asked if you’d like to install Craft right away. If you choose not to, you can come back later and run:
 
 ```bash
-php craft install
+ddev craft install
 ```
 
 The setup wizard will also prompt you for details about your first account, including a username, email, and password. You’ll use these in just a moment!
