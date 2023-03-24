@@ -1,4 +1,4 @@
-dateModified: 1672879342
+dateModified: 1679699114
 email:
   fromEmail: support@craftcms.com
   fromName: 'Craft Blog'
@@ -67,7 +67,7 @@ system:
   edition: pro
   live: true
   name: 'Craft Blog'
-  schemaVersion: 4.0.0.9
+  schemaVersion: 4.4.0.4
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
