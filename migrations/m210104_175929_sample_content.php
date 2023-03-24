@@ -78,23 +78,10 @@ class m210104_175929_sample_content extends Migration
      */
     public function safeUp(): bool
     {
-        if ( ! $this->addBlogPosts()) {
-            return false;
-        }
-
-        if ( ! $this->addHomeContent()) {
-            return false;
-        }
-
-        if ( ! $this->addAboutContent()) {
-            return false;
-        }
-
-        if ( ! $this->addGqlToken()) {
-            return false;
-        }
-
-        return true;
+        return $this->addBlogPosts()
+            && $this->addHomeContent()
+            && $this->addAboutContent()
+            && $this->addGqlToken();
     }
 
     /**
@@ -152,7 +139,7 @@ class m210104_175929_sample_content extends Migration
      */
     private function addBlogPosts(): bool
     {
-        if ( ! $section = Craft::$app->getSections()->getSectionByHandle('blog')) {
+        if (!$section = Craft::$app->getSections()->getSectionByHandle('blog')) {
             echo 'Blog section does not exist.';
             return false;
         }
@@ -190,14 +177,14 @@ class m210104_175929_sample_content extends Migration
      */
     private function addHomeContent(): bool
     {
-        if (! $homeEntry = Entry::find()->slug('home')->status(null)->one()) {
+        if (!$homeEntry = Entry::find()->slug('home')->status(null)->one()) {
             echo 'Home is missing.';
             return false;
         }
 
         $homeEntry->setFieldValue('siteIntroduction', '<p>This simple Craft CMS project includes this homepage, a blog section, and an about page. You can use it to see Craft in action with the included Twig templates and headless Gatsby front end.</p>');
 
-        if (! Craft::$app->getElements()->saveElement($homeEntry)) {
+        if (!Craft::$app->getElements()->saveElement($homeEntry)) {
             echo 'Failed to save home page: ' . $homeEntry->getErrors()[0];
             return false;
         }
@@ -215,7 +202,7 @@ class m210104_175929_sample_content extends Migration
      */
     private function addAboutContent(): bool
     {
-        if (! $aboutEntry = Entry::find()->slug('about')->status(null)->one()) {
+        if (!$aboutEntry = Entry::find()->slug('about')->status(null)->one()) {
             echo 'About page is missing';
             return false;
         }
@@ -232,7 +219,7 @@ class m210104_175929_sample_content extends Migration
             ]
         );
 
-        if (! Craft::$app->getElements()->saveElement($aboutEntry)) {
+        if (!Craft::$app->getElements()->saveElement($aboutEntry)) {
             echo 'Failed to save about page: ' . $aboutEntry->getErrors()[0];
             return false;
         }
@@ -256,7 +243,7 @@ class m210104_175929_sample_content extends Migration
         $gatsbySchema = null;
 
         foreach ($schemas as $schema) {
-            if ( ! $schema->isPublic) {
+            if (!$schema->isPublic) {
                 $gatsbySchema = $schema;
                 break;
             }
