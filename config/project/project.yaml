@@ -1,4 +1,4 @@
-dateModified: 1679699114
+dateModified: 1694724442
 email:
   fromEmail: support@craftcms.com
   fromName: 'Craft Blog'
@@ -53,8 +53,8 @@ plugins:
     enabled: true
     schemaVersion: 2.0.0
     settings:
-      previewWebhookUrl: $GATSBY_PREVIEW_TARGET
       buildWebhookUrl: ''
+      previewWebhookUrl: $GATSBY_PREVIEW_TARGET
   redactor:
     edition: standard
     enabled: true
@@ -67,7 +67,7 @@ system:
   edition: pro
   live: true
   name: 'Craft Blog'
-  schemaVersion: 4.4.0.4
+  schemaVersion: 4.5.3.0
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false

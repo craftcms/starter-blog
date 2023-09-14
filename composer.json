@@ -5,7 +5,7 @@
   "license": "0BSD",
   "require": {
     "clubstudioltd/craft-asset-rev": "^7.0.0",
-    "craftcms/cms": "^4.0.0",
+    "craftcms/cms": "^4.5.4",
     "craftcms/gatsby-helper": "^2.0.0",
     "craftcms/redactor": "^3.0.0",
     "nystudio107/craft-typogrify": "^4.0.0",
