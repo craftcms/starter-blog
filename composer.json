@@ -9,7 +9,7 @@
     "craftcms/gatsby-helper": "^1.0",
     "craftcms/redactor": "^2.5.0",
     "nystudio107/craft-typogrify": "^1.1",
-    "vlucas/phpdotenv": "^2.4.0",
+    "vlucas/phpdotenv": "^5.4.0",
     "wrav/oembed": "^1.1"
   },
   "autoload": {

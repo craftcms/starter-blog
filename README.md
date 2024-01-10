@@ -84,6 +84,15 @@ rm -rf .git
 
 ### Set up your local environment
 
+> [!TIP]
+> [DDEV](https://ddev.com/) is our recommended local development environment. Run the following commands in the project directory to spin up a fully-functional web server and database—then skip down to the [Learn Craft](#learn-craft) section.
+> 
+> ```
+> ddev start
+> ddev composer install
+> ddev craft setup
+> ```
+
 This part is up to you. Some folks use [MAMP](https://www.mamp.info/) or [WAMP](http://www.wampserver.com/en/). Others use [Laravel Valet](https://laravel.com/docs/valet).
 
 Point your server to the `/web` directory where the `index.php` file lives.
