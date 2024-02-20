@@ -1,4 +1,4 @@
-dateModified: 1708456811
+dateModified: 1708468164
 email:
   fromEmail: support@craftcms.com
   fromName: 'Craft Blog'
@@ -61,6 +61,7 @@ plugins:
     schemaVersion: 2.0.0
     settings:
       buildWebhookUrl: ''
+      previewServerUrl: ''
       previewWebhookUrl: $GATSBY_PREVIEW_TARGET
   redactor:
     edition: standard
