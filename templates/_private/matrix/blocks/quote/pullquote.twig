@@ -4,7 +4,7 @@
 #}
 <blockquote class="m-8 italic text-2xl text-bold text-center font-serif rich-text text-gray-800">
 
-  {{ block.quote | typogrify }}
+  {{ block.quote }}
 
   {#
     In this conditional we check the string length of the trimmed value just in
@@ -12,7 +12,7 @@
   #}
   {% if block.attribution | trim | length %}
     <footer class="text-gray-600 font-sans not-italic text-base">
-      &mdash; {{ block.attribution | typogrify }}
+      &mdash; {{ block.attribution }}
     </footer>
   {% endif %}
 </blockquote>

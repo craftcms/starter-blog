@@ -1,4 +1,4 @@
-dateModified: 1694724442
+dateModified: 1708455115
 email:
   fromEmail: support@craftcms.com
   fromName: 'Craft Blog'
@@ -59,10 +59,6 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.3.0
-  typogrify:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
 system:
   edition: pro
   live: true
