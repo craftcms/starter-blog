@@ -16,13 +16,14 @@ return [
         'cacheKeySuffix' => '',
         // Manifest file names
         'manifest' => [
-            'legacy' => 'mix-manifest.json',
-            'modern' => 'mix-manifest.json',
+            'legacy' => 'manifest.json',
+            'modern' => 'manifest.json',
         ],
         // Public server config
         'server' => [
             'manifestPath' => '@webroot/assets/dist',
-            'publicPath' => '@web/assets/dist',
+            // Don't prepend manifest paths with anything else:
+            'publicPath' => '',
         ],
         // webpack-dev-server config
         'devServer' => [
