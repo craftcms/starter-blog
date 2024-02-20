@@ -1,4 +1,4 @@
-dateModified: 1708455115
+dateModified: 1708456811
 email:
   fromEmail: support@craftcms.com
   fromName: 'Craft Blog'
@@ -14,25 +14,27 @@ fs:
 meta:
   __names__:
     0c98f9b9-84bf-4766-af63-a3568b46c0a6: 'Rich Text' # Rich Text
-    2f6bf496-df01-42e0-9b77-a764f886813d: 'Aspect Ratio' # Aspect Ratio
+    2f6bf496-df01-42e0-9b77-a764f886813d: 'Body Content - Image Carousel - Aspect Ratio' # Body Content - Image Carousel - Aspect Ratio
     5a80053a-6435-4fd2-8a47-53e409d994ad: About # About
-    5d2372e2-c220-4af4-80c9-49bb8c85a92e: Position # Position
+    5d2372e2-c220-4af4-80c9-49bb8c85a92e: 'Body Content - Image - Position' # Body Content - Image - Position
     5e76b2e3-1eae-4bbc-93f4-122fe4526b02: Summary # Summary
-    5fd465cf-5b00-4b4f-8ee0-ce0eac4fd2eb: Attribution # Attribution
-    6b203fd7-eca1-4313-8795-efbb5f6a8e63: Image # Image
+    5fd465cf-5b00-4b4f-8ee0-ce0eac4fd2eb: 'Body Content - Quote - Attribution' # Body Content - Quote - Attribution
+    6b203fd7-eca1-4313-8795-efbb5f6a8e63: 'Body Content - Image - Image' # Body Content - Image - Image
+    7e2c012d-f507-4762-86e3-9b0ddc400c1f: 'Simple 2' # Simple 2
     7e401ee6-3575-42de-b3b4-cedae706f392: 'Image Carousel' # Image Carousel
     09c265f3-2ab1-405d-9111-108e6b54f0fb: Quote # Quote
     28d5c036-8cb0-4a14-b553-0167ee34efbe: Image # Image
     031e8547-9981-4367-ad27-178240517ea1: 'Site Introduction' # Site Introduction
     55cd92b3-363e-4573-ad2c-04650483ba64: Gatsby # Gatsby
+    69e08c2b-0771-4f37-b3ab-b01ae9535ee0: Default # Default
     90dee5cc-23f1-40ac-ae14-3fa71bebc4dc: 'Craft Blog' # Craft Blog
     101a70a1-d200-4629-91e5-3425a0937c0e: Uploads # Uploads
     265d76a5-d5a9-4c82-bee4-2f8450aacd0a: 'Public Schema' # Public Schema
+    913a6b8c-fba7-4a5c-9615-496e1bec6467: Standard # Standard
     8518a799-a012-4a6c-aa89-6a347cc00c2e: Home # Home
-    911477c7-3c92-407b-a9a9-e69ccb74eabb: Common # Common
     4593234a-cdd0-4c54-9931-4eb606b9e7f5: Home # Home
-    a6ca7d80-fa7f-433b-b6ba-fd9f19791f82: Style # Style
-    a6f02aa5-ab37-46e2-bbd4-3b56930577d5: Images # Images
+    a6ca7d80-fa7f-433b-b6ba-fd9f19791f82: 'Body Content - Quote - Style' # Body Content - Quote - Style
+    a6f02aa5-ab37-46e2-bbd4-3b56930577d5: 'Body Content - Image Carousel - Images' # Body Content - Image Carousel - Images
     a121b8e6-70e6-421b-9629-c664d2949934: Quote # Quote
     bb6d289b-c3cf-4a8d-9324-b98cbd32753b: Blog # Blog
     cdd377e5-a451-46b0-ae80-bc4cee907d3e: Caption # Caption
@@ -40,6 +42,7 @@ meta:
     db95de40-4dec-44cc-9d17-bba2223c91cf: 'Image Alt' # Image Alt
     dbd1be32-5e0d-4483-92a5-cc47aba67dcc: About # About
     df3a27ff-e318-422f-8ff5-d626eda8ce54: 'Rich Text' # Rich Text
+    e00e1efa-bb86-4ee8-b669-4a726b8a5427: Simple # Simple
     e8fdd2ad-6739-4bab-a689-8a422e18a8f4: Embed # Embed
     e567b6ab-3855-452b-a337-4c119dac4d62: 'Body Content' # Body Content
     f3400d6f-0f33-4cef-9521-f8f6620399ec: 'Craft Blog' # Craft Blog
@@ -48,6 +51,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
   gatsby-helper:
     edition: standard
     enabled: true
@@ -59,11 +66,15 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.3.0
+  twigpack:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
 system:
   edition: pro
   live: true
   name: 'Craft Blog'
-  schemaVersion: 4.5.3.0
+  schemaVersion: 5.0.0.19
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false

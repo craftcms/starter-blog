@@ -1,0 +1,36 @@
+columnSuffix: null
+handle: images
+instructions: 'Double-click an image thumbnail to apply a caption to an image.'
+name: 'Body Content - Image Carousel - Images'
+searchable: true
+settings:
+  allowSelfRelations: false
+  allowSubfolders: false
+  allowUploads: true
+  allowedKinds:
+    - image
+  branchLimit: null
+  defaultUploadLocationSource: 'volume:101a70a1-d200-4629-91e5-3425a0937c0e' # Uploads
+  defaultUploadLocationSubpath: images
+  localizeRelations: false
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  previewMode: full
+  restrictFiles: true
+  restrictLocation: false
+  restrictedDefaultUploadSubpath: null
+  restrictedLocationSource: 'volume:101a70a1-d200-4629-91e5-3425a0937c0e' # Uploads
+  restrictedLocationSubpath: null
+  selectionLabel: 'Add an image'
+  showCardsInGrid: false
+  showSiteMenu: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: true
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: large
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

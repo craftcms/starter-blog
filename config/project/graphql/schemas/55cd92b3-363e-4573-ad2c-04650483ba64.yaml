@@ -1,12 +1,6 @@
 isPublic: false
 name: Gatsby
 scope:
-  - 'sections.5a80053a-6435-4fd2-8a47-53e409d994ad:read' # About
-  - 'entrytypes.dbd1be32-5e0d-4483-92a5-cc47aba67dcc:read' # About
-  - 'sections.db2dff45-19b4-479c-8cba-ab88e7e7d2fd:read' # Blog
-  - 'entrytypes.bb6d289b-c3cf-4a8d-9324-b98cbd32753b:read' # Blog
-  - 'sections.4593234a-cdd0-4c54-9931-4eb606b9e7f5:read' # Home
-  - 'entrytypes.8518a799-a012-4a6c-aa89-6a347cc00c2e:read' # Home
   - 'volumes.101a70a1-d200-4629-91e5-3425a0937c0e:read' # Uploads
   - 'usergroups.everyone:read'
   - 'gatsby:read'
@@ -14,3 +8,6 @@ scope:
   - 'elements.revisions:read'
   - 'elements.inactive:read'
   - 'sites.f3400d6f-0f33-4cef-9521-f8f6620399ec:read' # Craft Blog
+  - 'sections.5a80053a-6435-4fd2-8a47-53e409d994ad:read' # About
+  - 'sections.4593234a-cdd0-4c54-9931-4eb606b9e7f5:read' # Home
+  - 'sections.db2dff45-19b4-479c-8cba-ab88e7e7d2fd:read' # Blog

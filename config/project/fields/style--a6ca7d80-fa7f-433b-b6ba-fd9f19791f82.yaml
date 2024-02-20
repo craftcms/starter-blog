@@ -1,0 +1,32 @@
+columnSuffix: null
+handle: style
+instructions: null
+name: 'Body Content - Quote - Style'
+searchable: true
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Blockquote
+        -
+          - value
+          - blockquote
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - Pullquote
+        -
+          - value
+          - pullquote
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

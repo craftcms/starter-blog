@@ -58,7 +58,6 @@ fieldLayouts:
 handle: blog
 hasTitleField: true
 name: Blog
-section: db2dff45-19b4-479c-8cba-ab88e7e7d2fd # Blog
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

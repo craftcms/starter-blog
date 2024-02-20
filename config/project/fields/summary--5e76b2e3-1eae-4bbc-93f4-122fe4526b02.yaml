@@ -1,5 +1,4 @@
 contentColumnType: text
-fieldGroup: 911477c7-3c92-407b-a9a9-e69ccb74eabb # Common
 handle: summary
 instructions: 'Summary for the blog index'
 name: Summary
@@ -7,14 +6,11 @@ searchable: true
 settings:
   availableTransforms: '*'
   availableVolumes: ''
-  cleanupHtml: true
+  ckeConfig: 69e08c2b-0771-4f37-b3ab-b01ae9535ee0 # Default
   columnType: text
+  enableSourceEditingForNonAdmins: false
   purifierConfig: ''
   purifyHtml: '1'
-  redactorConfig: ''
-  removeEmptyTags: '1'
-  removeInlineStyles: '1'
-  removeNbsp: '1'
 translationKeyFormat: null
 translationMethod: none
-type: craft\redactor\Field
+type: craft\ckeditor\Field

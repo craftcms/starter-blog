@@ -1,0 +1,36 @@
+color: null
+fieldLayouts:
+  59ffc94b-a1a3-4ecb-98e4-67dbd4317f23:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: df3a27ff-e318-422f-8ff5-d626eda8ce54 # Rich Text
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Rich Text'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8d3f5d0f-6f0f-46e2-b82e-4bb4a14fe586
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: fde4af3d-7f7c-439e-85db-7a3e03c7c093
+        userCondition: null
+handle: richText
+hasTitleField: false
+icon: null
+name: 'Rich Text'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

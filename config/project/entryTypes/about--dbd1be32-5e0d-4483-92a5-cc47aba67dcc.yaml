@@ -16,6 +16,5 @@ fieldLayouts:
 handle: about
 hasTitleField: false
 name: About
-section: 5a80053a-6435-4fd2-8a47-53e409d994ad # About
 sortOrder: 1
 titleFormat: '{section.name|raw}'

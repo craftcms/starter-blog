@@ -1,0 +1,43 @@
+columnSuffix: null
+handle: aspectRatio
+instructions: null
+name: 'Body Content - Image Carousel - Aspect Ratio'
+searchable: true
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - '16:9'
+        -
+          - value
+          - '16:9'
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - '4:3'
+        -
+          - value
+          - '4:3'
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '3:2'
+        -
+          - value
+          - '3:2'
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

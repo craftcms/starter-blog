@@ -1,0 +1,19 @@
+columnSuffix: null
+handle: quote
+instructions: null
+name: 'Body Content - Quote - Quote'
+searchable: true
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  ckeConfig: 7e2c012d-f507-4762-86e3-9b0ddc400c1f # Simple 2
+  columnType: text
+  defaultTransform: ''
+  enableSourceEditingForNonAdmins: true
+  purifierConfig: ''
+  purifyHtml: '1'
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: true
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

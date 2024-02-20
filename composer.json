@@ -4,12 +4,14 @@
   "type": "project",
   "license": "0BSD",
   "require": {
-    "clubstudioltd/craft-asset-rev": "^7.0.0",
-    "craftcms/cms": "^4.5.4",
-    "craftcms/gatsby-helper": "^2.0.0",
-    "craftcms/redactor": "^3.0.0",
+    "craftcms/cms": "^5.0.0-beta.1",
+    "craftcms/gatsby-helper": "v3.x-dev",
+    "craftcms/ckeditor": "^4.0.0-beta.1",
+    "nystudio107/craft-twigpack": "v5.x-dev",
     "vlucas/phpdotenv": "^5.4.0"
   },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "autoload": {
     "psr-4": {
       "modules\\": "modules/"
@@ -18,9 +20,6 @@
   "config": {
     "sort-packages": true,
     "optimize-autoloader": true,
-    "platform": {
-      "php": "8.0.2"
-    },
     "allow-plugins": {
       "yiisoft/yii2-composer": true,
       "craftcms/plugin-installer": true
@@ -36,5 +35,11 @@
     "post-install-cmd": [
       "@php craft clear-caches/all"
     ]
-  }
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/AugustMiller/craft-twigpack"
+    }
+  ]
 }
