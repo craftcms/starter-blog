@@ -229,6 +229,10 @@ web_extra_exposed_ports:
     container_port: 3000
     http_port: 2999
     https_port: 3000
+  - name: gatsby
+    container_port: 8000
+    http_port: 7999
+    https_port: 8000
 
 #web_extra_daemons:
 #- name: "http-1"

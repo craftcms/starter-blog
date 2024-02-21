@@ -1,4 +1,4 @@
-dateModified: 1708468164
+dateModified: 1708475048
 email:
   fromEmail: support@craftcms.com
   fromName: 'Craft Blog'
@@ -25,7 +25,6 @@ meta:
     09c265f3-2ab1-405d-9111-108e6b54f0fb: Quote # Quote
     28d5c036-8cb0-4a14-b553-0167ee34efbe: Image # Image
     031e8547-9981-4367-ad27-178240517ea1: 'Site Introduction' # Site Introduction
-    55cd92b3-363e-4573-ad2c-04650483ba64: Gatsby # Gatsby
     69e08c2b-0771-4f37-b3ab-b01ae9535ee0: Default # Default
     90dee5cc-23f1-40ac-ae14-3fa71bebc4dc: 'Craft Blog' # Craft Blog
     101a70a1-d200-4629-91e5-3425a0937c0e: Uploads # Uploads
@@ -60,9 +59,9 @@ plugins:
     enabled: true
     schemaVersion: 2.0.0
     settings:
-      buildWebhookUrl: ''
+      buildWebhookUrl: $GATSBY_BUILD_TARGET
       previewServerUrl: ''
-      previewWebhookUrl: $GATSBY_PREVIEW_TARGET
+      previewWebhookUrl: $GATSBY_REFRESH_URL
   redactor:
     edition: standard
     enabled: true
