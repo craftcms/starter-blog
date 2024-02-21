@@ -112,21 +112,13 @@ class m210104_175929_sample_content extends Migration
             Craft::$app->getElements()->deleteElement($block);
         }
 
-        // remove GraphQL token
+        // Remove GraphQL token + Schema
         $graphQlService = Craft::$app->getGql();
-        $schemas = $graphQlService->getSchemas();
-        $gatsbySchema = null;
+        $gatsbyToken = $graphQlService->getTokenByAccessToken($this->gqlToken);
 
-        foreach ($schemas as $schema) {
-            if ($schema->accessToken === $this->gqlToken) {
-                $gatsbySchema = $schema;
-                break;
-            }
-        }
+        $graphQlService->deleteTokenById($gatsbyToken->id);
 
-        $graphQlService->deleteSchema($gatsbySchema);
-
-        return false;
+        return true;
     }
 
     /**
@@ -139,7 +131,7 @@ class m210104_175929_sample_content extends Migration
      */
     private function addBlogPosts(): bool
     {
-        if (!$section = Craft::$app->getSections()->getSectionByHandle('blog')) {
+        if (!$section = Craft::$app->getEntries()->getSectionByHandle('blog')) {
             echo 'Blog section does not exist.';
             return false;
         }
