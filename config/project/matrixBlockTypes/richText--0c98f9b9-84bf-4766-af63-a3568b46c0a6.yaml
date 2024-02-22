@@ -27,23 +27,17 @@ fields:
     settings:
       availableTransforms: '*'
       availableVolumes: '*'
+      ckeConfig: 913a6b8c-fba7-4a5c-9615-496e1bec6467 # Standard
       columnType: text
-      configSelectionMode: choose
       defaultTransform: ''
-      manualConfig: ''
+      enableSourceEditingForNonAdmins: true
       purifierConfig: ''
       purifyHtml: '1'
-      redactorConfig: Standard.json
-      removeEmptyTags: '1'
-      removeInlineStyles: '1'
-      removeNbsp: '1'
-      showHtmlButtonForNonAdmins: '1'
       showUnpermittedFiles: false
       showUnpermittedVolumes: true
-      uiMode: enlarged
     translationKeyFormat: null
     translationMethod: none
-    type: craft\redactor\Field
+    type: craft\ckeditor\Field
 handle: richText
 name: 'Rich Text'
 sortOrder: 1

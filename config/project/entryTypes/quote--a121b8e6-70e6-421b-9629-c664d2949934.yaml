@@ -1,0 +1,66 @@
+color: null
+fieldLayouts:
+  e25f5116-982d-45a0-ac12-9d3a3f1d07e7:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: a6ca7d80-fa7f-433b-b6ba-fd9f19791f82 # Body Content - Quote - Style
+            handle: null
+            includeInCards: true
+            instructions: null
+            label: Style
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 15732e19-4eb6-4f16-9332-e489400b54ac
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 09c265f3-2ab1-405d-9111-108e6b54f0fb # Quote
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Quote
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5678bfa2-11ec-410b-8815-df39bc123959
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 5fd465cf-5b00-4b4f-8ee0-ce0eac4fd2eb # Body Content - Quote - Attribution
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Attribution
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fdd111e3-5569-49e8-b9a0-2485efee9103
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 62ab037b-3946-4f4b-8f9c-2b62d059c26f
+        userCondition: null
+handle: quote
+hasTitleField: false
+icon: null
+name: Quote
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -1,0 +1,51 @@
+color: null
+fieldLayouts:
+  a3b39778-708a-4de0-9501-6b1d37108919:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: a6f02aa5-ab37-46e2-bbd4-3b56930577d5 # Body Content - Image Carousel - Images
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Images
+            providesThumbs: true
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 943a94ce-7da1-44ac-a419-52001d4822f4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2f6bf496-df01-42e0-9b77-a764f886813d # Body Content - Image Carousel - Aspect Ratio
+            handle: null
+            includeInCards: true
+            instructions: null
+            label: 'Aspect Ratio'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: baea9a3e-739d-4896-bb9c-cc560fac5804
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 5d1c7888-50cf-4d9c-9a2c-4df568eaa1d6
+        userCondition: null
+handle: imageCarousel
+hasTitleField: false
+icon: null
+name: 'Image Carousel'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

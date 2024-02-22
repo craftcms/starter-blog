@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: a6f02aa5-ab37-46e2-bbd4-3b56930577d5 # Images
+            fieldUid: a6f02aa5-ab37-46e2-bbd4-3b56930577d5 # Body Content - Image Carousel - Images
             instructions: null
             label: null
             required: false
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 2f6bf496-df01-42e0-9b77-a764f886813d # Aspect Ratio
+            fieldUid: 2f6bf496-df01-42e0-9b77-a764f886813d # Body Content - Image Carousel - Aspect Ratio
             instructions: null
             label: null
             required: false
@@ -25,7 +25,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  2f6bf496-df01-42e0-9b77-a764f886813d: # Aspect Ratio
+  2f6bf496-df01-42e0-9b77-a764f886813d: # Body Content - Image Carousel - Aspect Ratio
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
@@ -72,7 +72,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Dropdown
-  a6f02aa5-ab37-46e2-bbd4-3b56930577d5: # Images
+  a6f02aa5-ab37-46e2-bbd4-3b56930577d5: # Body Content - Image Carousel - Images
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null

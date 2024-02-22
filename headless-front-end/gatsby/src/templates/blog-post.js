@@ -9,16 +9,16 @@ import { getPrettyDate, getStandardDate } from "../utils/dates"
 
 export const query = graphql`
   query BlogPostQuery($slug: String!) {
-    entry: craftBlogBlogEntry(slug: { eq: $slug }) {
+    entry: craftBlogEntry(slug: { eq: $slug }) {
       id
       remoteId
       title
       postDate
       bodyContent {
-        ...RichTextFragment
-        ...QuoteFragment
-        ...ImageFragment
-        ...ImageCarouselFragment
+        ... RichTextFragment
+        ... QuoteFragment
+        ... ImageFragment
+        ... ImageCarouselFragment
       }
     }
   }

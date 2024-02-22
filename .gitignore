@@ -1,6 +1,9 @@
 /.env
 /.idea
+/.vscode
 /vendor
 /node_modules
 .DS_Store
 *.code-workspace
+
+/config/license.*

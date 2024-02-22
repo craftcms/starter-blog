@@ -1,0 +1,54 @@
+columnSuffix: null
+handle: position
+instructions: null
+name: 'Body Content - Image - Position'
+searchable: true
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Wide
+        -
+          - value
+          - wide
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - Center
+        -
+          - value
+          - center
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Left
+        -
+          - value
+          - left
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Right
+        -
+          - value
+          - right
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

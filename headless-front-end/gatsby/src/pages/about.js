@@ -7,7 +7,7 @@ import Matrix from "../components/matrix"
 
 export const query = graphql`
   query AboutPageQuery {
-    about: craftAboutAboutEntry {
+    about: craftAboutEntry {
       title
       bodyContent {
         ...RichTextFragment
