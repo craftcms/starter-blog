@@ -1,13 +1,18 @@
 isPublic: false
 name: Gatsby
 scope:
-  - 'volumes.101a70a1-d200-4629-91e5-3425a0937c0e:read' # Uploads
-  - 'usergroups.everyone:read'
-  - 'gatsby:read'
+  - 'sites.f3400d6f-0f33-4cef-9521-f8f6620399ec:read' # Craft Blog
   - 'elements.drafts:read'
   - 'elements.revisions:read'
   - 'elements.inactive:read'
-  - 'sites.f3400d6f-0f33-4cef-9521-f8f6620399ec:read' # Craft Blog
   - 'sections.5a80053a-6435-4fd2-8a47-53e409d994ad:read' # About
   - 'sections.4593234a-cdd0-4c54-9931-4eb606b9e7f5:read' # Home
   - 'sections.db2dff45-19b4-479c-8cba-ab88e7e7d2fd:read' # Blog
+  - 'nestedentryfields.09c265f3-2ab1-405d-9111-108e6b54f0fb:read' # Quote
+  - 'nestedentryfields.df3a27ff-e318-422f-8ff5-d626eda8ce54:read' # Rich Text
+  - 'nestedentryfields.031e8547-9981-4367-ad27-178240517ea1:read' # Site Introduction
+  - 'nestedentryfields.5e76b2e3-1eae-4bbc-93f4-122fe4526b02:read' # Summary
+  - 'nestedentryfields.e567b6ab-3855-452b-a337-4c119dac4d62:read' # Body Content
+  - 'volumes.101a70a1-d200-4629-91e5-3425a0937c0e:read' # Uploads
+  - 'usergroups.everyone:read'
+  - 'gatsby:read'
