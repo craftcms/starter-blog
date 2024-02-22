@@ -1,4 +1,4 @@
-dateModified: 1708620435
+dateModified: 1708620591
 email:
   fromEmail: support@craftcms.com
   fromName: 'Craft Blog'
@@ -59,10 +59,6 @@ plugins:
       buildWebhookUrl: $GATSBY_BUILD_TARGET
       previewServerUrl: ''
       previewWebhookUrl: $GATSBY_REFRESH_URL
-  redactor:
-    edition: standard
-    enabled: true
-    schemaVersion: 2.3.0
   twigpack:
     edition: standard
     enabled: true
