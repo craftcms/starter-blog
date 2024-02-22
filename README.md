@@ -323,18 +323,19 @@ We hope you’ll give it a go, but if you prefer not to, then delete these folde
 * `package.json`
 * `package-lock.json`
 
-In the `templates/layout/main.twig` find this:
+In the `templates/_private/layout/index.twig` file, remove these lines, in the `<head>` and at the end of `<body>`, respectively:
 
 ```twig
-{% set stylesheet = rev('main.css') %}
-{% if stylesheet %}
-  <link rel="stylesheet" href="{{ rev('main.css') }}">
-{% endif %}
+{{ craft.twigpack.includeCssModule("main.css") }}
+
+{# ... #}
+
+{{ craft.twigpack.includeJsModule("main.js") }}
 ```
 
-Replace it with a link to your own stylesheet.
+…with a `<link>` for your own stylesheet!
 
-You can also safely uninstall and remove the Asset Rev plugin from the Control Panel (and delete the `config/assetrev.php` file).
+You can also safely uninstall and remove the [Twigpack](https://plugins.craftcms.com/twigpack) plugin from the Control Panel (and delete the `config/twigpack.php` file).
 
 ### Setup
 
