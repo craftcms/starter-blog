@@ -16,7 +16,7 @@ jobs:
     strategy:
       matrix:
         operating-system: [ubuntu-latest]
-        php-versions: ["8.0", "8.1"]
+        php-versions: ["8.2"]
         db: ["mysql", "pgsql"]
 
     services:
@@ -39,7 +39,7 @@ jobs:
           - 5432:5432
         options: --health-cmd="pg_isready" --health-interval=10s --health-timeout=5s --health-retries=3
       nginx:
-        image: craftcms/nginx:8.0
+        image: craftcms/nginx:8.2
         options: --volume ${{ github.workspace }}:/app --user www-data:www-data
         ports:
           - 80:8080
@@ -48,7 +48,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Setup PHP Action
-        uses: shivammathur/setup-php@2.5.0
+        uses: shivammathur/setup-php@2.29.0
         with:
           php-version: ${{ matrix.php-versions }}
           extensions: bcmath, mbstring, intl, gd, imagick, zip, dom, pdo_mysql, pdo_pgsql, fileinfo
