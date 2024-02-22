@@ -39,7 +39,7 @@
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/AugustMiller/craft-twigpack"
+      "url": "https://github.com/craftcms/craft-twigpack"
     }
   ]
 }

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "abc12af0cdbb0149a3ad29be771e2b96",
+    "content-hash": "f50a23a84adcb6e202f448a47611a902",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -331,16 +331,16 @@
         },
         {
             "name": "craftcms/ckeditor",
-            "version": "4.0.0-beta.6",
+            "version": "4.0.0-beta.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/ckeditor.git",
-                "reference": "587c03c7be2802008738aa43cd09060387cb5e12"
+                "reference": "6a4109772efeca715463c56de0f85ece572dced3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/ckeditor/zipball/587c03c7be2802008738aa43cd09060387cb5e12",
-                "reference": "587c03c7be2802008738aa43cd09060387cb5e12",
+                "url": "https://api.github.com/repos/craftcms/ckeditor/zipball/6a4109772efeca715463c56de0f85ece572dced3",
+                "reference": "6a4109772efeca715463c56de0f85ece572dced3",
                 "shasum": ""
             },
             "require": {
@@ -391,20 +391,20 @@
                 "rss": "https://github.com/craftcms/ckeditor/commits/master.atom",
                 "source": "https://github.com/craftcms/ckeditor"
             },
-            "time": "2024-02-15T21:01:09+00:00"
+            "time": "2024-02-22T00:05:43+00:00"
         },
         {
             "name": "craftcms/cms",
-            "version": "5.0.0-beta.2",
+            "version": "5.0.0-beta.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "2f959ac6cb5107f9956bc50afa41f6c5440f0f34"
+                "reference": "aef0ab977215d7a9a94acd40ee586027339c35ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/2f959ac6cb5107f9956bc50afa41f6c5440f0f34",
-                "reference": "2f959ac6cb5107f9956bc50afa41f6c5440f0f34",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/aef0ab977215d7a9a94acd40ee586027339c35ce",
+                "reference": "aef0ab977215d7a9a94acd40ee586027339c35ce",
                 "shasum": ""
             },
             "require": {
@@ -513,7 +513,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2024-02-15T20:43:30+00:00"
+            "time": "2024-02-22T21:56:27+00:00"
         },
         {
             "name": "craftcms/gatsby-helper",
@@ -1693,7 +1693,7 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v10.45.0",
+            "version": "v10.45.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
@@ -1748,7 +1748,7 @@
         },
         {
             "name": "illuminate/conditionable",
-            "version": "v10.45.0",
+            "version": "v10.45.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/conditionable.git",
@@ -1794,7 +1794,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v10.45.0",
+            "version": "v10.45.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -1842,7 +1842,7 @@
         },
         {
             "name": "illuminate/macroable",
-            "version": "v10.45.0",
+            "version": "v10.45.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/macroable.git",
@@ -2258,17 +2258,20 @@
             "version": "v5.x-dev",
             "source": {
                 "type": "git",
-                "url": "https://github.com/AugustMiller/craft-twigpack.git",
-                "reference": "1d317631c21c892f8488d52cd27497ca98ae6684"
+                "url": "https://github.com/craftcms/craft-twigpack.git",
+                "reference": "ba32785e7eb1f199002428ba7fe8850b2954f0ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/AugustMiller/craft-twigpack/zipball/1d317631c21c892f8488d52cd27497ca98ae6684",
-                "reference": "1d317631c21c892f8488d52cd27497ca98ae6684",
+                "url": "https://api.github.com/repos/craftcms/craft-twigpack/zipball/ba32785e7eb1f199002428ba7fe8850b2954f0ce",
+                "reference": "ba32785e7eb1f199002428ba7fe8850b2954f0ce",
                 "shasum": ""
             },
             "require": {
                 "craftcms/cms": "^5.0.0-beta.1"
+            },
+            "require-dev": {
+                "craftcms/cloud": "^1.37"
             },
             "type": "craft-plugin",
             "extra": {
@@ -2305,7 +2308,7 @@
                 "issues": "https://nystudio107.com/plugins/twigpack/support",
                 "source": "https://github.com/nystudio107/craft-twigpack"
             },
-            "time": "2024-02-08T17:00:19+00:00"
+            "time": "2024-02-22T22:10:51+00:00"
         },
         {
             "name": "paragonie/constant_time_encoding",
