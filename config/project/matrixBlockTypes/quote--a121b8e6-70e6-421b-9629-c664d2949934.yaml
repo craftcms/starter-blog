@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: a6ca7d80-fa7f-433b-b6ba-fd9f19791f82 # Body Content - Quote - Style
+            fieldUid: a6ca7d80-fa7f-433b-b6ba-fd9f19791f82 # Style
             instructions: null
             label: null
             required: false
@@ -23,7 +23,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 5fd465cf-5b00-4b4f-8ee0-ce0eac4fd2eb # Body Content - Quote - Attribution
+            fieldUid: 5fd465cf-5b00-4b4f-8ee0-ce0eac4fd2eb # Attribution
             instructions: null
             label: null
             required: false
@@ -34,7 +34,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  5fd465cf-5b00-4b4f-8ee0-ce0eac4fd2eb: # Body Content - Quote - Attribution
+  5fd465cf-5b00-4b4f-8ee0-ce0eac4fd2eb: # Attribution
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
@@ -76,7 +76,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\ckeditor\Field
-  a6ca7d80-fa7f-433b-b6ba-fd9f19791f82: # Body Content - Quote - Style
+  a6ca7d80-fa7f-433b-b6ba-fd9f19791f82: # Style
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null

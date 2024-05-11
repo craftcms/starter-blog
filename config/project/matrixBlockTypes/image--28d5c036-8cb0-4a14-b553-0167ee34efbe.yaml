@@ -5,7 +5,7 @@ fieldLayouts:
       -
         elements:
           -
-            fieldUid: 6b203fd7-eca1-4313-8795-efbb5f6a8e63 # Body Content - Image - Image
+            fieldUid: 6b203fd7-eca1-4313-8795-efbb5f6a8e63 # Image
             instructions: null
             label: null
             required: false
@@ -14,7 +14,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 5d2372e2-c220-4af4-80c9-49bb8c85a92e # Body Content - Image - Position
+            fieldUid: 5d2372e2-c220-4af4-80c9-49bb8c85a92e # Position
             instructions: null
             label: null
             required: false
@@ -25,7 +25,7 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  5d2372e2-c220-4af4-80c9-49bb8c85a92e: # Body Content - Image - Position
+  5d2372e2-c220-4af4-80c9-49bb8c85a92e: # Position
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null
@@ -83,7 +83,7 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Dropdown
-  6b203fd7-eca1-4313-8795-efbb5f6a8e63: # Body Content - Image - Image
+  6b203fd7-eca1-4313-8795-efbb5f6a8e63: # Image
     columnSuffix: null
     contentColumnType: string
     fieldGroup: null

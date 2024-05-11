@@ -7,7 +7,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: a6f02aa5-ab37-46e2-bbd4-3b56930577d5 # Body Content - Image Carousel - Images
+            fieldUid: a6f02aa5-ab37-46e2-bbd4-3b56930577d5 # Images
             handle: null
             includeInCards: false
             instructions: null
@@ -22,7 +22,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 2f6bf496-df01-42e0-9b77-a764f886813d # Body Content - Image Carousel - Aspect Ratio
+            fieldUid: 2f6bf496-df01-42e0-9b77-a764f886813d # Aspect Ratio
             handle: null
             includeInCards: true
             instructions: null
