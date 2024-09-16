@@ -6,8 +6,8 @@
   "author": "Jake Dohm <jake.dohm@me.com>",
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^4.1.3",
-    "gatsby": "^4.12.1",
-    "gatsby-cli": "^4.12.1",
+    "gatsby": "^5.0.0",
+    "gatsby-cli": "^5.0.0",
     "gatsby-image": "^3.10.0",
     "gatsby-plugin-manifest": "^4.12.1",
     "gatsby-plugin-offline": "^5.12.1",
