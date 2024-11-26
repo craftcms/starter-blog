@@ -27,15 +27,10 @@
     <link href="//fonts.googleapis.com/css?family=Work+Sans:600|Quattrocento+Sans:400,400i,700" rel="stylesheet" type="text/css">
 
     {#
-      The Asset Rev plugin provides this `rev()` Twig function for cache-busting
-      css and js files. It will return nothing when the webpack dev server is
-      running because styles are then injected via js.
+      Because Webpack produces unpredictably-named bundles, we have to lean on
+      manifest.json to tell us where they live. Twigpack is perfect for this!
     #}
-    {% set stylesheet = rev('main.css') %}
-    {% if stylesheet %}
-      <link rel="stylesheet" href="{{ rev('main.css') }}">
-    {% endif %}
-
+    {{ craft.twigpack.includeCssModule("main.css") }}
   </head>
   <body class="ltr">
     <nav class="container mx-auto py-4 px-4" role="navigation" aria-label="Main">
@@ -82,11 +77,9 @@
     </footer>
 
     {#
-      As in the <head> section above, the Asset Rev plugin provides the `rev()`
-      function to cache-bust the js file. Unlike the CSS <link> tag in the <head>,
-      this works just fine with the webpack dev server. See the `/config/assetrev.php`
-      file to see how it is configured.
+      As in the <head> section above, the Twigpack plugin allows us to output a
+      URL to the Javascript bundle—even when using the Webpack dev server!
     #}
-    <script src="{{ rev('main.js') }}"></script>
+    {{ craft.twigpack.includeJsModule("main.js") }}
   </body>
 </html>

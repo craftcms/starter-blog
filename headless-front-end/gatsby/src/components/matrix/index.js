@@ -40,19 +40,17 @@ const Blocks = ({ blocks }) => {
 export default Blocks
 
 export const query = graphql`
-  fragment RichTextFragment on Craft_bodyContent_richText_BlockType {
+  fragment RichTextFragment on Craft_richText_Entry {
     richText
-    typeHandle
   }
 
-  fragment QuoteFragment on Craft_bodyContent_quote_BlockType {
+  fragment QuoteFragment on Craft_quote_Entry {
     style
     quote
     attribution
-    typeHandle
   }
 
-  fragment ImageFragment on Craft_bodyContent_image_BlockType {
+  fragment ImageFragment on Craft_image_Entry {
     image {
       url
       ... on Craft_uploads_Asset {
@@ -61,10 +59,9 @@ export const query = graphql`
       }
     }
     position
-    typeHandle
   }
 
-  fragment ImageCarouselFragment on Craft_bodyContent_imageCarousel_BlockType {
+  fragment ImageCarouselFragment on Craft_imageCarousel_Entry {
     images {
       url
       ... on Craft_uploads_Asset {
@@ -72,6 +69,5 @@ export const query = graphql`
       }
     }
     aspectRatio
-    typeHandle
   }
 `

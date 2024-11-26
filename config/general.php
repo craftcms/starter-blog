@@ -25,5 +25,6 @@ return GeneralConfig::create()
     ->aliases([
         '@web' => App::env('PRIMARY_SITE_URL'),
         '@webroot' => '@root/web',
+        '@gatsby' => App::env('GATSBY_PREVIEW_URL'),
     ])
 ;
