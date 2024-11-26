@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> **2024-11-26** — We have [a new suite of starter projects](https://craftcms.com/starters) that make better use of Craft 5, and are available in a variety of front-end frameworks!
+
 # Craft CMS Blog Starter
 
 This blog starter project is for developers who are new to Craft CMS and want to learn the basics quickly. It seeks to demonstrate a few Craft essentials, without being too prescriptive about other parts of your development toolkit. You’ll get a turn-key front-end built on the native Twig templating language.
