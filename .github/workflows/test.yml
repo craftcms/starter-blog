@@ -63,7 +63,7 @@ jobs:
 
       - name: Install Composer dependencies
         run: composer install --prefer-dist --no-progress
-      
+
       - name: Add Docker database host aliases to build environment
         run: sudo echo "127.0.0.1 nginx postgres mysql" | sudo tee -a /etc/hosts
 
@@ -92,7 +92,7 @@ jobs:
         working-directory: headless-front-end/gatsby
 
       - name: Upload Craft logs
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         if: failure()
         with:
           name: craft-logs
