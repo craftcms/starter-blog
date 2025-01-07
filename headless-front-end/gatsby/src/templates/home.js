@@ -5,7 +5,7 @@ import { getPrettyDate, getStandardDate } from "../utils/dates"
 
 export const query = graphql`
   query WhateverQuery($limit: Int, $skip: Int) {
-    blogPosts: allCraftBlogBlogEntry(limit: $limit, skip: $skip) {
+    blogPosts: allCraftBlogEntry(limit: $limit, skip: $skip) {
       nodes {
         title
         slug
@@ -14,7 +14,7 @@ export const query = graphql`
       }
     }
 
-    home: craftHomeHomeEntry {
+    home: craftHomeEntry {
       siteIntroduction
     }
 

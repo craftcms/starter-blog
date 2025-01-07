@@ -1,4 +1,6 @@
 enableVersioning: true
+entryTypes:
+  - dbd1be32-5e0d-4483-92a5-cc47aba67dcc # About
 handle: about
 name: About
 previewTargets:

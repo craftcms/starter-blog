@@ -1,0 +1,25 @@
+headingLevels:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+name: Default
+options:
+  code:
+    indentSequence: '  '
+toolbar:
+  - sourceEditing
+  - '|'
+  - heading
+  - '|'
+  - blockQuote
+  - codeBlock
+  - bold
+  - italic
+  - strikethrough
+  - bulletedList
+  - numberedList
+  - insertImage
+  - link

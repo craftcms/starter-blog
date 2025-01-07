@@ -1,16 +1,20 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: 911477c7-3c92-407b-a9a9-e69ccb74eabb # Common
 handle: bodyContent
 instructions: ''
 name: 'Body Content'
 searchable: true
 settings:
-  contentTable: '{{%matrixcontent_bodycontent}}'
-  maxBlocks: ''
-  minBlocks: ''
+  entryTypes:
+    - 0c98f9b9-84bf-4766-af63-a3568b46c0a6 # Rich Text
+    - 7e401ee6-3575-42de-b3b4-cedae706f392 # Image Carousel
+    - 28d5c036-8cb0-4a14-b553-0167ee34efbe # Image
+    - a121b8e6-70e6-421b-9629-c664d2949934 # Quote
+  maxEntries: ''
+  minEntries: ''
   propagationKeyFormat: null
   propagationMethod: all
+  viewMode: blocks
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Matrix
