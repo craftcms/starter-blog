@@ -2,6 +2,7 @@ enableVersioning: true
 entryTypes:
   - 8518a799-a012-4a6c-aa89-6a347cc00c2e # Home
 handle: home
+maxAuthors: 1
 name: Home
 previewTargets:
   -

@@ -2,6 +2,7 @@ enableVersioning: true
 entryTypes:
   - dbd1be32-5e0d-4483-92a5-cc47aba67dcc # About
 handle: about
+maxAuthors: 1
 name: About
 previewTargets:
   -
