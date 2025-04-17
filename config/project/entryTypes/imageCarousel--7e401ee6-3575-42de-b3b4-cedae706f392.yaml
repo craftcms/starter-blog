@@ -1,4 +1,4 @@
-color: null
+color: blue
 fieldLayouts:
   a3b39778-708a-4de0-9501-6b1d37108919:
     tabs:
@@ -6,6 +6,8 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: '2025-04-17T23:19:48+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: a6f02aa5-ab37-46e2-bbd4-3b56930577d5 # Images
             handle: null
@@ -21,10 +23,12 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-04-17T23:19:48+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 2f6bf496-df01-42e0-9b77-a764f886813d # Aspect Ratio
             handle: null
-            includeInCards: true
+            includeInCards: false
             instructions: null
             label: 'Aspect Ratio'
             providesThumbs: false
@@ -40,7 +44,7 @@ fieldLayouts:
         userCondition: null
 handle: imageCarousel
 hasTitleField: false
-icon: null
+icon: images
 name: 'Image Carousel'
 showSlugField: true
 showStatusField: true

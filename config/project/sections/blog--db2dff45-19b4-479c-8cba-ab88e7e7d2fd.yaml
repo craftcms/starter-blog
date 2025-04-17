@@ -1,7 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - bb6d289b-c3cf-4a8d-9324-b98cbd32753b # Blog
+  - bb6d289b-c3cf-4a8d-9324-b98cbd32753b # Post
 handle: blog
 maxAuthors: 1
 name: Blog
