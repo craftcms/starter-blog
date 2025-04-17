@@ -15,7 +15,7 @@ fieldLayouts:
             handle: null
             includeInCards: false
             instructions: null
-            label: Image
+            label: null
             providesThumbs: true
             required: false
             tip: null
@@ -28,11 +28,11 @@ fieldLayouts:
             dateAdded: '2025-04-17T23:19:48+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: 5d2372e2-c220-4af4-80c9-49bb8c85a92e # Position
+            fieldUid: 5d2372e2-c220-4af4-80c9-49bb8c85a92e # Layout/Position
             handle: null
             includeInCards: true
             instructions: null
-            label: Position
+            label: null
             providesThumbs: false
             required: false
             tip: null

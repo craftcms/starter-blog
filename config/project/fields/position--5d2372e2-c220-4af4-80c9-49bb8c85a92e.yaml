@@ -1,9 +1,10 @@
 columnSuffix: null
 handle: position
 instructions: null
-name: 'Body Content - Image - Position'
+name: Layout/Position
 searchable: true
 settings:
+  customOptions: false
   options:
     -
       __assoc__:
@@ -13,6 +14,12 @@ settings:
         -
           - value
           - wide
+        -
+          - icon
+          - ''
+        -
+          - color
+          - ''
         -
           - default
           - '1'
@@ -25,6 +32,12 @@ settings:
           - value
           - center
         -
+          - icon
+          - ''
+        -
+          - color
+          - ''
+        -
           - default
           - ''
     -
@@ -36,6 +49,12 @@ settings:
           - value
           - left
         -
+          - icon
+          - ''
+        -
+          - color
+          - ''
+        -
           - default
           - ''
     -
@@ -46,6 +65,12 @@ settings:
         -
           - value
           - right
+        -
+          - icon
+          - ''
+        -
+          - color
+          - ''
         -
           - default
           - ''

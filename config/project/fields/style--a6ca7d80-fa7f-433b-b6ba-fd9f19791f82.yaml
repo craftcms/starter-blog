@@ -1,9 +1,10 @@
 columnSuffix: null
 handle: style
 instructions: null
-name: 'Body Content - Quote - Style'
+name: 'Display Style'
 searchable: true
 settings:
+  customOptions: false
   options:
     -
       __assoc__:
@@ -13,6 +14,12 @@ settings:
         -
           - value
           - blockquote
+        -
+          - icon
+          - ''
+        -
+          - color
+          - ''
         -
           - default
           - '1'
@@ -24,6 +31,12 @@ settings:
         -
           - value
           - pullquote
+        -
+          - icon
+          - ''
+        -
+          - color
+          - ''
         -
           - default
           - ''

@@ -13,7 +13,7 @@ fieldLayouts:
             handle: null
             includeInCards: false
             instructions: null
-            label: 'Rich Text'
+            label: null
             providesThumbs: false
             required: false
             tip: null

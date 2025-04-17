@@ -1,4 +1,4 @@
-dateModified: 1744932522
+dateModified: 1744932844
 email:
   fromEmail: support@craftcms.com
   fromName: 'Craft Blog'
@@ -14,15 +14,15 @@ fs:
 meta:
   __names__:
     0c98f9b9-84bf-4766-af63-a3568b46c0a6: 'Rich Text' # Rich Text
-    2f6bf496-df01-42e0-9b77-a764f886813d: 'Aspect Ratio' # Aspect Ratio
+    2f6bf496-df01-42e0-9b77-a764f886813d: 'Slide Aspect Ratio' # Slide Aspect Ratio
     5a80053a-6435-4fd2-8a47-53e409d994ad: About # About
-    5d2372e2-c220-4af4-80c9-49bb8c85a92e: Position # Position
+    5d2372e2-c220-4af4-80c9-49bb8c85a92e: Layout/Position # Layout/Position
     5e76b2e3-1eae-4bbc-93f4-122fe4526b02: Summary # Summary
     5fd465cf-5b00-4b4f-8ee0-ce0eac4fd2eb: Attribution # Attribution
     6b203fd7-eca1-4313-8795-efbb5f6a8e63: Image # Image
     7e2c012d-f507-4762-86e3-9b0ddc400c1f: 'Simple 2' # Simple 2
     7e401ee6-3575-42de-b3b4-cedae706f392: 'Image Carousel' # Image Carousel
-    09c265f3-2ab1-405d-9111-108e6b54f0fb: Quote # Quote
+    09c265f3-2ab1-405d-9111-108e6b54f0fb: 'Quote Text' # Quote Text
     28d5c036-8cb0-4a14-b553-0167ee34efbe: Image # Image
     031e8547-9981-4367-ad27-178240517ea1: 'Site Introduction' # Site Introduction
     55cd92b3-363e-4573-ad2c-04650483ba64: Gatsby # Gatsby
@@ -33,7 +33,7 @@ meta:
     913a6b8c-fba7-4a5c-9615-496e1bec6467: Standard # Standard
     8518a799-a012-4a6c-aa89-6a347cc00c2e: Home # Home
     4593234a-cdd0-4c54-9931-4eb606b9e7f5: Home # Home
-    a6ca7d80-fa7f-433b-b6ba-fd9f19791f82: Style # Style
+    a6ca7d80-fa7f-433b-b6ba-fd9f19791f82: 'Display Style' # Display Style
     a6f02aa5-ab37-46e2-bbd4-3b56930577d5: Images # Images
     a121b8e6-70e6-421b-9629-c664d2949934: Quote # Quote
     bb6d289b-c3cf-4a8d-9324-b98cbd32753b: Post # Post
@@ -43,7 +43,6 @@ meta:
     dbd1be32-5e0d-4483-92a5-cc47aba67dcc: About # About
     df3a27ff-e318-422f-8ff5-d626eda8ce54: 'Rich Text' # Rich Text
     e00e1efa-bb86-4ee8-b669-4a726b8a5427: Simple # Simple
-    e8fdd2ad-6739-4bab-a689-8a422e18a8f4: Embed # Embed
     e567b6ab-3855-452b-a337-4c119dac4d62: 'Body Content' # Body Content
     f3400d6f-0f33-4cef-9521-f8f6620399ec: 'Craft Blog' # Craft Blog
 plugins:

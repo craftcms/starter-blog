@@ -1,19 +1,40 @@
 columnSuffix: null
-contentColumnType: string
 handle: bodyContent
-instructions: ''
+instructions: null
 name: 'Body Content'
 searchable: true
 settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  enableVersioning: false
   entryTypes:
-    - 0c98f9b9-84bf-4766-af63-a3568b46c0a6 # Rich Text
-    - 7e401ee6-3575-42de-b3b4-cedae706f392 # Image Carousel
-    - 28d5c036-8cb0-4a14-b553-0167ee34efbe # Image
-    - a121b8e6-70e6-421b-9629-c664d2949934 # Quote
-  maxEntries: ''
-  minEntries: ''
+    -
+      __assoc__:
+        -
+          - uid
+          - 0c98f9b9-84bf-4766-af63-a3568b46c0a6 # Rich Text
+    -
+      __assoc__:
+        -
+          - uid
+          - 7e401ee6-3575-42de-b3b4-cedae706f392 # Image Carousel
+    -
+      __assoc__:
+        -
+          - uid
+          - 28d5c036-8cb0-4a14-b553-0167ee34efbe # Image
+    -
+      __assoc__:
+        -
+          - uid
+          - a121b8e6-70e6-421b-9629-c664d2949934 # Quote
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: null
   propagationKeyFormat: null
   propagationMethod: all
+  showCardsInGrid: false
   viewMode: blocks
 translationKeyFormat: null
 translationMethod: site

@@ -13,11 +13,11 @@ fieldLayouts:
             dateAdded: '2025-04-17T23:19:48+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: a6ca7d80-fa7f-433b-b6ba-fd9f19791f82 # Style
+            fieldUid: a6ca7d80-fa7f-433b-b6ba-fd9f19791f82 # Display Style
             handle: null
             includeInCards: true
             instructions: null
-            label: Style
+            label: null
             providesThumbs: false
             required: false
             tip: null
@@ -30,11 +30,11 @@ fieldLayouts:
             dateAdded: '2025-04-17T23:19:48+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: 09c265f3-2ab1-405d-9111-108e6b54f0fb # Quote
+            fieldUid: 09c265f3-2ab1-405d-9111-108e6b54f0fb # Quote Text
             handle: null
             includeInCards: true
             instructions: null
-            label: Quote
+            label: null
             providesThumbs: false
             required: false
             tip: null
@@ -51,7 +51,7 @@ fieldLayouts:
             handle: null
             includeInCards: true
             instructions: null
-            label: Attribution
+            label: null
             providesThumbs: false
             required: false
             tip: null

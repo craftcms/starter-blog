@@ -13,7 +13,7 @@ fieldLayouts:
             handle: null
             includeInCards: false
             instructions: null
-            label: Images
+            label: null
             providesThumbs: true
             required: false
             tip: null
@@ -26,11 +26,11 @@ fieldLayouts:
             dateAdded: '2025-04-17T23:19:48+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: 2f6bf496-df01-42e0-9b77-a764f886813d # Aspect Ratio
+            fieldUid: 2f6bf496-df01-42e0-9b77-a764f886813d # Slide Aspect Ratio
             handle: null
             includeInCards: false
             instructions: null
-            label: 'Aspect Ratio'
+            label: null
             providesThumbs: false
             required: false
             tip: null
