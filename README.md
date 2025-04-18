@@ -7,14 +7,13 @@ This blog starter project is for developers who are new to Craft CMS and want to
 
 ### Topics, features, and implementations:
 
-- Using a [Matrix field](https://craftcms.com/docs/4.x/matrix-fields.html) as a page-builder;
-- [Templating fundamentals](https://craftcms.com/docs/4.x/dev/twig-primer.html#dry-templating), including: inheritance with layouts, dynamic includes, and macros;
-- [Pagination](https://craftcms.com/docs/4.x/element-queries.html#pagination) of entries;
+- Using a [Matrix field](https://craftcms.com/docs/5.x/reference/field-types/matrix.html) as a page-builder;
+- [Templating fundamentals](https://craftcms.com/docs/5.x/development/twig.html), including: inheritance with layouts, dynamic includes, and macros;
+- [Pagination](https://craftcms.com/docs/5.x/development/element-queries.html#pagination) of entries;
 - Responsive images
 - Local asset volumes
-- [Error pages](https://craftcms.com/docs/4.x/routing.html#error-templates)
+- [Error pages](https://craftcms.com/docs/5.x/system/routing.html#error-templates)
 - Installation and configuration of [plugins](https://plugins.craftcms.com)
-- Front-end development with Webpack and Tailwind CSS
 
 ### It’s free to use
 
