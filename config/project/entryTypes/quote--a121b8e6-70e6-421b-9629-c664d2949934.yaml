@@ -13,7 +13,7 @@ fieldLayouts:
             dateAdded: '2025-04-17T23:19:48+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: a6ca7d80-fa7f-433b-b6ba-fd9f19791f82 # Display Style
+            fieldUid: a6ca7d80-fa7f-433b-b6ba-fd9f19791f82 # Style
             handle: null
             includeInCards: true
             instructions: null
