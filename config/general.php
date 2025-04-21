@@ -22,8 +22,4 @@ return GeneralConfig::create()
     ->allowAdminChanges(App::env('ALLOW_ADMIN_CHANGES') ?? false)
     // Disallow robots
     ->disallowRobots(App::env('DISALLOW_ROBOTS') ?? false)
-    ->aliases([
-        '@web' => App::env('PRIMARY_SITE_URL'),
-        '@webroot' => '@root/web',
-    ])
 ;
