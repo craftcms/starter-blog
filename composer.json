@@ -18,16 +18,5 @@
       "yiisoft/yii2-composer": true,
       "craftcms/plugin-installer": true
     }
-  },
-  "scripts": {
-    "post-root-package-install": [
-      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-    ],
-    "post-update-cmd": [
-      "@php craft clear-caches/all"
-    ],
-    "post-install-cmd": [
-      "@php craft clear-caches/all"
-    ]
   }
 }
