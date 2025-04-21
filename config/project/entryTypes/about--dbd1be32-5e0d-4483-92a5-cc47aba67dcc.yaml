@@ -1,20 +1,38 @@
+color: null
 fieldLayouts:
   0476a59c-d8e9-40fd-bce3-4ba321daf851:
     tabs:
       -
+        elementCondition: null
         elements:
           -
-            instructions: null
-            label: ''
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-          -
+            dateAdded: '2025-04-17T23:19:48+00:00'
+            editCondition: null
+            elementCondition: null
             fieldUid: e567b6ab-3855-452b-a337-4c119dac4d62 # Body Content
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
             required: false
+            tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: fb640987-0f32-4c39-9023-a7d5320d14cc
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
-        sortOrder: 1
+        uid: c7603c3e-74e2-49a9-a614-9f56148bb38f
+        userCondition: null
 handle: about
 hasTitleField: false
+icon: circle-info
 name: About
-sortOrder: 1
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: ''

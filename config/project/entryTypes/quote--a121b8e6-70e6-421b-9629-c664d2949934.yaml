@@ -1,17 +1,23 @@
 color: null
 fieldLayouts:
   e25f5116-982d-45a0-ac12-9d3a3f1d07e7:
+    cardView:
+      - 'layoutElement:5678bfa2-11ec-410b-8815-df39bc123959'
+      - 'layoutElement:fdd111e3-5569-49e8-b9a0-2485efee9103'
+      - 'layoutElement:15732e19-4eb6-4f16-9332-e489400b54ac'
     tabs:
       -
         elementCondition: null
         elements:
           -
+            dateAdded: '2025-04-17T23:19:48+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: a6ca7d80-fa7f-433b-b6ba-fd9f19791f82 # Style
             handle: null
             includeInCards: true
             instructions: null
-            label: Style
+            label: null
             providesThumbs: false
             required: false
             tip: null
@@ -21,12 +27,14 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-04-17T23:19:48+00:00'
+            editCondition: null
             elementCondition: null
-            fieldUid: 09c265f3-2ab1-405d-9111-108e6b54f0fb # Quote
+            fieldUid: 09c265f3-2ab1-405d-9111-108e6b54f0fb # Quote Text
             handle: null
-            includeInCards: false
+            includeInCards: true
             instructions: null
-            label: Quote
+            label: null
             providesThumbs: false
             required: false
             tip: null
@@ -36,12 +44,14 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-04-17T23:19:48+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 5fd465cf-5b00-4b4f-8ee0-ce0eac4fd2eb # Attribution
             handle: null
-            includeInCards: false
+            includeInCards: true
             instructions: null
-            label: Attribution
+            label: null
             providesThumbs: false
             required: false
             tip: null
@@ -55,7 +65,7 @@ fieldLayouts:
         userCondition: null
 handle: quote
 hasTitleField: false
-icon: null
+icon: quotes
 name: Quote
 showSlugField: true
 showStatusField: true

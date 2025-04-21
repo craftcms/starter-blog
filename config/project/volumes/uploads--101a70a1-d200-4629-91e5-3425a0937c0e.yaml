@@ -1,19 +1,84 @@
+altTranslationKeyFormat: null
+altTranslationMethod: none
 fieldLayouts:
   f6203211-ad03-49ec-8423-3d215898f508:
     tabs:
       -
-        fields:
-          cdd377e5-a451-46b0-ae80-bc4cee907d3e: # Caption
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: b9a331fc-b9ad-478b-b252-c05796912a43
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-17T23:19:48+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: cdd377e5-a451-46b0-ae80-bc4cee907d3e # Caption
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
             required: false
-            sortOrder: 1
-          db95de40-4dec-44cc-9d17-bba2223c91cf: # Image Alt
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b06834d6-0c28-4c3c-b298-4e069a7bc131
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-17T23:19:48+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: db95de40-4dec-44cc-9d17-bba2223c91cf # Image Alt
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
             required: false
-            sortOrder: 2
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f4604a25-c737-421d-bd2d-022e36cde448
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
-        sortOrder: 1
+        uid: c19cef9a-ddb4-4be1-a652-bb7279324afd
+        userCondition: null
 fs: uploads
 handle: uploads
-hasUrls: true
 name: Uploads
 sortOrder: 1
-url: '@web/uploads'
+subpath: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: null
+transformSubpath: ''

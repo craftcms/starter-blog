@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: image
 instructions: 'Double-click the image thumbnail to apply a caption to an image.'
-name: 'Body Content - Image - Image'
+name: Image
 searchable: true
 settings:
   allowSelfRelations: false
@@ -10,9 +10,9 @@ settings:
   allowedKinds:
     - image
   branchLimit: null
+  defaultPlacement: end
   defaultUploadLocationSource: 'volume:101a70a1-d200-4629-91e5-3425a0937c0e' # Uploads
   defaultUploadLocationSubpath: images
-  localizeRelations: false
   maintainHierarchy: false
   maxRelations: 1
   minRelations: null
@@ -32,5 +32,5 @@ settings:
   validateRelatedElements: false
   viewMode: large
 translationKeyFormat: null
-translationMethod: site
+translationMethod: none
 type: craft\fields\Assets

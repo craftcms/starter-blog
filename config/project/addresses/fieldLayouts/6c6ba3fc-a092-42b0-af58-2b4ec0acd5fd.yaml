@@ -1,0 +1,69 @@
+cardView:
+  - 'layoutElement:27e9a617-6e20-462f-99ac-4de53965a52d'
+tabs:
+  -
+    elementCondition: null
+    elements:
+      -
+        autocapitalize: true
+        autocomplete: false
+        autocorrect: true
+        class: null
+        dateAdded: '2025-04-17T23:08:08+00:00'
+        disabled: false
+        elementCondition: null
+        id: null
+        includeInCards: false
+        inputType: null
+        instructions: null
+        label: null
+        max: null
+        min: null
+        name: null
+        orientation: null
+        placeholder: null
+        providesThumbs: false
+        readonly: false
+        requirable: false
+        size: null
+        step: null
+        tip: null
+        title: null
+        type: craft\fieldlayoutelements\addresses\LabelField
+        uid: ef340bfe-b38a-4746-ad1e-ca3788bd664a
+        userCondition: null
+        warning: null
+        width: 100
+      -
+        attribute: countryCode
+        dateAdded: '2025-04-17T23:08:08+00:00'
+        elementCondition: null
+        id: null
+        includeInCards: false
+        instructions: null
+        label: null
+        orientation: null
+        providesThumbs: false
+        requirable: false
+        tip: null
+        type: craft\fieldlayoutelements\addresses\CountryCodeField
+        uid: ab34caa6-11fa-4940-8391-b0cf953f158c
+        userCondition: null
+        warning: null
+        width: 100
+      -
+        dateAdded: '2025-04-17T23:08:08+00:00'
+        elementCondition: null
+        includeInCards: true
+        instructions: null
+        label: null
+        providesThumbs: false
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\addresses\AddressField
+        uid: 27e9a617-6e20-462f-99ac-4de53965a52d
+        userCondition: null
+        warning: null
+    name: Content
+    uid: 56f1c593-6545-400b-92ac-473c65acf4fe
+    userCondition: null

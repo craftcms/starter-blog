@@ -1,15 +1,16 @@
-contentColumnType: text
+columnSuffix: null
 handle: imageAlt
 instructions: 'Optional text for the `<img>` tag `alt` attribute.'
 name: 'Image Alt'
 searchable: true
 settings:
-  charLimit: ''
-  code: ''
-  columnType: text
-  initialRows: '4'
-  multiline: ''
-  placeholder: ''
+  byteLimit: null
+  charLimit: null
+  code: false
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\PlainText

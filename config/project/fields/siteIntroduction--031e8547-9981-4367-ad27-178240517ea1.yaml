@@ -1,16 +1,22 @@
-contentColumnType: text
+columnSuffix: null
 handle: siteIntroduction
-instructions: ''
+instructions: null
 name: 'Site Introduction'
 searchable: true
 settings:
-  availableTransforms: '*'
+  availableTransforms: ''
   availableVolumes: '*'
-  ckeConfig: 69e08c2b-0771-4f37-b3ab-b01ae9535ee0 # Default
-  columnType: text
-  enableSourceEditingForNonAdmins: false
-  purifierConfig: ''
-  purifyHtml: '1'
+  ckeConfig: e00e1efa-bb86-4ee8-b669-4a726b8a5427 # Simple
+  createButtonLabel: null
+  defaultTransform: null
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  showWordCount: false
+  sourceEditingGroups:
+    - __ADMINS__
+  wordLimit: null
 translationKeyFormat: null
 translationMethod: none
 type: craft\ckeditor\Field

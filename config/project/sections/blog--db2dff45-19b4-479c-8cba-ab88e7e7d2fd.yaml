@@ -1,7 +1,8 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - bb6d289b-c3cf-4a8d-9324-b98cbd32753b # Blog
+  -
+    uid: bb6d289b-c3cf-4a8d-9324-b98cbd32753b # Post
 handle: blog
 maxAuthors: 1
 name: Blog
@@ -12,22 +13,22 @@ previewTargets:
         - label
         - 'Primary entry page'
       -
-        - urlFormat
-        - '{url}'
-      -
         - refresh
         - '1'
+      -
+        - urlFormat
+        - '{url}'
   -
     __assoc__:
       -
         - label
         - 'Gatsby entry page'
       -
-        - urlFormat
-        - '@gatsby/{uri}'
-      -
         - refresh
         - ''
+      -
+        - urlFormat
+        - '@gatsby/{uri}'
 propagationMethod: all
 siteSettings:
   f3400d6f-0f33-4cef-9521-f8f6620399ec: # Craft Blog

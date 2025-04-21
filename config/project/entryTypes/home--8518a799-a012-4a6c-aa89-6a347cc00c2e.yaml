@@ -1,20 +1,38 @@
+color: yellow
 fieldLayouts:
   434b8bff-3f8f-4c04-b4e1-43001b019d73:
     tabs:
       -
+        elementCondition: null
         elements:
           -
-            instructions: null
-            label: ''
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-          -
+            dateAdded: '2025-04-17T23:19:48+00:00'
+            editCondition: null
+            elementCondition: null
             fieldUid: 031e8547-9981-4367-ad27-178240517ea1 # Site Introduction
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
             required: false
+            tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 948a51a1-1f7c-421e-88ee-f926501285dd
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
-        sortOrder: 1
+        uid: 8adc11cc-0bd2-42d6-a149-cc361bf0430e
+        userCondition: null
 handle: home
 hasTitleField: false
+icon: house
 name: Home
-sortOrder: 1
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: ''

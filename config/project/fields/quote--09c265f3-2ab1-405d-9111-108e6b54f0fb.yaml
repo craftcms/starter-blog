@@ -1,19 +1,21 @@
 columnSuffix: null
 handle: quote
 instructions: null
-name: 'Body Content - Quote - Quote'
+name: 'Quote Text'
 searchable: true
 settings:
-  availableTransforms: '*'
+  availableTransforms: ''
   availableVolumes: '*'
-  ckeConfig: 7e2c012d-f507-4762-86e3-9b0ddc400c1f # Simple 2
-  columnType: text
-  defaultTransform: ''
-  enableSourceEditingForNonAdmins: true
-  purifierConfig: ''
-  purifyHtml: '1'
+  ckeConfig: e00e1efa-bb86-4ee8-b669-4a726b8a5427 # Simple
+  createButtonLabel: null
+  defaultTransform: null
+  purifierConfig: null
+  purifyHtml: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: true
+  showWordCount: false
+  sourceEditingGroups: '*'
+  wordLimit: null
 translationKeyFormat: null
 translationMethod: none
 type: craft\ckeditor\Field
