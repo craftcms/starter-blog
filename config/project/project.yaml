@@ -1,4 +1,4 @@
-dateModified: 1745259971
+dateModified: 1745273965
 email:
   fromEmail: support@craftcms.com
   fromName: 'Craft Blog'
@@ -44,17 +44,6 @@ meta:
     e567b6ab-3855-452b-a337-4c119dac4d62: 'Body Content' # Body Content
     f3400d6f-0f33-4cef-9521-f8f6620399ec: 'Craft Blog' # Craft Blog
 plugins:
-  assetrev:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
-  gatsby-helper:
-    edition: standard
-    enabled: true
-    schemaVersion: 2.0.0
-    settings:
-      buildWebhookUrl: ''
-      previewWebhookUrl: $GATSBY_PREVIEW_TARGET
   redactor:
     edition: standard
     enabled: true
