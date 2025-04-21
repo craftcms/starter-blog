@@ -8,11 +8,6 @@
     "craftcms/redactor": "^3.0.0",
     "vlucas/phpdotenv": "^5.4.0"
   },
-  "autoload": {
-    "psr-4": {
-      "modules\\": "modules/"
-    }
-  },
   "config": {
     "sort-packages": true,
     "optimize-autoloader": true,
