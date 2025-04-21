@@ -22,4 +22,7 @@ return GeneralConfig::create()
     ->allowAdminChanges(App::env('ALLOW_ADMIN_CHANGES') ?? false)
     // Disallow robots
     ->disallowRobots(App::env('DISALLOW_ROBOTS') ?? false)
+    ->aliases([
+        '@uploads' => App::env('PRIMARY_SITE_URL') . '/uploads'
+    ])
 ;

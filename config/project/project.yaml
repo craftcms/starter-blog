@@ -10,7 +10,7 @@ fs:
     settings:
       path: '@webroot/uploads'
     type: craft\fs\Local
-    url: '@web/uploads'
+    url: '@uploads'
 meta:
   __names__:
     0c98f9b9-84bf-4766-af63-a3568b46c0a6: 'Rich Text' # Rich Text
