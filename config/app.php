@@ -17,9 +17,8 @@
  * your config/ folder, alongside this one.
  */
 
+use craft\helpers\App;
+
 return [
-    'modules' => [
-        'blog' => \modules\Blog::class,
-    ],
-   'bootstrap' => ['blog'],
+    'id' => App::env('CRAFT_APP_ID'),
 ];
