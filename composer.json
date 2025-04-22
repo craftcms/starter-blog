@@ -1,13 +1,11 @@
 {
   "name": "craftcms/starter-blog",
-  "description": "A Craft CMS blog site starter with Tailwind CSS",
+  "description": "A Craft CMS blog site starter kit",
   "type": "project",
   "license": "0BSD",
   "require": {
     "craftcms/cms": "^5.0.0",
-    "craftcms/gatsby-helper": "^2.0.0",
     "craftcms/ckeditor": "^4.0.0",
-    "nystudio107/craft-twigpack": "^5.0.0",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "autoload": {
@@ -26,12 +24,6 @@
   "scripts": {
     "post-root-package-install": [
       "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-    ],
-    "post-update-cmd": [
-      "@php craft clear-caches/all"
-    ],
-    "post-install-cmd": [
-      "@php craft clear-caches/all"
     ]
   }
 }

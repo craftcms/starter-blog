@@ -23,8 +23,6 @@ return GeneralConfig::create()
     // Disallow robots
     ->disallowRobots(App::env('DISALLOW_ROBOTS') ?? false)
     ->aliases([
-        '@web' => App::env('PRIMARY_SITE_URL'),
-        '@webroot' => '@root/web',
-        '@gatsby' => App::env('GATSBY_PREVIEW_URL'),
+        '@uploads' => App::env('PRIMARY_SITE_URL') . '/uploads'
     ])
 ;

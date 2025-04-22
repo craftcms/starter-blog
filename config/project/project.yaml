@@ -1,4 +1,4 @@
-dateModified: 1745007533
+dateModified: 1745273965
 email:
   fromEmail: support@craftcms.com
   fromName: 'Craft Blog'
@@ -10,7 +10,7 @@ fs:
     settings:
       path: '@webroot/uploads'
     type: craft\fs\Local
-    url: '@web/uploads'
+    url: '@uploads'
 meta:
   __names__:
     0c98f9b9-84bf-4766-af63-a3568b46c0a6: 'Rich Text' # Rich Text
@@ -48,18 +48,6 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 3.0.0.0
-  gatsby-helper:
-    edition: standard
-    enabled: true
-    schemaVersion: 2.0.0
-    settings:
-      buildWebhookUrl: $GATSBY_BUILD_TARGET
-      previewServerUrl: ''
-      previewWebhookUrl: $GATSBY_REFRESH_URL
-  twigpack:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
 system:
   edition: pro
   live: true

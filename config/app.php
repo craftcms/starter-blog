@@ -17,9 +17,6 @@
  * your config/ folder, alongside this one.
  */
 
-return [
-    'modules' => [
-        'blog' => \modules\Blog::class,
-    ],
-   'bootstrap' => ['blog'],
-];
+use craft\helpers\App;
+
+return [];
