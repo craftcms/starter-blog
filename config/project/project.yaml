@@ -60,6 +60,6 @@ users:
   defaultGroup: ''
   photoSubpath: null
   photoVolumeUid: null
-  require2fa: all
+  require2fa: false
   requireEmailVerification: true
   validateOnPublicRegistration: false
