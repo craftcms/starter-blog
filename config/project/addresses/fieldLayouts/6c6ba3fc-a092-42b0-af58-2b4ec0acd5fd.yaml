@@ -13,7 +13,6 @@ tabs:
         disabled: false
         elementCondition: null
         id: null
-        includeInCards: false
         inputType: null
         instructions: null
         label: null
@@ -22,7 +21,6 @@ tabs:
         name: null
         orientation: null
         placeholder: null
-        providesThumbs: false
         readonly: false
         requirable: false
         size: null
@@ -39,11 +37,9 @@ tabs:
         dateAdded: '2025-04-17T23:08:08+00:00'
         elementCondition: null
         id: null
-        includeInCards: false
         instructions: null
         label: null
         orientation: null
-        providesThumbs: false
         requirable: false
         tip: null
         type: craft\fieldlayoutelements\addresses\CountryCodeField
@@ -54,10 +50,8 @@ tabs:
       -
         dateAdded: '2025-04-17T23:08:08+00:00'
         elementCondition: null
-        includeInCards: true
         instructions: null
         label: null
-        providesThumbs: false
         required: false
         tip: null
         type: craft\fieldlayoutelements\addresses\AddressField

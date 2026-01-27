@@ -13,10 +13,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 6b203fd7-eca1-4313-8795-efbb5f6a8e63 # Image
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: true
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -30,10 +28,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 5d2372e2-c220-4af4-80c9-49bb8c85a92e # Layout/Position
             handle: null
-            includeInCards: true
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -44,6 +40,7 @@ fieldLayouts:
         name: Content
         uid: 249743ae-e9a8-41ce-b286-4782bff3be44
         userCondition: null
+    thumbFieldKey: 'layoutElement:a1ad0bac-ef1a-475f-96dc-2ae14f2766f1'
 handle: image
 hasTitleField: false
 icon: image

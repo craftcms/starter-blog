@@ -11,10 +11,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: a6f02aa5-ab37-46e2-bbd4-3b56930577d5 # Images
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: true
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -28,10 +26,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 2f6bf496-df01-42e0-9b77-a764f886813d # Slide Aspect Ratio
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -42,6 +38,7 @@ fieldLayouts:
         name: Content
         uid: 5d1c7888-50cf-4d9c-9a2c-4df568eaa1d6
         userCondition: null
+    thumbFieldKey: 'layoutElement:943a94ce-7da1-44ac-a419-52001d4822f4'
 handle: imageCarousel
 hasTitleField: false
 icon: images

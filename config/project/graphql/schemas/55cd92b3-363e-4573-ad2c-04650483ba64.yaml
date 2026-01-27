@@ -16,3 +16,5 @@ scope:
   - 'volumes.101a70a1-d200-4629-91e5-3425a0937c0e:read' # Uploads
   - 'usergroups.everyone:read'
   - 'gatsby:read'
+  - 'directive:parseRefs'
+  - 'directive:transform'
