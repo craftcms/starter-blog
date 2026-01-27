@@ -14,3 +14,5 @@ scope:
   - 'elements.revisions:read'
   - 'elements.inactive:read'
   - 'sites.f3400d6f-0f33-4cef-9521-f8f6620399ec:read' # Craft Blog
+  - 'directive:parseRefs'
+  - 'directive:transform'
