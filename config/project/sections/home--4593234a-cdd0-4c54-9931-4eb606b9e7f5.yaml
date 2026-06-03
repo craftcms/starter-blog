@@ -5,16 +5,12 @@ entryTypes:
     uid: 8518a799-a012-4a6c-aa89-6a347cc00c2e # Home
 handle: home
 maxAuthors: 1
+minAuthors: 1
 name: Home
 previewTargets:
   -
-    __assoc__:
-      -
-        - label
-        - 'Primary entry page'
-      -
-        - urlFormat
-        - '{url}'
+    label: 'Primary entry page'
+    urlFormat: '{url}'
 propagationMethod: all
 siteSettings:
   f3400d6f-0f33-4cef-9521-f8f6620399ec: # Craft Blog
